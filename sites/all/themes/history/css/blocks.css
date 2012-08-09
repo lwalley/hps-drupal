@@ -1,0 +1,221 @@
+/* Blocks. */
+.block {
+  margin-bottom: 15px;
+}
+h2.block-title {
+  font-size: 1.385em;
+  line-height: 1.2;
+  margin: 0 0 0.4em 0;
+}
+.mini-panel-title {
+  margin: 0 10px;
+}
+.region-header .block {
+  clear: none;
+  float: right;
+  margin: 35px -5px 0;
+}
+.region-header div#block-block-9 {
+  clear: none;
+  float: right;
+  margin: -30px 0 -25px 0;
+}
+#page > footer .block {
+  margin: 0;
+  font-weight: 500;
+}
+#page > footer .block .block-inner {
+  padding: 20px 0 0 0;
+  background: none;
+}
+/* Block lists */
+.block ul li {
+  margin: 0;
+}
+.block .item-list ul  {
+  margin-left: 15px;
+}
+.block-panels_mini .mini-panel-title {
+  margin: 0 10px;
+}
+/* Reset margins and padding for the Help block .block-inner */
+#block-system-help .block-inner {
+  padding: 0;
+  margin: 0;
+}
+/* Reset block ul in the dashboard */
+#dashboard .block ul {
+  margin-left: 0;
+}
+.block-search .inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+.region-header .block-search .inner {
+  padding: 0;
+}
+input#edit-search-api-page-search-form-search-api-page--2.custom-search-box.form-text.custom-search-default-value {
+	width: 160px;
+}
+input#edit-search-api-page-search-form-search-api-page--2.custom-search-box.form-text {
+	width: 160px;
+}
+#search-form input#edit-keys-2,
+#block-search-api-page-search {
+  width: 64%;
+}
+div.form-item.form-type-textfield.form-item-keys-2 {
+  margin-top: 0;
+}
+#search-api-page-search-form-search input.form-submit,
+#search-form input.form-submit {
+  background: url(images/search-button.png) no-repeat scroll center top transparent;
+  border-color: #E4E4E4 #D2D2D2 #B4B4B4;
+  cursor: pointer;
+  height: 25px;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -9999px;
+  width: 34px;
+  text-transform: uppercase; /* IE7 hack to trigger text indent reliably */
+  position: relative;
+  top: -45px;
+  right: -118px;
+}
+#search-api-page-search-form-search-api-page input.form-submit:hover,
+#search-api-page-search-form-search-api-page input.form-submit:focus,
+#search-form input.form-submit:hover,
+#search-form input.form-submit:focus {
+  background-position: center bottom;
+}
+.ie6-7 #search-api-page-search-form-search-api-page input.form-submit:hover,
+.ie6-7 #search-api-page-search-form-search-api-page input.form-submit:focus,
+.ie6-7 #search-form input.form-submit:hover,
+.ie6-7 #search-form input.form-submit:focus {
+  background-position: center -25px;
+}
+input#edit-keys-1.form-text {
+  width: 150px;
+}
+div.form-item.form-type-textfield.form-item-keys-1 {
+  display: inline;
+}
+#block-views-popular-block-1, #block-views-popular-block, #block-featured-content-1 {
+	display: inline-block;
+	width: 100%;
+	float: left;
+}
+ul.quicktabs-tabs.quicktabs-style-arrows {
+  font: bold 22px Garamond;
+  line-height: 31px;
+}
+ul.quicktabs-tabs.quicktabs-style-arrows a {
+  text-decoration: none;
+  background: none;
+  color: #9B9B9B;
+}
+ul.quicktabs-tabs.quicktabs-style-arrows li.active a, ul.quicktabs-tabs.quicktabs-style-arrows li a:hover {
+  text-decoration: none;
+  color: #733922;
+} 
+div.region.region-four-fourth {
+  width: 18%;
+} 
+div.region.region-four-first {
+  width: 32%;
+  color: #fff;
+}
+div.region.region-four-first a{
+  color: #fff !important;
+}
+div.region.region-four-first a:hover{
+  text-decoration: underline;
+}
+div.region.region-footer a:hover{
+  text-decoration: underline;
+  color: #fff;
+}
+/* FP hover buttons */
+.exhibits {
+  margin:0;
+	padding: 0;
+  background: url(/sites/all/themes/history/css/images/exhibits_on.png);
+  width: 290px;
+  height: 123px;
+    float: left;
+  height: 120px;
+  width: 275px;
+  padding: 0px 15px 2px 0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-color: #EBEAE6;
+  border: 1px solid #C0C0BB;
+  display: inline-block;
+  text-decoration: none;
+}
+.exhibits a, .exhibits a:link, .exhibits a:visited {
+  display: block;
+}
+.exhibits a:hover img, .exhibits a:active img {
+	visibility: hidden;
+}
+.about {
+  margin:0;
+	padding: 0;
+  background: url(/sites/all/themes/history/css/images/about_on.png);
+  width: 290px;
+  height: 123px;
+    float: left;
+  height: 120px;
+  width: 275px;
+  padding: 0px 15px 2px 0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-color: #EBEAE6;
+  border: 1px solid #C0C0BB;
+  display: inline-block;
+  text-decoration: none;
+}
+.about a, .about a:link, .about a:visited {
+  display: block;
+}
+.about a:hover img, .about a:active img {
+	visibility: hidden;
+}
+.search {
+  margin:0;
+	padding: 0;
+  background: url(/sites/all/themes/history/css/images/search_on.png);
+  width: 290px;
+  height: 123px;
+    float: left;
+  height: 120px;
+  width: 275px;
+  padding: 0px 15px 2px 0px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-color: #EBEAE6;
+  border: 1px solid #C0C0BB;
+  display: inline-block;
+  text-decoration: none;
+}
+.search a, .search a:link, .search a:visited {
+  display: block;
+}
+.search a:hover img, .search a:active img {
+	visibility: hidden;
+}

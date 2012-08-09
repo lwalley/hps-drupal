@@ -1,0 +1,302 @@
+/*
+  This file contains the basic logic for nice menus, and should not be
+  edited.  To customize the menus, it's recommended to create a custom CSS
+  file using nice_menus_default.css as a template, then configure the module
+  to use your custom CSS file (this is done in the global settings tab of
+  the theme administration.)
+*/
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+ul.nice-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #c0c0b8;
+  font-family: Garamond, Perpetua, "Times New Roman", serif;
+  font-size: 1.3em;
+  z-index: 9999;
+  margin-top: 15px !important;
+  width: 968px;
+}
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: Garamond, Perpetua, "Times New Roman", serif;
+  font-size: large;
+  -webkit-border-top-right-radius: 0px !important;
+  -webkit-border-bottom-right-radius: 0px !important;
+  -moz-border-radius-topright: 0px !important;
+  -moz-border-radius-bottomright: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+ul.nice-menu li {
+  border-top: 0;
+  float: left;
+  height: auto;
+  width: auto;
+  padding: 5px 19px 5px 18px;
+	display:inline-block;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000;
+}
+ul.nice-menu li:first-child:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4a9aa1), color-stop(1, #006d71) );
+	background:-moz-linear-gradient( center top, #4a9aa1 5%, #006d71 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a9aa1', endColorstr='#006d71');
+	background-color:#4a9aa1;
+}
+
+ul.nice-menu a {
+  padding: 0.3em 5px 0.3em 5px;
+  color: #000000;
+}
+
+ul.nice-menu ul li {
+  width: 13em;
+  padding-left: 0;
+}
+ul.nice-menu-down li:first-child {
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006d71), color-stop(1, #4a9aa1) );
+	background:-moz-linear-gradient( center top, #006d71 5%, #4a9aa1 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006d71', endColorstr='#4a9aa1');
+	background-color:#006d71;
+	border:1px solid #006d71;
+	display:inline-block;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000;
+}
+ul.nice-menu-down li:last-child {
+  -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -moz-border-radius-bottomright: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -moz-box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006d71), color-stop(1, #4a9aa1) );
+	background:-moz-linear-gradient( center top, #006d71 5%, #4a9aa1 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006d71', endColorstr='#4a9aa1');
+	background-color:#006d71;
+	display:inline-block;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000;
+}
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li {
+
+}
+
+ul.nice-menu-down li li {
+  border-top: 0;
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 12em; /* LTR */
+  top: -1px;
+}
+ul.nice-menu-down li ul li ul:hover {
+  left: 12em; /* LTR */
+  top: -1px;
+}
+ul.nice-menu-down li {
+
+}
+
+ul.nice-menu-down li:hover {
+  background: #006d71; /* LTR */
+}
+ul.nice-menu-down li.menuparent {
+	-moz-box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006d71), color-stop(1, #4a9aa1) );
+	background:-moz-linear-gradient( center top, #006d71 5%, #4a9aa1 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006d71', endColorstr='#4a9aa1');
+	background-color:#006d71;
+	border:1px solid #006d71;
+	display:inline-block;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #000;
+}
+
+ul.nice-menu-down li.menu-path-node-1531 {
+        -moz-box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+        box-shadow:inset 0px 1px 0px 0px #4a9aa1;
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006d71), color-stop(1, #4a9aa1) );
+        background:-moz-linear-gradient( center top, #006d71 5%, #4a9aa1 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#006d71', endColorstr='#4a9aa1');
+        background-color:#006d71;        
+        border:1px solid #006d71;
+        display:inline-block;
+        text-decoration:none;        
+        text-shadow:1px 1px 0px #000;
+}
+
+
+ul.nice-menu-down li.menuparent:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4a9aa1), color-stop(1, #006d71) );
+	background:-moz-linear-gradient( center top, #4a9aa1 5%, #006d71 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a9aa1', endColorstr='#006d71');
+	background-color:#4a9aa1;
+}
+
+ul.nice-menu-down li.menu-path-node-1531:hover {
+        background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4a9aa1), color-stop(1, #006d71) );
+        background:-moz-linear-gradient( center top, #4a9aa1 5%, #006d71 100% );
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a9aa1', endColorstr='#006d71');
+        background-color:#4a9aa1;
+}
+
+
+ul.nice-menu-down li li:first-child {
+  background: #006d71 !important; /* LTR */
+  border: 1px solid #4a9aa1 !important;
+  margin-top: 6px;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+ul.nice-menu-down li li:last-child {
+  background: #006d71; /* LTR */
+  border: 1px solid #4a9aa1 !important;   
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+ul.nice-menu-down li li {
+  background: #006d71 !important; /* LTR */
+  border: 1px solid #4a9aa1 !important; 
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+ul.nice-menu-down li li:hover {
+  background: #4a9aa1 !important; /* LTR */
+  border: 1px solid #006d71 !important;   
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+ul.nice-menu-down li li.menuparent {
+  background: #006d71 url(images/arrow-right.png) right center no-repeat !important;
+  border: 1px solid #4a9aa1 !important;
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background: #4a9aa1 url(images/arrow-right.png) right center no-repeat !important;
+  border: 1px solid #006d71 !important;
+}
+ul.nice-menu-down li ul li ul {
+  margin-left: 37px !important; 
+}
+
+/* user menu */
+div.region.region-header nav#block-system-user-menu { 
+  position: absolute;
+  right: -5px;
+  font-size:0.9em;
+  text-transform:uppercase;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+div.region.region-header nav#block-system-user-menu li{
+	display:inline;
+	margin:0px;
+	padding:0px;
+}
+
+div.region.region-header nav#block-system-user-menu li a{
+	color: #444;
+	font-weight: 500;
+}
+
+div.region.region-header nav#block-system-user-menu li:after{
+	content:"|";
+	padding: 10px;
+	color: #444;
+	font-weight: 500;
+}
+div.region.region-header nav#block-system-user-menu li.last:after{
+	content: "";
+	padding: 0px;
+}
+
+/* login menu */
+div.region.region-header nav#block-menu-menu-login {
+  position: absolute;
+  right: -5px;
+  font-size:0.9em;
+  text-transform:uppercase;
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+div.region.region-header nav#block-menu-menu-login li{
+	display:inline;
+	margin:0px;
+	padding:0px;
+}
+
+div.region.region-header nav#block-menu-menu-login li a{
+	color: #444;
+  font-weight: 500;
+}
+
+div.region.region-header nav#block-menu-menu-login li:after{
+	content:"|";
+	padding: 10px;
+	color: #444;
+	font-weight: 500;	
+}
+div.region.region-header nav#block-menu-menu-login li.last::after{
+	content: "";
+	padding: 0px;
+}

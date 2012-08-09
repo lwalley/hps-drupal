@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MBLHistory Import feature.
+ */
+
+include_once 'mblhistory_import.features.inc';

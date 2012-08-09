@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Embryo Project feature.
+ */
+
+include_once 'embryo_project.features.inc';

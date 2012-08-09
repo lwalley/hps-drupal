@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ * Code for the DSpace Item feature.
+ */
+
+include_once 'dspace_item.features.inc';
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * Add a template suggestion to DSpace Item node types.
+ */
+function dspace_item_preprocess_node(&$variables) {
+  if (isset($variables['type']) && $variables['type'] == 'dspace_item') {
+    if (count($variables['field_dc_description_type'])) {
+        if ($type = $variables['field_dc_description_type'][0]['taxonomy_term']->name) {
+          $variables['theme_hook_suggestions'][] = 'node__dspace_item__' . strtolower($type);
+        }
+    }
+  }
+}

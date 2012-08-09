@@ -1,0 +1,1 @@
+This directory should be used to place settings, downloaded and custom modules and themes which are specific to the mblhistory site.
