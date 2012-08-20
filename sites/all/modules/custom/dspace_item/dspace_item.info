@@ -1,7 +1,7 @@
 name = DSpace Item
 description = The DSpace Item node type
 core = 7.x
-package = Embryo
+package = DSpace
 php = 5.2.4
 version = 7.x-1.0
 project = dspace_item
