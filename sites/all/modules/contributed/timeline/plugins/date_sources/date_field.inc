@@ -9,7 +9,7 @@ $plugin = array(
   'name' => t('Date field'),
   'callback' => 'timeline_date_source_date_field_conversion',
   'handler_name' => 'views_handler_field_field',
-  'field_type' => 'datetime',
+  'field_type' => 'date',
 );
 
 /**
