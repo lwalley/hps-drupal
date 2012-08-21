@@ -1252,6 +1252,7 @@ function search_api_get_data_type_info($type = NULL) {
  */
 function search_api_get_service_info($id = NULL) {
   $services = &drupal_static(__FUNCTION__);
+
   if (!isset($services)) {
     $services = module_invoke_all('search_api_service_info');
 
