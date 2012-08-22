@@ -225,10 +225,6 @@ table.setup tr:hover td.title {
   background-color: #D0E0F2;
 }
 
-input[type="file"] {
-	width: 30em;
-}
-
 /* Method definitions from phpdoc */
 .method-definition {
   background-image: url('images/h_bar.gif');
@@ -251,5 +247,8 @@ input[type="file"] {
 .var-type,
 .method-result {
   color: #4A9166;
+  font-style: italic;  
+}
+r: #4A9166;
   font-style: italic;  
 }

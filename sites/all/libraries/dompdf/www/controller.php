@@ -1,21 +1,18 @@
 <?php 
 
-session_start();
-
 $cmd = isset($_GET["cmd"]) ? $_GET["cmd"] : null;
 
 include "../dompdf_config.inc.php";
-include "functions.inc.php";
 
 switch ($cmd) {
   case "clear-font-cache":
-    $files = glob(DOMPDF_FONT_DIR."*.{UFM,AFM,ufm,afm}.php", GLOB_BRACE);
+    $files = glob(DOMPDF_FONT_DIR."*.{ufm,afm}.php", GLOB_BRACE);
     foreach($files as $file) {
       unlink($file);
     }
+    echo count($files)." cache files removed. Refresh page.<br />";
   break;
-  
-  case "install-font":
+}install-font":
     if (!auth_ok()) break;
     
     $family = $_POST["family"];
