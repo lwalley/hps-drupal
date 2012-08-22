@@ -321,7 +321,7 @@
 
             // We need to set a timeout so that the slideshow doesn't wait
             // indefinitely for all images to load.
-            //setTimeout("Drupal.viewsSlideshowCycle.load('" + fullId + "')", settings.wait_for_image_load_timeout);
+            setTimeout("Drupal.viewsSlideshowCycle.load('" + fullId + "')", settings.wait_for_image_load_timeout);
           }
           else {
             Drupal.viewsSlideshowCycle.load(fullId);
