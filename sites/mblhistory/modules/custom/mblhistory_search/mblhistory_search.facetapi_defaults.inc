@@ -1,20 +1,20 @@
 <?php
 /**
  * @file
- * embryo_search.facetapi_defaults.inc
+ * mblhistory_search.facetapi_defaults.inc
  */
 
 /**
  * Implements hook_facetapi_default_facet_settings().
  */
-function embryo_search_facetapi_default_facet_settings() {
+function mblhistory_search_facetapi_default_facet_settings() {
   $export = array();
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
-  $facet->name = 'search_api@embryo_search_index::field_dc_description_type';
-  $facet->searcher = 'search_api@embryo_search_index';
+  $facet->name = 'search_api@mblhistory_search_index::field_dc_description_type';
+  $facet->searcher = 'search_api@mblhistory_search_index';
   $facet->realm = '';
   $facet->facet = 'field_dc_description_type';
   $facet->enabled = FALSE;
@@ -25,6 +25,9 @@ function embryo_search_facetapi_default_facet_settings() {
       'facets' => array(),
       'force_deactivation' => TRUE,
       'regex' => FALSE,
+      'roles' => array(),
+      'bundle' => 'none',
+      'bundle_selected' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
@@ -33,15 +36,15 @@ function embryo_search_facetapi_default_facet_settings() {
     'default_true' => TRUE,
     'facet_search_ids' => array(),
   );
-  $export['search_api@embryo_search_index::field_dc_description_type'] = $facet;
+  $export['search_api@mblhistory_search_index::field_dc_description_type'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
-  $facet->name = 'search_api@embryo_search_index::field_dc_subject_embryo';
-  $facet->searcher = 'search_api@embryo_search_index';
+  $facet->name = 'search_api@mblhistory_search_index::field_dc_subject_mblhistory';
+  $facet->searcher = 'search_api@mblhistory_search_index';
   $facet->realm = '';
-  $facet->facet = 'field_dc_subject_embryo';
+  $facet->facet = 'field_dc_subject_mblhistory';
   $facet->enabled = FALSE;
   $facet->settings = array(
     'operator' => 'and',
@@ -58,13 +61,13 @@ function embryo_search_facetapi_default_facet_settings() {
     'default_true' => TRUE,
     'facet_search_ids' => array(),
   );
-  $export['search_api@embryo_search_index::field_dc_subject_embryo'] = $facet;
+  $export['search_api@mblhistory_search_index::field_dc_subject_mblhistory'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
-  $facet->name = 'search_api@embryo_search_index:block:field_dc_description_type';
-  $facet->searcher = 'search_api@embryo_search_index';
+  $facet->name = 'search_api@mblhistory_search_index:block:field_dc_description_type';
+  $facet->searcher = 'search_api@mblhistory_search_index';
   $facet->realm = 'block';
   $facet->facet = 'field_dc_description_type';
   $facet->enabled = TRUE;
@@ -126,24 +129,24 @@ function embryo_search_facetapi_default_facet_settings() {
     'soft_limit' => '20',
     'nofollow' => 1,
     'show_expanded' => 0,
+    'empty_text' => array(
+      'value' => '',
+      'format' => 'filtered_html',
+    ),
+    'submit_realm' => 'Save and go back to realm settings',
     'exclude' => '',
     'regex' => 0,
     'show_minimum_items' => 2,
-    'empty_text' => array(
-      'value' => '',
-      'format' => 'full_html',
-    ),
-    'submit_realm' => 'Save and go back to realm settings',
   );
-  $export['search_api@embryo_search_index:block:field_dc_description_type'] = $facet;
+  $export['search_api@mblhistory_search_index:block:field_dc_description_type'] = $facet;
 
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
-  $facet->name = 'search_api@embryo_search_index:block:field_dc_subject_embryo';
-  $facet->searcher = 'search_api@embryo_search_index';
+  $facet->name = 'search_api@mblhistory_search_index:block:field_dc_subject_mblhistory';
+  $facet->searcher = 'search_api@mblhistory_search_index';
   $facet->realm = 'block';
-  $facet->facet = 'field_dc_subject_embryo';
+  $facet->facet = 'field_dc_subject_mblhistory';
   $facet->enabled = TRUE;
   $facet->settings = array(
     'weight' => 0,
@@ -203,16 +206,16 @@ function embryo_search_facetapi_default_facet_settings() {
     'soft_limit' => '20',
     'nofollow' => 1,
     'show_expanded' => 0,
+    'empty_text' => array(
+      'value' => '',
+      'format' => 'filtered_html',
+    ),
+    'submit_realm' => 'Save and go back to realm settings',
     'exclude' => '',
     'regex' => 0,
     'show_minimum_items' => 2,
-    'empty_text' => array(
-      'value' => '',
-      'format' => 'full_html',
-    ),
-    'submit_realm' => 'Save and go back to realm settings',
   );
-  $export['search_api@embryo_search_index:block:field_dc_subject_embryo'] = $facet;
+  $export['search_api@mblhistory_search_index:block:field_dc_subject_mblhistory'] = $facet;
 
   return $export;
 }
