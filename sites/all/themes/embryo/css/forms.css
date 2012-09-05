@@ -118,18 +118,6 @@ textarea.form-textarea, textarea {
   -webkit-border-top-left-radius: 3px;
   border-radius: 3px 3px 0 0;
 }
-#block-search-api-page-embryo-solr-search input.form-text,
-select[multiple="multiple"] {
-  background-color: #fff;
-  border: solid 2px #e6e4de !important;
-  padding: 4px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  width: 160px;
-  position: relative;
-  /* right: 65px; */
-}
 input.form-text,
 select[multiple="multiple"] {
   background-color: #fff;
@@ -139,11 +127,20 @@ select[multiple="multiple"] {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
+.block-search-api-page input.form-text,
+select[multiple="multiple"] {
+  width: 160px;
+  position: relative;
+  /* right: 65px; */
+}
 .ie9 input.form-text,
 .ie9 select[multiple="multiple"],
 .chrome input.form-text,
 .chrome select[multiple="multiple"] {
   padding: 2px 4px;
+}
+.block-search-api-page input.form-text {
+  padding: 4px;
 }
 select {
   max-width: 100%;
