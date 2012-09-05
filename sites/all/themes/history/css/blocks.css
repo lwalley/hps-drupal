@@ -61,13 +61,13 @@ input#edit-search-api-page-search-form-search-api-page--2.custom-search-box.form
 	width: 160px;
 }
 #search-form input#edit-keys-2,
-#block-search-api-page-search {
+.block-search-api-page {
   width: 64%;
 }
 div.form-item.form-type-textfield.form-item-keys-2 {
   margin-top: 0;
 }
-#search-api-page-search-form-search input.form-submit,
+.block-search-api-page input.form-submit,
 #search-form input.form-submit {
   background: url(images/search-button.png) no-repeat scroll center top transparent;
   border-color: #E4E4E4 #D2D2D2 #B4B4B4;
@@ -84,22 +84,22 @@ div.form-item.form-type-textfield.form-item-keys-2 {
   top: -45px;
   right: -118px;
 }
-#search-api-page-search-form-search-api-page input.form-submit:hover,
-#search-api-page-search-form-search-api-page input.form-submit:focus,
+.block-search-api-page input.form-submit:hover,
+.block-search-api-page input.form-submit:focus,
 #search-form input.form-submit:hover,
 #search-form input.form-submit:focus {
   background-position: center bottom;
 }
-.ie6-7 #search-api-page-search-form-search-api-page input.form-submit:hover,
-.ie6-7 #search-api-page-search-form-search-api-page input.form-submit:focus,
+.ie6-7 .block-search-api-page input.form-submit:hover,
+.ie6-7 .block-search-api-page input.form-submit:focus,
 .ie6-7 #search-form input.form-submit:hover,
 .ie6-7 #search-form input.form-submit:focus {
   background-position: center -25px;
 }
-input#edit-keys-1.form-text {
+.block-search-api-page input[type="text"] {
   width: 150px;
 }
-div.form-item.form-type-textfield.form-item-keys-1 {
+.block-search-api-page div.form-item.form-type-textfield {
   display: inline;
 }
 #block-views-popular-block-1, #block-views-popular-block, #block-featured-content-1 {

@@ -50,17 +50,10 @@ h2.block-title {
 .region-header .block-search .inner {
   padding: 0;
 }
-input#edit-search-api-page-search-form-embryo-solr-search--2.custom-search-box.form-text.custom-search-default-value {
-	width: 160px;
-}
-input#edit-search-api-page-search-form-embryo-solr-search--2.custom-search-box.form-text {
-	width: 160px;
-}
-#search-form input#edit-keys,
-#block-search-api-page-embryo-solr-search .form-item-search-api-page-search-form-embryo-solr-search input {
+#search-form input#edit-keys {
   width: 64%;
 }
-#search-api-page-search-form-embryo-solr-search input.form-submit,
+.block-search-api-page input.form-submit,
 #search-form input.form-submit {
   background: url(images/search-button.png) no-repeat scroll center top transparent;
   border-color: #E4E4E4 #D2D2D2 #B4B4B4;
@@ -74,24 +67,23 @@ input#edit-search-api-page-search-form-embryo-solr-search--2.custom-search-box.f
   width: 34px;
   text-transform: uppercase; /* IE7 hack to trigger text indent reliably */
 }
-#search-api-page-search-form-embryo-solr-search input.form-submit:hover,
-#search-api-page-search-form-embryo-solr-search input.form-submit:focus,
+.block-search-api-page input.form-submit:hover,
+.block-search-api-page input.form-submit:focus,
 #search-form input.form-submit:hover,
 #search-form input.form-submit:focus {
   background-position: center bottom;
 }
-.ie6-7 #search-api-page-search-form-embryo-solr-search input.form-submit:hover,
-.ie6-7 #search-api-page-search-form-embryo-solr-search input.form-submit:focus,
-.ie6-7 #search-form input.form-submit:hover,
+.ie6-7 .block-search-api-page input.form-submit:hover,
+.ie6-7 .block-search-api-page input.form-submit:focus,
 .ie6-7 #search-form input.form-submit:focus {
   background-position: center -25px;
 }
-input#edit-keys-4.form-text {
-  width: 150px;
-}
-div.form-item.form-type-textfield.form-item-keys-4 {
+.block-search-api-page div.form-item.form-type-textfield {
   display: inline;
   margin-top: 0;
+}
+.block-search-api-page input[type="text"] {
+  width: 150px;
 }
 #block-views-popular-block-1, #block-views-popular-block, #block-featured-content-1 {
 	display: inline-block;
