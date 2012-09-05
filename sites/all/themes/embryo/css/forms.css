@@ -131,7 +131,6 @@ select[multiple="multiple"] {
 select[multiple="multiple"] {
   width: 160px;
   position: relative;
-  /* right: 65px; */
 }
 .ie9 input.form-text,
 .ie9 select[multiple="multiple"],

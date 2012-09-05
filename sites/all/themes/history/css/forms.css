@@ -128,17 +128,18 @@ select[multiple="multiple"] {
   border-radius: 3px;
   width: 160px;
 }
+.block-search-api-page input.form-text,
+select[multiple="multiple"] {
+  position: relative;
+}
 .ie9 input.form-text,
 .ie9 select[multiple="multiple"],
 .chrome input.form-text,
 .chrome select[multiple="multiple"] {
   padding: 2px 4px;
 }
-.block-search-api-page input.form-text,
-select[multiple="multiple"] {
+.block-search-api-page input.form-text {
   padding: 4px;
-  position: relative;
-  right: 65px;
 }
 select {
   max-width: 100%;

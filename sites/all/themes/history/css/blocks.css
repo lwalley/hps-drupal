@@ -18,7 +18,7 @@ h2.block-title {
 .region-header div#block-block-9 {
   clear: none;
   float: right;
-  margin: -30px 0 -25px 0;
+  margin: 10px 0 -25px 0;
 }
 #page > footer .block {
   margin: 0;
@@ -60,8 +60,7 @@ input#edit-search-api-page-search-form-search-api-page--2.custom-search-box.form
 input#edit-search-api-page-search-form-search-api-page--2.custom-search-box.form-text {
 	width: 160px;
 }
-#search-form input#edit-keys-2,
-.block-search-api-page {
+#search-form input#edit-keys-2 {
   width: 64%;
 }
 div.form-item.form-type-textfield.form-item-keys-2 {
@@ -80,9 +79,6 @@ div.form-item.form-type-textfield.form-item-keys-2 {
   text-indent: -9999px;
   width: 34px;
   text-transform: uppercase; /* IE7 hack to trigger text indent reliably */
-  position: relative;
-  top: -45px;
-  right: -118px;
 }
 .block-search-api-page input.form-submit:hover,
 .block-search-api-page input.form-submit:focus,
@@ -101,6 +97,7 @@ div.form-item.form-type-textfield.form-item-keys-2 {
 }
 .block-search-api-page div.form-item.form-type-textfield {
   display: inline;
+  margin-top: 0;
 }
 #block-views-popular-block-1, #block-views-popular-block, #block-featured-content-1 {
 	display: inline-block;
