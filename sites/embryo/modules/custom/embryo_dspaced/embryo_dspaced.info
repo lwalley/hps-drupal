@@ -1,0 +1,6 @@
+name = Embryo DSpaced Entities
+description = Defines custom entities and fields for the Embryo DSpace community
+package = DSpaced
+core = 7.x
+
+dependencies[] = dspaced_entities

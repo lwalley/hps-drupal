@@ -1,0 +1,6 @@
+name = MBL History DSpaced
+description = Defines custom entities and fields for the MBL History DSpace community
+package = DSpaced
+core = 7.x
+
+dependencies[] = dspaced_entities

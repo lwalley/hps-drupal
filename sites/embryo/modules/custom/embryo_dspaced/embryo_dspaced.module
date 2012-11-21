@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Main module file for Embryo DSpaced module.
+ */
+
+/**
+ * Implements hook_dspaced_entities_default().
+ */
+function embryo_dspaced_dspaced_entities_default() {
+  $entities = array();
+  $entities['bundles'] = array(
+    'taxonomy_term' => array(
+      'dc_subject_embryo' => array(
+        'name' => t("DC Subject Embryo"),
+        'description' => t("Embryo qualifier of the Dublin Core subject property " .
+          "Contains keywords that describe the topic of a resource in the context " .
+          "of The Embryo Project."),
+        'machine_name' => 'dc_subject_embryo',
+      ),
+    ),
+  );
+
+  $entities['fields'] = _embryo_dspaced_fields();
+  $entities['instances'] = array(
+    'node' => array(
+      'dspaced_entities_item' => $entities['fields'],
+    ),
+  );
+
+  return $entities;
+}
+
+/**
+ * Implements hook_dspaced_item_feeds_importer_fields_alter().
+ */
+function embryo_dspaced_dspaced_item_feeds_importer_fields_alter(&$fields) {
+  $fields = array_merge($fields, _embryo_dspaced_fields());
+}
+
+/**
+ * Helper function to define custom DSpace Item fields.
+ */
+function _embryo_dspaced_fields() {
+  return array(
+    'dc_subject_embryo' => array(
+      'field_name' => 'dc_subject_embryo',
+      'label' => t('DC Subject Embryo'),
+      'cardinality' => FIELD_CARDINALITY_UNLIMITED,
+      'type' => 'taxonomy_term_reference',
+      'settings' => array(
+        'allowed_values' => array(
+          array(
+            'vocabulary' => 'dc_subject_embryo',
+            'parent' => 0,
+          ),
+        ),
+      ),
+      'xpath' => "metadata/metadataentity[schema = 'dc' and " .
+                 "element = 'subject' and qualifier = 'embryo']/value",
+    ),
+  );
+}
