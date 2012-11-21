@@ -1,6 +1,0 @@
-name = DSpace REST
-description = Import DSpace collections using the Feeds Module
-core = 7.x
-package = DSpace
-
-dependencies[] = feeds

@@ -1,6 +1,0 @@
-name = LNI Repository Connector
-description = Expose repository items as Drupal nodes via an LNI connection 
-core = 7.x
-
-
-

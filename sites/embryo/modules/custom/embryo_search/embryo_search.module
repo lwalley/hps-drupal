@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Embryo Search feature.
- */
-
-include_once 'embryo_search.features.inc';

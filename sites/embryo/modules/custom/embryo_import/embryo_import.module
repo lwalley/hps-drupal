@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Embryo Import feature.
- */
-
-include_once 'embryo_import.features.inc';
