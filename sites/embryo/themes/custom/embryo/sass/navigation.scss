@@ -52,6 +52,9 @@ li a.active {
  * Main menu and Secondary menu links
  */
 #main-menu {
+  // Main menu is turned off so we can have expanded menu items,
+  // you could use #block-system-main-menu instead.
+  // @see #navigation
 }
 #secondary-menu {
 }
@@ -73,38 +76,83 @@ li a.active {
 .block-menu-block {
 }
 
-// Style navigation as horizontal lists for screens large enough.
-@media all and (min-width: 600px) {
-  #main {
-    padding-top: rhythm(4);
+#navigation {
+  @include box-shadow();
+  background: $navigation-default-background-color;
+  color: $navigation-default-font-color;
+  h2 {
+    a {
+      display: block;
+    }
   }
-  #navigation {
-    @include border-radius();
-    @include box-shadow();
-    background-color: $nav-bg;
-    @include background-image(linear-gradient(lighten($nav-bg, 8),
-                              $nav-bg, darken($nav-bg, 11)));
-    font-family: $font-navigation;
+  ul {
+    padding: 0;
+    margin: 0;
+    background-color: $navigation-default-background-color;
+    @include adjust-leading-to(2);
     ul {
-      @include adjust-font-size-to($navigation-font-size);
-      a {
-        color: #fff;
-        @include text-shadow();
-        text-decoration: none;
-        @include padding-leader(0.5, $navigation-font-size);
-        @include padding-trailer(0.5, $navigation-font-size);
-        padding-right: rhythm(0.5, $navigation-font-size);
-        padding-left: rhythm(0.5, $navigation-font-size);
+      background-color: darken($navigation-default-background-color, 10%);
+      ul {
+        background-color: darken($navigation-default-background-color, 20%)
       }
     }
   }
-  #secondary-menu {
-    ul {
-      li {
-        a {
-          padding: rhythm(0.5);
+  a {
+    display: block;
+    text-decoration: none;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $navigation-default-font-color;
+    }
+  }
+  li {
+    list-style: none;
+    &.active-trail {
+      background-color: $navigation-active-background-color;
+      > a {
+        &:link,
+        &:visited,
+        &:active {
+          color: $navigation-active-font-color;
         }
       }
     }
+    &.active-trail a {
+      &:hover {
+        background-color: $navigation-active-hover-background-color;
+        color: $navigation-active-hover-font-color;
+      }
+    }
+    a {
+      &:hover {
+        background-color: $navigation-hover-background-color;
+        color: $navigation-hover-font-color;
+      }
+    }
+    &.expanded {
+      position: relative;
+      > a {
+        margin-right: rhythm(2);
+        &.submenu-toggle {
+          margin-right: 0;
+          text-align: center;
+          width: rhythm(1);
+          position: absolute;
+          right: 0;
+          @include hpszen-vertical-rule(left);
+        }
+
+      }
+    }
   }
+}
+
+@media all and (min-width: 600px) {
+
+  #navigation {
+    @include margin-trailer(1);
+  }
+
 }

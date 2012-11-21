@@ -67,19 +67,32 @@ $font-body:        $helvetica-neue;
 $font-monospace:   $courier;
 
 // Variables for default colors, shadows etc.
-$base-blue:                    #4068A5;
+// ASU colors
+$gold:   #FFB310;
+$maroon: #990033;
+$black:  black;
+$white:  white;
+// Neutral
+$grey:   #4F5557;
+$clay:   #AFA593;
+// Secondary
+$blue:   #008ED6;
+$green:  #568E14;
+$orange: #F47C00;
+//$clay:   #AFA593;
+
 
 $base-font-color:              black;
-$highlight-font-color:         $base-blue;
+$highlight-font-color:         $blue;
 
-$nav-bg:                       desaturate(lighten($base-blue, 18), 5);
-$nav-border:                   darken($nav-bg, 10);
-$nav-border-top:               lighten($nav-bg, 15);
-$nav-border-bottom:            darken($nav-bg, 25);
-$nav-border-left:              darken($nav-bg, 11);
-$nav-border-right:             lighten($nav-bg, 7);
-$nav-color:                    darken($nav-bg, 38);
-$nav-color-hover:              darken($nav-color, 25);
+//$nav-bg:                       desaturate(lighten($blue, 18), 5);
+//$nav-border:                   darken($nav-bg, 10);
+//$nav-border-top:               lighten($nav-bg, 15);
+//$nav-border-bottom:            darken($nav-bg, 25);
+//$nav-border-left:              darken($nav-bg, 11);
+//$nav-border-right:             lighten($nav-bg, 7);
+//$nav-color:                    darken($nav-bg, 38);
+//$nav-color-hover:              darken($nav-color, 25);
 
 $default-text-shadow-color:    rgba(black, 0.5);
 $default-text-shadow-h-offset: 1px;
@@ -93,6 +106,16 @@ $default-box-shadow-v-offset:  1px;
 $default-box-shadow-blur:      4px;
 $default-box-shadow-spread:    false;
 $default-box-shadow-inset:     false;
+
+$navigation-default-background-color:       $blue;
+$navigation-default-font-color:             white;
+$navigation-hover-background-color:         lighten($blue, 5%);
+$navigation-hover-font-color:               white;
+$navigation-active-background-color:        lighten($blue, 10%);
+$navigation-active-font-color:              white;
+$navigation-active-hover-background-color:  lighten($blue, 5%);
+$navigation-active-hover-font-color:        white;
+
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 1em;

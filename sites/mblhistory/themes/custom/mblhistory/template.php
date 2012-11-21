@@ -146,10 +146,10 @@ function mblhistory_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/*
 function mblhistory_preprocess_page(&$variables, $hook) {
+  $variables['logo'] = base_path() . path_to_theme() . '/logo.gif';
 }
-//*/
+
 
 /**
  * Override or insert variables into the node templates.

@@ -83,6 +83,7 @@ body {
   h2 {
     color: $highlight-font-color;
     font-style: italic;
+    font-weight: normal;
     @include adjust-leading-to(1.2, $slogan-font-size);
     @include letterpress(1);
   }
@@ -235,6 +236,28 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 #footer {
+  @include margin-leader(2);
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  background-color: $blue;
+  color: white;
+  a {
+    color: white;
+  }
+
+  @include box-shadow();
+  .view-display-id-block_supporting_organisations_logos {
+    ul {
+      list-style-type: none;
+      li {
+        height: rhythm(3);
+        margin-bottom: rhythm(1);
+        img {
+          max-height: 100%;
+        }
+      }
+    }
+  }
 }
 
 /*
@@ -263,9 +286,6 @@ span.field-label { /* The inline field label used by the Fences module */
       width: rhythm(19, $slogan-font-size);
       margin-top: -1 * rhythm(4, $slogan-font-size);
     }
-  }
-  #content {
-    @include padding-leader(1);
   }
 }
 

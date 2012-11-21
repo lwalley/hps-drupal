@@ -1,0 +1,358 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+/*
+ * Body
+ */
+/* line 17, ../sass/pages.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../images/background.jpg") no-repeat left top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+/* line 32, ../sass/pages.scss */
+#skip-link {
+  margin: 0;
+}
+/* line 36, ../sass/pages.scss */
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+/* line 50, ../sass/pages.scss */
+#header {
+  position: relative;
+  overflow: visible;
+}
+
+/* line 55, ../sass/pages.scss */
+#logo {
+  /* Wrapping link for logo */
+  position: absolute;
+  top: -1.2em;
+  left: -1.2em;
+  z-index: 1;
+}
+/* line 60, ../sass/pages.scss */
+#logo img {
+  vertical-align: bottom;
+  max-height: 4.8em;
+}
+
+/* line 66, ../sass/pages.scss */
+#name-and-slogan {
+  /* Wrapper for website name and slogan */
+  position: relative;
+  z-index: 10;
+  font-family: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+  color: #fff;
+}
+/* line 71, ../sass/pages.scss */
+#name-and-slogan h1 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+/* line 74, ../sass/pages.scss */
+#name-and-slogan h1 a:link,
+#name-and-slogan h1 a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+/* line 79, ../sass/pages.scss */
+#name-and-slogan h1 a:hover,
+#name-and-slogan h1 a:focus {
+  text-decoration: underline;
+}
+/* line 83, ../sass/pages.scss */
+#name-and-slogan h2 {
+  color: #006d71;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.2em;
+  text-shadow: white 1px 1px 2px;
+}
+
+/* line 92, ../sass/pages.scss */
+.region-header {
+  /* Wrapper for any blocks placed in the header region */
+  clear: both;
+  /* Clear the logo */
+}
+
+/*
+ * Main (container for everything else)
+ */
+/* line 100, ../sass/pages.scss */
+#main {
+  position: relative;
+  z-index: 4;
+}
+
+/* line 106, ../sass/pages.scss */
+#content,
+.sidebar {
+  background: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* line 115, ../sass/pages.scss */
+.breadcrumb {
+  /* The path to the current page in the form of a list of links */
+}
+/* line 116, ../sass/pages.scss */
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 120, ../sass/pages.scss */
+.breadcrumb li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 133, ../sass/pages.scss */
+h1.title,
+h2.node-title,
+h2.block-title,
+h2.title,
+h2.comment-form,
+h3.title {
+  /* Comment title */
+  margin: 0;
+}
+
+/* line 137, ../sass/pages.scss */
+tr.even {
+  /* Some tables have rows marked even or odd. */
+  /* background-color: #eee; */
+  /* Drupal core uses a #eee background */
+}
+
+/* line 141, ../sass/pages.scss */
+tr.odd {
+  /* background-color: #eee; */
+  /* Drupal core uses a #eee background */
+}
+
+/* line 145, ../sass/pages.scss */
+div.messages {
+  /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
+  margin: 1.5em 0;
+  /* Drupal core uses "6px 0" margin */
+}
+/* line 148, ../sass/pages.scss */
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 154, ../sass/pages.scss */
+div.status {
+  /* Normal priority messages */
+}
+
+/* line 158, ../sass/pages.scss */
+div.warning,
+tr.warning {
+  /* Medium priority messages */
+  /* border: 1px solid #f0c020; */
+  /* Drupal core uses: 1px solid #f0c020 */
+}
+
+/* line 163, ../sass/pages.scss */
+div.error,
+tr.error {
+  /* High priority messages. See also the .error declaration below. */
+}
+
+/* line 166, ../sass/pages.scss */
+.error {
+  /* Errors that are separate from div.messages status messages. */
+  /* color: #e55; */
+  /* Drupal core uses a #e55 background */
+}
+
+/* line 170, ../sass/pages.scss */
+.warning {
+  /* Warnings that are separate from div.messages status messages. */
+  /* color: #e09010; */
+  /* Drupal core uses a #e09010 background */
+}
+
+/* line 174, ../sass/pages.scss */
+.tabs {
+  /* See also the tabs.css file. */
+}
+
+/* line 177, ../sass/pages.scss */
+.region-help {
+  /* Help text on a page */
+}
+
+/* line 180, ../sass/pages.scss */
+.more-help-link {
+  /* Link to more help */
+}
+
+/* line 183, ../sass/pages.scss */
+.region-content {
+  /* Wrapper for the actual page content */
+}
+
+/* line 186, ../sass/pages.scss */
+ul.inline {
+  /* List of links generated by theme_links() */
+  display: inline;
+  padding: 0;
+}
+/* line 190, ../sass/pages.scss */
+ul.inline li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 1em 0 0;
+  /* LTR */
+}
+
+/* line 196, ../sass/pages.scss */
+span.field-label {
+  /* The inline field label used by the Fences module */
+  padding: 0 1em 0 0;
+  /* LTR */
+}
+
+/* line 200, ../sass/pages.scss */
+.item-list .pager {
+  /* A list of page numbers when more than 1 page of content is available */
+  padding: 0;
+}
+/* line 203, ../sass/pages.scss */
+.item-list .pager li {
+  /* Each page number in the pager list */
+  padding: 0 0.5em;
+}
+
+/* line 208, ../sass/pages.scss */
+.feed-icon {
+  /* The link to the RSS or Atom feed for the current list of content */
+}
+
+/* line 211, ../sass/pages.scss */
+.more-link {
+  /* Aggregator, blog, and forum more link */
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+/*
+ * Footer
+ */
+/* line 238, ../sass/pages.scss */
+#footer {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  background-color: #006d71;
+  color: white;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+/* line 244, ../sass/pages.scss */
+#footer a {
+  color: white;
+}
+/* line 249, ../sass/pages.scss */
+#footer .view-display-id-block_supporting_organisations_logos ul {
+  list-style-type: none;
+}
+/* line 251, ../sass/pages.scss */
+#footer .view-display-id-block_supporting_organisations_logos ul li {
+  height: 4.5em;
+  margin-bottom: 1.5em;
+}
+/* line 254, ../sass/pages.scss */
+#footer .view-display-id-block_supporting_organisations_logos ul li img {
+  max-height: 100%;
+}
+
+/*
+ * Page bottom
+ */
+/* line 266, ../sass/pages.scss */
+.region-bottom {
+  /* Wrapper for any blocks placed in the page bottom region */
+}
+
+@media all and (min-width: 600px) {
+  /* line 272, ../sass/pages.scss */
+  #logo {
+    top: -0.42857em;
+    left: -1.71429em;
+  }
+  /* line 275, ../sass/pages.scss */
+  #logo img {
+    max-height: 4.28571em;
+  }
+
+  /* line 279, ../sass/pages.scss */
+  #name-and-slogan {
+    /* Wrapper for website name and slogan */
+  }
+  /* line 280, ../sass/pages.scss */
+  #name-and-slogan h1 {
+    width: 12.85714em;
+    margin-left: 2.57143em;
+  }
+  /* line 283, ../sass/pages.scss */
+  #name-and-slogan h1 small {
+    font-style: italic;
+    font-weight: normal;
+  }
+  /* line 288, ../sass/pages.scss */
+  #name-and-slogan h2 {
+    margin-left: 16em;
+    width: 19em;
+    margin-top: -4em;
+  }
+}
