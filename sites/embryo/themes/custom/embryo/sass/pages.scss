@@ -46,12 +46,11 @@ body {
  * Header
  */
 
-#header {
-  #logo { /* Wrapping link for logo */
-    //top: -1 * rhythm(2, $name-font-size);
-    //left: -1 * rhythm(2, $name-font-size);
-  }
+#header {}
+
+#logo { /* Wrapping link for logo */
 }
+
 
 #name-and-slogan { /* Wrapper for website name and slogan */
   color: #fff;
@@ -83,8 +82,10 @@ body {
 
 // Header: two column
 @media all and (min-width: 1em / 16 * 900) {
+  $base-font-size:   14px;
+  $base-line-height: 1.5 * $base-font-size;
   $name-font-size: 3  * $base-font-size;
-  $slogan-font-size: 1.5 * $base-font-size;
+  $slogan-font-size: 1.25 * $base-font-size;
   #header {
     #logo {
       height: rhythm(8);
