@@ -9,7 +9,6 @@
 
 @import "base";
 
-
 /*
  * Body
  */
@@ -48,63 +47,80 @@ body {
  */
 
 #header {
-  position: relative;
-  overflow: visible;
-}
-
-#logo { /* Wrapping link for logo */
-  position: absolute;
-  top: -1 * rhythm(2, $name-font-size);
-  left: -1 * rhythm(2, $name-font-size);
-  z-index: 1;
-  img {
-    vertical-align: bottom;
-    max-height: rhythm(8, $name-font-size);
+  #logo { /* Wrapping link for logo */
+    //top: -1 * rhythm(2, $name-font-size);
+    //left: -1 * rhythm(2, $name-font-size);
   }
 }
 
 #name-and-slogan { /* Wrapper for website name and slogan */
-  position: relative;
-  z-index: 10;
-  font-family: $font-heading;
   color: #fff;
-  h1 {
-    @include single-text-shadow();
-    a:link,
-    a:visited {
-      color: #fff;
-      text-decoration: none;
-    }
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-    }
+}
+
+#site-name { /* The name of the website */
+  @include single-text-shadow();
+  a:link,
+  a:visited {
+    text-decoration: none;
+    color: #fff;
   }
-  h2 {
-    color: $highlight-font-color;
-    font-style: italic;
-    font-weight: normal;
-    @include adjust-leading-to(1.2, $slogan-font-size);
-    @include letterpress(1);
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+    color: #fff;
   }
 }
 
-.region-header { /* Wrapper for any blocks placed in the header region */
-  clear: both; /* Clear the logo */
+#site-slogan { /* The slogan (or tagline) of a website */
+  color: $highlight-font-color;
+  font-style: italic;
+  font-weight: normal;
+  @include hpszen-letterpress(1);
 }
+
+.region-header { /* Wrapper for any blocks placed in the header region */
+}
+
+// Header: two column
+@media all and (min-width: 1em / 16 * 900) {
+  $name-font-size: 3  * $base-font-size;
+  $slogan-font-size: 1.5 * $base-font-size;
+  #header {
+    #logo {
+      height: rhythm(8);
+      left: -1 * rhythm(2);
+    }
+    #name-and-slogan {
+      h1 {
+        width: rhythm(25, $name-font-size);
+        margin-top: 0;
+      }
+      h2 {
+        @include adjust-font-size-to($slogan-font-size);
+        @include adjust-leading-to(1.5, $slogan-font-size);
+        margin-left: rhythm(16, $slogan-font-size);
+        width: rhythm(19, $slogan-font-size);
+        margin-top: -1 * rhythm(2.5, $slogan-font-size);
+      }
+    }
+  }
+}
+
+
+
 
 /*
  * Main (container for everything else)
  */
 
 #main {
-  position: relative;
-  z-index: 4;
 }
 
-#content,
-.sidebar {
-  background: #fff;
+/*
+ * Content
+ */
+#content {
+  background-color: white;
   @include border-radius();
   @include box-shadow();
 }
@@ -236,16 +252,13 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 #footer {
-  @include margin-leader(2);
-  @include padding-leader(1);
-  @include padding-trailer(1);
   background-color: $blue;
+  margin-top: rhythm(2);
+  @include box-shadow();
   color: white;
   a {
     color: white;
   }
-
-  @include box-shadow();
   .view-display-id-block_supporting_organisations_logos {
     ul {
       list-style-type: none;
@@ -266,26 +279,3 @@ span.field-label { /* The inline field label used by the Fences module */
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 }
-
-// Override mobile first default styles for larger screens
-@media all and (min-width: 600px) {
-  $name-font-size: 3.5  * $base-font-size;
-  #logo {
-    top: -1 * rhythm(1, $name-font-size);
-    left: -1 * rhythm(4, $name-font-size);
-    img {
-      max-height: rhythm(10, $name-font-size);
-    }
-  }
-  #name-and-slogan { /* Wrapper for website name and slogan */
-    h1 {
-      width: rhythm(25, $name-font-size);
-    }
-    h2 {
-      margin-left: rhythm(16, $slogan-font-size);
-      width: rhythm(19, $slogan-font-size);
-      margin-top: -1 * rhythm(4, $slogan-font-size);
-    }
-  }
-}
-

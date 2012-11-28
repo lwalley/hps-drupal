@@ -43,6 +43,8 @@ li a.active {
  * Navigation bar
  */
 #navigation {
+  @include box-shadow();
+  @include margin-trailer(1);
 }
 
 .region-navigation {
@@ -77,12 +79,22 @@ li a.active {
 }
 
 #navigation {
-  @include box-shadow();
   background: $navigation-default-background-color;
   color: $navigation-default-font-color;
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 0 rhythm(0.5);
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      color: $navigation-default-font-color;
+    }
+  }
   h2 {
     a {
-      display: block;
+      padding: 0;
     }
   }
   ul {
@@ -91,20 +103,10 @@ li a.active {
     background-color: $navigation-default-background-color;
     @include adjust-leading-to(2);
     ul {
-      background-color: darken($navigation-default-background-color, 10%);
+      background-color: lighten($navigation-default-background-color, 10%);
       ul {
-        background-color: darken($navigation-default-background-color, 20%)
+        background-color: lighten($navigation-default-background-color, 20%)
       }
-    }
-  }
-  a {
-    display: block;
-    text-decoration: none;
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      color: $navigation-default-font-color;
     }
   }
   li {
@@ -147,12 +149,4 @@ li a.active {
       }
     }
   }
-}
-
-@media all and (min-width: 600px) {
-
-  #navigation {
-    @include margin-trailer(1);
-  }
-
 }

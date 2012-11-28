@@ -30,6 +30,14 @@ ul li.leaf {
 /*
  * Navigation bar
  */
+/* line 45, ../sass/navigation.scss */
+#navigation {
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5em;
+}
+
 /*
  * Main menu and Secondary menu links
  */
@@ -42,73 +50,71 @@ ul li.leaf {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
-/* line 79, ../sass/navigation.scss */
+/* line 81, ../sass/navigation.scss */
 #navigation {
-  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   background: #008ed6;
   color: white;
 }
 /* line 84, ../sass/navigation.scss */
-#navigation h2 a {
+#navigation a {
   display: block;
+  text-decoration: none;
+  padding: 0 0.75em;
 }
-/* line 88, ../sass/navigation.scss */
+/* line 91, ../sass/navigation.scss */
+#navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active {
+  color: white;
+}
+/* line 96, ../sass/navigation.scss */
+#navigation h2 a {
+  padding: 0;
+}
+/* line 100, ../sass/navigation.scss */
 #navigation ul {
   padding: 0;
   margin: 0;
   background-color: #008ed6;
   line-height: 3em;
 }
-/* line 93, ../sass/navigation.scss */
+/* line 105, ../sass/navigation.scss */
 #navigation ul ul {
-  background-color: #006ca3;
+  background-color: #0aadff;
 }
-/* line 95, ../sass/navigation.scss */
+/* line 107, ../sass/navigation.scss */
 #navigation ul ul ul {
-  background-color: #004a70;
+  background-color: #3dbeff;
 }
-/* line 100, ../sass/navigation.scss */
-#navigation a {
-  display: block;
-  text-decoration: none;
-}
-/* line 106, ../sass/navigation.scss */
-#navigation a:link, #navigation a:visited, #navigation a:hover, #navigation a:active {
-  color: white;
-}
-/* line 110, ../sass/navigation.scss */
+/* line 112, ../sass/navigation.scss */
 #navigation li {
   list-style: none;
 }
-/* line 112, ../sass/navigation.scss */
+/* line 114, ../sass/navigation.scss */
 #navigation li.active-trail {
   background-color: #0aadff;
 }
-/* line 117, ../sass/navigation.scss */
+/* line 119, ../sass/navigation.scss */
 #navigation li.active-trail > a:link, #navigation li.active-trail > a:visited, #navigation li.active-trail > a:active {
   color: white;
 }
-/* line 123, ../sass/navigation.scss */
+/* line 125, ../sass/navigation.scss */
 #navigation li.active-trail a:hover {
   background-color: #009ff0;
   color: white;
 }
-/* line 129, ../sass/navigation.scss */
+/* line 131, ../sass/navigation.scss */
 #navigation li a:hover {
-  background-color: #009ff0;
+  background-color: #3dbeff;
   color: white;
 }
-/* line 134, ../sass/navigation.scss */
+/* line 136, ../sass/navigation.scss */
 #navigation li.expanded {
   position: relative;
 }
-/* line 136, ../sass/navigation.scss */
+/* line 138, ../sass/navigation.scss */
 #navigation li.expanded > a {
   margin-right: 3em;
 }
-/* line 138, ../sass/navigation.scss */
+/* line 140, ../sass/navigation.scss */
 #navigation li.expanded > a.submenu-toggle {
   margin-right: 0;
   text-align: center;
@@ -116,17 +122,10 @@ ul li.leaf {
   position: absolute;
   right: 0;
   border-left-style: solid;
-  border-left-width: 0.07143em;
-  padding-left: -0.07143em;
+  border-left-width: 0.08333em;
+  padding-left: -0.08333em;
   border-left-color: rgba(255, 255, 255, 0.2);
   -webkit-box-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
   box-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
-}
-
-@media all and (min-width: 600px) {
-  /* line 154, ../sass/navigation.scss */
-  #navigation {
-    margin-bottom: 1.5em;
-  }
 }

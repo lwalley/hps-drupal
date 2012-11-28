@@ -58,11 +58,12 @@
   }
 }
 
-@mixin box-emboss($opacity: 0.8, $opacity2: 0.05) {
+// HPS Mixins
+@mixin hpszen-box-emboss($opacity: 0.2, $opacity2: 0.05) {
   @include box-shadow(rgba(white, $opacity) 0 1px 0, rgba(black, $opacity2) 0 1px 0 inset);
 }
-@mixin letterpress($opacity: 0.5) {
-  @include text-shadow(rgba(white, $opacity) 1px 1px 2px);
+@mixin hpszen-letterpress($opacity: 0.5) {
+  @include text-shadow(rgba(white, $opacity) 0 1px 0);
 }
 @mixin hpszen-vertical-rule($side, $opacity: 0.2, $opacity2: 0.5) {
   @include apply-side-rhythm-border($side, 1px, 0);
@@ -74,3 +75,30 @@
   }
 }
 
+@mixin hpszen-button($from: #fff, $to: #ddd) {
+  overflow: visible;
+  color: #394651;
+  text-transform: lowercase;
+  text-decoration: none;
+  @include rhythm-borders(1px, 0.5);
+  @include border-radius(3px);
+  border-color: $to - #111111;
+  @include background-image(linear-gradient(left top, $from, $to));
+  cursor: pointer;
+  &:hover {
+    @include background-image(linear-gradient(left top, saturate($from + #111111, 10%), saturate($to + #111111, 10%)));
+  }
+  &:active {
+    @include background-image(linear-gradient(left top, $from, $to));
+  }
+}
+@mixin hpszen-input($width: rhythm(10), $from: #ddd, $to: #fff) {
+  width: $width;
+  @include rhythm-borders(1px, 0.5);
+  border-color: $from - #111111;
+  @include background-image(linear-gradient($from, $to));
+}
+@mixin hpszen-textarea($width: rhythm(10), $from: #ddd, $to:  #fff) {
+  border: 1px solid darken($from, 10%);
+  @include background-image(linear-gradient(left top, $from, $to));
+}
