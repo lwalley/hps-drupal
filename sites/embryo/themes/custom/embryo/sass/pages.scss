@@ -23,6 +23,27 @@ body {
 #page {
 }
 
+@media all and (min-width: 1em / 16 * 961) and (max-width: 1em / 16 * 1023) {
+  #page,
+  .region-bottom {
+    // Applying a max width, 13px is base font size in base theme at this screen width, we're overriding responsive layout
+    // @see responsive.scss
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1em / 13 * 960;
+  }
+}
+@media all and (min-width: 1em / 16 * 1024) {
+  #page,
+  .region-bottom {
+    // Applying a max width, 14px is base font size in base theme at this screen width, we're overriding responsive layout
+    // @see responsive.scss
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1em / 14 * 960;
+  }
+}
+
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
@@ -30,7 +51,6 @@ body {
 
 #skip-link {
   margin: 0;
-
   a,
   a:visited {
     display: block;
@@ -42,73 +62,68 @@ body {
   }
 }
 
-/*
- * Header
- */
-
-#header {}
-
-#logo { /* Wrapping link for logo */
+// Header: positioning child elements
+#logo {
+  width: auto;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: -1 * rhythm(8);
 }
-
-
-#name-and-slogan { /* Wrapper for website name and slogan */
-  color: #fff;
-}
-
-#site-name { /* The name of the website */
-  @include single-text-shadow();
-  a:link,
-  a:visited {
-    text-decoration: none;
-    color: #fff;
+#name-and-slogan {
+  h1#site-name {
+    display: inline;
+    @include single-text-shadow();
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: #fff;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      color: #fff;
+    }
   }
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-    color: #fff;
+  h2#site-slogan {
+    display: inline;
+    @include adjust-font-size-to(1.3 * $base-font-size);
+    @include adjust-leading-to(1);
+    color: $highlight-font-color;
+    font-style: italic;
+    font-weight: normal;
+    @include hpszen-letterpress(1);
   }
-}
-
-#site-slogan { /* The slogan (or tagline) of a website */
-  color: $highlight-font-color;
-  font-style: italic;
-  font-weight: normal;
-  @include hpszen-letterpress(1);
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */
 }
 
-// Header: two column
-@media all and (min-width: 1em / 16 * 900) {
-  $base-font-size:   14px;
-  $base-line-height: 1.5 * $base-font-size;
-  $name-font-size: 3  * $base-font-size;
-  $slogan-font-size: 1.25 * $base-font-size;
-  #header {
-    #logo {
-      height: rhythm(8);
-      left: -1 * rhythm(2);
-    }
-    #name-and-slogan {
-      h1 {
-        width: rhythm(25, $name-font-size);
-        margin-top: 0;
-      }
-      h2 {
-        @include adjust-font-size-to($slogan-font-size);
-        @include adjust-leading-to(1.5, $slogan-font-size);
-        margin-left: rhythm(16, $slogan-font-size);
-        width: rhythm(19, $slogan-font-size);
-        margin-top: -1 * rhythm(2.5, $slogan-font-size);
-      }
+#secondary-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: right;
+  .block-menu .block-title,
+  .block-menu-block .block-title {
+    @include element-invisible;
+  }
+  ul {
+    @include delimited-list('|');
+    @include adjust-leading-to(3);
+    a {
+      padding: rhythm(1);
     }
   }
 }
-
-
-
+@media all and (min-width: 1em / 16 * 1024) {
+  #name-and-slogan {
+    h1 {
+      @include adjust-leading-to(0.8);
+    }
+  }
+}
 
 /*
  * Main (container for everything else)
@@ -122,8 +137,109 @@ body {
  */
 #content {
   background-color: white;
-  @include border-radius();
+  @include border-radius(8px, 8px);
   @include box-shadow();
+}
+
+// Override grid layout on front page because we need double padding to get boxes
+.front {
+  &.hpszen-primary-aside-boxes {
+    #content {
+      .panel-hpszen-aside-box {
+        padding-left: $zen-gutter-width / 2;
+        padding-right: $zen-gutter-width / 2;
+        .panel-pane {
+          @include background-image(linear-gradient($grey, $grey - #111111));
+          border: 1px solid $grey;
+          @include border-radius(3px, 3px);
+          @include leader(1);
+          @include adjust-leading-to(1);
+          h2 {
+            @include hpszen-adjust-font-size-and-rhythm(1.7);
+            @include leader(0.25);
+            @include trailer(0.25);
+          }
+          ul {
+            margin: 0;
+          }
+          a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .more-link {
+            @include adjust-leading-to(2);
+            a {
+              color: $blue;
+            }
+          }
+          &.pane-hps-news-panel-pane-front-page-news {
+            ul {
+              list-style-type: none;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Content: two columns underneath content, override front because we need double padding to get boxes
+// @see layouts/responsive.scss
+@media all and (min-width: 1em / 16 * 600) and (max-width: 1em / 16 * 799) {
+  .front {
+    &.hpszen-primary-aside-boxes {
+      #main {
+        #content {
+          .panel-hpszen-aside-box {
+            .panel-pane {
+              &:nth-of-type(1) {
+                width: 48%;
+              }
+              &:nth-of-type(2) {
+                clear: none;
+                width: 48%;
+                margin-left: 52%;
+              }
+              &:nth-of-type(3) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Content: asides adjacent to content
+@media all and (min-width: 1em / 16 * 800) {
+  .front {
+    &.hpszen-primary-aside-boxes {
+      #main {
+        #content {
+          .panel-hpszen-primary-box {
+            width: 58.66667%;
+            margin-right: -58.66667%;
+          }
+          .panel-hpszen-aside-box {
+            padding-left: 0;
+            padding-right: 0;
+            width: 39.33333%;
+            margin-left: 58.66667%;
+            .panel-pane {
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .region-highlighted {
@@ -140,6 +256,13 @@ body {
     margin: 0;
     padding: 0;
   }
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-headings;
+  color: $blue;
 }
 
 h1.title, /* The title of the page */
@@ -226,6 +349,30 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 .more-link { /* Aggregator, blog, and forum more link */
+}
+ul.links {
+  display: block;
+  @include leader(2);
+  @include trailer(1);
+  overflow: hidden;
+  @include adjust-font-size-to(0.9 * $base-font-size);
+  @include adjust-leading-to(2);
+  li {
+    &.print_html,
+    &.print_mail,
+    &.print_pdf {
+      margin-left: 0;
+      a {
+        @include hpszen-letterpress();
+        color: black;
+        @include hpszen-button();
+      }
+    }
+  }
+}
+#block-sharethis-sharethis-block {
+  @include leading-border();
+  border-color: $grey;
 }
 
 /*

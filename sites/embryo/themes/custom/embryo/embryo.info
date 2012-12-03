@@ -28,8 +28,10 @@ base theme  = hpszen
 
 ; Stylehseets are inherited from base theme.
 ; Override or add new stylesheets.
+stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/pages.css
 stylesheets[all][] = css/navigation.css
+stylesheets[all][] = css/slideshow.css
 
 ; Javascript files are inherited from base theme.
 ; Override or add new Javascript files.
