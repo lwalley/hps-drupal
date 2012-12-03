@@ -20,6 +20,7 @@ body {
   @include background-size(cover);
 }
 
+
 #page {
 }
 
@@ -43,6 +44,28 @@ body {
     max-width: 1em / 14 * 960;
   }
 }
+
+// Defaults
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-headings;
+  color: $blue;
+}
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $blue;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $blue - #222222;
+  }
+}
+
 
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
@@ -139,6 +162,15 @@ body {
   background-color: white;
   @include border-radius(8px, 8px);
   @include box-shadow();
+}
+
+// Search results
+.page-search {
+  .views-row {
+    h2 {
+      border-bottom: 1px solid $grey;
+    }
+  }
 }
 
 // Override grid layout on front page because we need double padding to get boxes
@@ -258,13 +290,6 @@ body {
   }
 }
 
-h1,
-h2,
-h3 {
-  font-family: $font-headings;
-  color: $blue;
-}
-
 h1.title, /* The title of the page */
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
 h2.block-title, /* Block title */
@@ -344,30 +369,30 @@ span.field-label { /* The inline field label used by the Fences module */
     padding: 0 0.5em;
   }
 }
-
+a.lexicon-term {
+  text-decoration: none;
+  border-bottom: 1px dotted black;
+}
 .feed-icon { /* The link to the RSS or Atom feed for the current list of content */
 }
 
 .more-link { /* Aggregator, blog, and forum more link */
 }
-ul.links {
+.print_html,
+.print_mail,
+.print_pdf {
   display: block;
+  float: left;
+  padding-right: rhythm(1);
   @include leader(2);
   @include trailer(1);
-  overflow: hidden;
   @include adjust-font-size-to(0.9 * $base-font-size);
   @include adjust-leading-to(2);
-  li {
-    &.print_html,
-    &.print_mail,
-    &.print_pdf {
-      margin-left: 0;
-      a {
-        @include hpszen-letterpress();
-        color: black;
-        @include hpszen-button();
-      }
-    }
+  margin-left: 0;
+  a {
+    @include hpszen-letterpress();
+    color: black;
+    @include hpszen-button();
   }
 }
 #block-sharethis-sharethis-block {
