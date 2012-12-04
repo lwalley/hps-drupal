@@ -175,8 +175,9 @@ a {
 
 // Override grid layout on front page because we need double padding to get boxes
 .front {
-  &.hpszen-primary-aside-boxes {
+  &.hpszen-primary-downsides-boxes {
     #content {
+      padding-bottom: 0;
       .panel-hpszen-aside-box {
         padding-left: $zen-gutter-width / 2;
         padding-right: $zen-gutter-width / 2;
@@ -222,7 +223,7 @@ a {
 // @see layouts/responsive.scss
 @media all and (min-width: 1em / 16 * 600) and (max-width: 1em / 16 * 799) {
   .front {
-    &.hpszen-primary-aside-boxes {
+    &.hpszen-primary-downsides-boxes {
       #main {
         #content {
           .panel-hpszen-aside-box {
@@ -250,7 +251,7 @@ a {
 // Content: asides adjacent to content
 @media all and (min-width: 1em / 16 * 800) {
   .front {
-    &.hpszen-primary-aside-boxes {
+    &.hpszen-primary-downsides-boxes {
       #main {
         #content {
           .panel-hpszen-primary-box {
