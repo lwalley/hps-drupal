@@ -32,6 +32,7 @@ stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/pages.css
 stylesheets[all][] = css/navigation.css
 stylesheets[all][] = css/slideshow.css
+stylesheets[all][] = css/views-styles.css
 
 ; Javascript files are inherited from base theme.
 ; Override or add new Javascript files.

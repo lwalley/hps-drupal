@@ -113,7 +113,7 @@ a {
     display: inline;
     @include adjust-font-size-to(1.3 * $base-font-size);
     @include adjust-leading-to(1);
-    color: $highlight-font-color;
+    color: $blue;
     font-style: italic;
     font-weight: normal;
     @include hpszen-letterpress(1);
@@ -164,116 +164,6 @@ a {
   @include box-shadow();
 }
 
-// Search results
-.page-search {
-  .views-row {
-    h2 {
-      border-bottom: 1px solid $grey;
-    }
-  }
-}
-
-// Override grid layout on front page because we need double padding to get boxes
-.front {
-  &.hpszen-primary-downsides-boxes {
-    #content {
-      padding-bottom: 0;
-      .panel-hpszen-aside-box {
-        padding-left: $zen-gutter-width / 2;
-        padding-right: $zen-gutter-width / 2;
-        .panel-pane {
-          @include background-image(linear-gradient($grey, $grey - #111111));
-          border: 1px solid $grey;
-          @include border-radius(3px, 3px);
-          @include leader(1);
-          @include adjust-leading-to(1);
-          h2 {
-            @include hpszen-adjust-font-size-and-rhythm(1.7);
-            @include leader(0.25);
-            @include trailer(0.25);
-          }
-          ul {
-            margin: 0;
-          }
-          a {
-            text-decoration: none;
-            color: black;
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-          .more-link {
-            @include adjust-leading-to(2);
-            a {
-              color: $blue;
-            }
-          }
-          &.pane-hps-news-panel-pane-front-page-news {
-            ul {
-              list-style-type: none;
-              padding: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-// Content: two columns underneath content, override front because we need double padding to get boxes
-// @see layouts/responsive.scss
-@media all and (min-width: 1em / 16 * 600) and (max-width: 1em / 16 * 799) {
-  .front {
-    &.hpszen-primary-downsides-boxes {
-      #main {
-        #content {
-          .panel-hpszen-aside-box {
-            .panel-pane {
-              &:nth-of-type(1) {
-                width: 48%;
-              }
-              &:nth-of-type(2) {
-                clear: none;
-                width: 48%;
-                margin-left: 52%;
-              }
-              &:nth-of-type(3) {
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-// Content: asides adjacent to content
-@media all and (min-width: 1em / 16 * 800) {
-  .front {
-    &.hpszen-primary-downsides-boxes {
-      #main {
-        #content {
-          .panel-hpszen-primary-box {
-            width: 58.66667%;
-            margin-right: -58.66667%;
-          }
-          .panel-hpszen-aside-box {
-            padding-left: 0;
-            padding-right: 0;
-            width: 39.33333%;
-            margin-left: 58.66667%;
-            .panel-pane {
-              &:first-child {
-                margin-top: 0;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 .region-highlighted {
 }
@@ -297,15 +187,27 @@ h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
-  margin: 0;
 }
-
 tr.even { /* Some tables have rows marked even or odd. */
-  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  background-color: lighten($blue, 40); /* Drupal core uses a #eee background */
 }
 
 tr.odd {
-  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  background-color: white; /* Drupal core uses a #eee background */
+}
+thead {
+  border-bottom: 3px solid $grey;
+}
+th {
+  img {
+    vertical-align: middle;
+    padding-left: rhythm(0.2);
+  }
+}
+td {
+  vertical-align: top;
+  padding: rhythm(0.5);
+  @include adjust-leading-to(1);
 }
 
 div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
@@ -401,6 +303,45 @@ a.lexicon-term {
   border-color: $grey;
 }
 
+// Search results. Browse by listings.
+.page-search,
+.pane-hps-browse-panel-pane-list {
+  .views-row {
+    h2 {
+      clear: both;
+      @include padding-leader(2);
+      border-bottom: 1px solid $grey;
+      @include trailer(0.5);
+    }
+    &.views-row-first {
+      h2 {
+        @include padding-leader(0.5);
+      }
+    }
+  }
+}
+
+.pane-hps-browse-panel-pane-index {
+  td {
+    &:nth-child(2),
+    &:nth-child(4) {
+      width: 12%;
+    }
+    &:nth-child(5) {
+      width: 15%
+    }
+  }
+}
+.pane-hps-browse-panel-pane-gallery {
+  h2 {
+    @include adjust-font-size-to(1.2 * $base-font-size);
+    @include adjust-leading-to(1);
+  }
+  .field-dspace-bitstream-url {
+    width: 100%;
+  }
+}
+
 /*
  * First sidebar (on left in LTR languages, on right in RTL)
  *
@@ -453,3 +394,126 @@ a.lexicon-term {
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 }
+
+// Override grid layout on front page because we need double padding to get boxes
+.front {
+  &.hpszen-primary-downsides-boxes {
+    #content {
+      padding-bottom: 0;
+      .panel-hpszen-primary-box,
+      .panel-hpszen-aside-box,
+      .panel-hpszen-downside-box {
+        // Reset padding to smaller size
+        .panel-pane {
+          @include zen-grid-item-base($zen-gutter-width);
+        }
+      }
+      .panel-hpszen-aside-box {
+        padding-left: $zen-gutter-width / 2;
+        padding-right: $zen-gutter-width / 2;
+        .panel-pane {
+          @include background-image(linear-gradient($grey, $grey - #111111));
+          border: 1px solid $grey;
+          @include border-radius(3px, 3px);
+          @include leader(1);
+          @include adjust-leading-to(1);
+          h2 {
+            @include hpszen-adjust-font-size-and-rhythm(1.7);
+            @include leader(0.25);
+            @include trailer(0.25);
+          }
+          ul {
+            margin: 0;
+          }
+          a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .more-link {
+            @include adjust-leading-to(2);
+            a {
+              color: $blue;
+            }
+          }
+          &.pane-hps-news-panel-pane-front-page-news {
+            ul {
+              list-style-type: none;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Content: two columns underneath content, override front because we need double padding to get boxes
+// @see layouts/responsive.scss
+@media all and (min-width: 1em / 16 * 600) and (max-width: 1em / 16 * 799) {
+  .front {
+    &.hpszen-primary-downsides-boxes {
+      #main {
+        #content {
+          .panel-hpszen-aside-box {
+            .panel-pane {
+              &:nth-of-type(1) {
+                width: 48%;
+              }
+              &:nth-of-type(2) {
+                clear: none;
+                width: 48%;
+                margin-left: 52%;
+              }
+              &:nth-of-type(3) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Content: asides adjacent to content
+@media all and (min-width: 1em / 16 * 800) {
+  .pane-hps-browse-panel-pane-list {
+    .views-row {
+      span.hpszen-responsive {
+        clear: both;
+        float: left;
+        padding-right: rhythm(1);
+        width: 50%;
+      }
+    }
+  }
+
+  .front {
+    &.hpszen-primary-downsides-boxes {
+      #main {
+        #content {
+          .panel-hpszen-primary-box {
+            width: 58.66667%;
+            margin-right: -58.66667%;
+          }
+          .panel-hpszen-aside-box {
+            padding-left: 0;
+            padding-right: 0;
+            width: 39.33333%;
+            margin-left: 58.66667%;
+            .panel-pane {
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
