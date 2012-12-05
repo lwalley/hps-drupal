@@ -410,6 +410,11 @@ a.lexicon-term {
         img {
           max-height: 100%;
         }
+        .hpszen-responsive {
+          &.hps-minor {
+            height: 100%;
+          }
+        }
       }
     }
   }
