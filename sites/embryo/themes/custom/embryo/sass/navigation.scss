@@ -55,6 +55,7 @@ ul li.leaf {
   }
   h2 {
     @include adjust-font-size-to(1 * $base-font-size);
+    background: $blue - #111111;
     @include background-image(linear-gradient(center top, $blue - #222222, $blue));
     @include rhythm-borders(1px, 0.4);
     @include border-radius(8px, 8px);
@@ -69,6 +70,7 @@ ul li.leaf {
   }
   li {
     list-style: none;
+    background: $blue - #111111;
     @include background-image(linear-gradient(center top, $blue - #222222, $blue));
     @include rhythm-borders(1px, 0.4);
     border-color: $blue;
