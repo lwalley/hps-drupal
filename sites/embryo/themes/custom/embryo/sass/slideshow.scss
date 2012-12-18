@@ -78,9 +78,8 @@
         margin-right: $zen-gutter-width / 2;
       }
       > h2 {
-        @include adjust-font-size-to(1.4 * $base-font-size);
+        @include adjust-font-size-to(1.7 * $base-font-size);
         font-weight: normal;
-        text-transform: uppercase;
         @include trailing-border(1px, 0);
         border-color: $grey;
       }
