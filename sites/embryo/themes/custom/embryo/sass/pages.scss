@@ -14,10 +14,15 @@
  */
 
 body {
-  margin: 0;
+  margin: rhythm(1);
   padding: 0;
-  background: url('../images/letter.jpg') no-repeat left top fixed;
-  @include background-size(cover);
+  // Use .html class to avoid conflict with CK Editor body
+  &.html {
+    margin: 0;
+    padding: 0;
+    background: url('../images/letter.jpg') no-repeat left top fixed;
+    @include background-size(cover);
+  }
 }
 
 
