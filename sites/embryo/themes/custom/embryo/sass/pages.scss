@@ -494,7 +494,7 @@ a.lexicon-term {
 }
 // Content: two columns underneath content, override front because we need double padding to get boxes
 // @see layouts/responsive.scss
-@media all and (min-width: 1em / 16 * 600) and (max-width: 1em / 16 * 799) {
+@media all and (min-width: 1em / 16 * 600) and (max-width: 1em / 16 * 767) {
   .front {
     &.hpszen-primary-downsides-boxes {
       #main {
@@ -522,7 +522,7 @@ a.lexicon-term {
   }
 }
 // Content: asides adjacent to content
-@media all and (min-width: 1em / 16 * 800) {
+@media all and (min-width: 1em / 16 * 768) {
   .pane-hps-browse-panel-pane-list {
     .views-row {
       span.hpszen-responsive {
