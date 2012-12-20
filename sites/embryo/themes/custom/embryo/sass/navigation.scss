@@ -63,6 +63,7 @@ ul li.leaf {
     &.expanded {
       @include border-bottom-radius(0);
     }
+    margin-bottom: 0;
   }
   ul {
     margin: 0;
