@@ -25,7 +25,6 @@ body {
   }
 }
 
-
 #page {
 }
 
@@ -56,21 +55,20 @@ h2,
 h3,
 h4 {
   font-family: $font-headings;
-  color: $blue;
+  color: $base-color-heading;
 }
 a {
   &:link,
   &:visited {
     text-decoration: none;
-    color: $blue;
+    color: $base-color-link;
   }
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: $blue - #222222;
+    color: $base-color-link - #222222;
   }
 }
-
 
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
@@ -119,7 +117,7 @@ a {
     margin-left: rhythm(3);
     @include adjust-font-size-to(1.5 * $base-font-size);
     @include adjust-leading-to(1);
-    color: $blue - #111111;
+    color: $base-color-heading - #111111;
     font-style: italic;
     font-weight: normal;
     @include hpszen-letterpress(1);
@@ -168,7 +166,7 @@ a {
     @include adjust-leading-to(3);
     a {
       padding: rhythm(1);
-      color: $blue - #111111;
+      color: $base-color-link - #111111;
     }
   }
 }
@@ -196,7 +194,6 @@ a {
   @include box-shadow();
 }
 
-
 .region-highlighted {
 }
 
@@ -221,7 +218,7 @@ h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
 }
 tr.even { /* Some tables have rows marked even or odd. */
-  background-color: lighten($blue, 40); /* Drupal core uses a #eee background */
+  background-color: lighten($base-color-accent, 40); /* Drupal core uses a #eee background */
 }
 
 tr.odd {
@@ -405,7 +402,7 @@ a.lexicon-term {
  */
 
 #footer {
-  background-color: $blue;
+  background-color: $base-color-accent;
   margin-top: rhythm(2);
   @include box-shadow();
   color: white;
@@ -478,7 +475,7 @@ a.lexicon-term {
           .more-link {
             @include adjust-leading-to(2);
             a {
-              color: $blue;
+              color: $base-color-link;
             }
           }
           &.pane-hps-news-panel-pane-front-page-news {

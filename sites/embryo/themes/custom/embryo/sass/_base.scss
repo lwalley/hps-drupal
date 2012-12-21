@@ -69,10 +69,11 @@ $font-monospace:   $courier;
 $blue:   #557ebd;
 $grey:   #ebeae6;
 
-$base-background-color:              white;
-$base-font-color:                    black;
-$font-headings-color:                $blue;
-$highlight-font-color:               $blue;
+$base-color-background:              white;
+$base-color-accent:                  $blue;
+$base-color-text:                    black;
+$base-color-link:                    $blue;
+$base-color-heading:                $blue;
 
 $default-text-shadow-color:          rgba(black, 0.5);
 $default-text-shadow-h-offset:       1px;
@@ -88,15 +89,6 @@ $default-box-shadow-v-offset:        2px; // Positive is down.
 $default-box-shadow-blur:            5px;
 $default-box-shadow-spread:          false;
 $default-box-shadow-inset:           false;
-
-$navigation-default-background-color:       $blue;
-$navigation-default-font-color:             white;
-$navigation-hover-background-color:         lighten($navigation-default-background-color, 20%);
-$navigation-hover-font-color:               white;
-$navigation-active-background-color:        lighten($navigation-default-background-color, 10%);
-$navigation-active-font-color:              white;
-$navigation-active-hover-background-color:  lighten($blue, 5%);
-$navigation-active-hover-font-color:        white;
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 1em;

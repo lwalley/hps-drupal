@@ -55,11 +55,11 @@ ul li.leaf {
   }
   h2 {
     @include adjust-font-size-to(1 * $base-font-size);
-    background: $blue - #111111;
-    @include background-image(linear-gradient(center top, $blue - #222222, $blue));
+    background: $base-color-accent - #111111;
+    @include background-image(linear-gradient(center top, $base-color-accent - #222222, $base-color-accent));
     @include rhythm-borders(1px, 0.4);
     @include border-radius(8px, 8px);
-    border-color: $blue;
+    border-color: $base-color-accent;
     &.expanded {
       @include border-bottom-radius(0);
     }
@@ -71,10 +71,10 @@ ul li.leaf {
   }
   li {
     list-style: none;
-    background: $blue - #111111;
-    @include background-image(linear-gradient(center top, $blue - #222222, $blue));
+    background: $base-color-accent - #111111;
+    @include background-image(linear-gradient(center top, $base-color-accent - #222222, $base-color-accent));
     @include rhythm-borders(1px, 0.4);
-    border-color: $blue;
+    border-color: $base-color-accent;
     &.expanded {
       position: relative;
       > a {

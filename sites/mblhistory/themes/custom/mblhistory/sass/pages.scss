@@ -14,13 +14,60 @@
  */
 
 body {
-  margin: 0;
+  margin: rhythm(1);
   padding: 0;
-  background: url('../images/background.jpg') no-repeat left top fixed;
-  @include background-size(cover);
+  // Use .html class to avoid conflict with CK Editor body
+  &.html {
+    margin: 0;
+    padding: 0;
+    background: url('../images/background.jpg') no-repeat left top fixed;
+    @include background-size(cover);
+  }
 }
 
 #page {
+}
+
+@media all and (min-width: 1em / 16 * 961) and (max-width: 1em / 16 * 1023) {
+  #page,
+  .region-bottom {
+    // Applying a max width, 13px is base font size in base theme at this screen width, we're overriding responsive layout
+    // @see responsive.scss
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1em / 13 * 960;
+  }
+}
+@media all and (min-width: 1em / 16 * 1024) {
+  #page,
+  .region-bottom {
+    // Applying a max width, 14px is base font size in base theme at this screen width, we're overriding responsive layout
+    // @see responsive.scss
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1em / 14 * 960;
+  }
+}
+
+// Defaults
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-headings;
+  color: $base-color-heading;
+}
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $base-color-link;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $base-color-link - #222222;
+  }
 }
 
 /*
@@ -30,7 +77,6 @@ body {
 
 #skip-link {
   margin: 0;
-
   a,
   a:visited {
     display: block;
@@ -42,80 +88,95 @@ body {
   }
 }
 
-/*
- * Header
- */
-
-#header {}
-
-#logo { /* Wrapping link for logo */
+// Header: positioning child elements
+#logo {
+  width: auto;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: -1 * rhythm(8);
 }
-
-#name-and-slogan { /* Wrapper for website name and slogan */
-  color: #fff;
-}
-
-#site-name { /* The name of the website */
-  @include single-text-shadow();
-  a:link,
-  a:visited {
-    text-decoration: none;
-    color: #fff;
+#name-and-slogan {
+  h1#site-name {
+    display: inline;
+    @include single-text-shadow();
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: #fff;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      color: #fff;
+    }
   }
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-    color: #fff;
+  h2#site-slogan {
+    display: block;
+    margin-left: rhythm(3);
+    @include adjust-font-size-to(1.5 * $base-font-size);
+    @include adjust-leading-to(1);
+    color: $base-color-heading - #111111;
+    font-style: italic;
+    font-weight: normal;
+    @include hpszen-letterpress(1);
   }
 }
-
-#site-slogan { /* The slogan (or tagline) of a website */
-  color: $highlight-font-color;
-  font-style: italic;
-  font-weight: normal;
-  @include hpszen-letterpress(1);
+@media all and (min-width: 1em / 16 * 481) {
+  #name-and-slogan {
+    h2#site-slogan {
+      margin-left: rhythm(2);
+    }
+  }
+}
+@media all and (min-width: 1em / 16 * 768) {
+  #header {
+    padding-top: rhythm(1);
+    .region-header {
+      margin-top: rhythm(2);
+    }
+  }
+  #name-and-slogan {
+    h1#site-name {
+      @include adjust-font-size-to(3 * $base-font-size);
+      @include adjust-leading-to(0.8);
+    }
+    h2#site-slogan {
+      @include trailer(1);
+      margin-right: -30%;
+    }
+  }
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */
 }
 
-// Header: two column
-@media all and (min-width: 1em / 16 * 900) {
-  $base-font-size:   14px;
-  $base-line-height: 1.5 * $base-font-size;
-  $name-font-size: 3  * $base-font-size;
-  $slogan-font-size: 1.25 * $base-font-size;
-  #header {
-    #logo {
-      height: rhythm(8);
-      left: -1 * rhythm(2);
-    }
-    #name-and-slogan {
-      h1 {
-        font-family: $times-new-roman;
-        font-weight: normal;
-        width: rhythm(25, $name-font-size);
-        margin-top: 0;
-        margin-left: rhythm(10, $name-font-size);
-        @include margin-trailer(2, $name-font-size);
-        small {
-          font-style: italic;
-          font-weight: normal;
-        }
-      }
-      h2 {
-        @include adjust-font-size-to($slogan-font-size);
-        @include adjust-leading-to(1.5, $slogan-font-size);
-        margin-left: rhythm(16, $slogan-font-size);
-        width: rhythm(19, $slogan-font-size);
-        margin-top: -1 * rhythm(2.5, $slogan-font-size);
-      }
+#secondary-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: right;
+  .block-menu .block-title,
+  .block-menu-block .block-title {
+    @include element-invisible;
+  }
+  ul {
+    @include delimited-list('|');
+    @include adjust-leading-to(3);
+    a {
+      padding: rhythm(1);
+      color: $base-color-link - #111111;
     }
   }
 }
-
-
-
+@media all and (min-width: 1em / 16 * 1024) {
+  #name-and-slogan {
+    h1 {
+      @include adjust-leading-to(0.8);
+    }
+  }
+}
 
 /*
  * Main (container for everything else)
@@ -129,7 +190,7 @@ body {
  */
 #content {
   background-color: white;
-  @include border-radius();
+  @include border-radius(8px, 8px);
   @include box-shadow();
 }
 
@@ -155,15 +216,27 @@ h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
-  margin: 0;
 }
-
 tr.even { /* Some tables have rows marked even or odd. */
-  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  background-color: lighten($base-color-accent, 40); /* Drupal core uses a #eee background */
 }
 
 tr.odd {
-  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  background-color: white; /* Drupal core uses a #eee background */
+}
+thead {
+  border-bottom: 3px solid $grey;
+}
+th {
+  img {
+    vertical-align: middle;
+    padding-left: rhythm(0.2);
+  }
+}
+td {
+  vertical-align: top;
+  padding: rhythm(0.5);
+  @include adjust-leading-to(1);
 }
 
 div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
@@ -207,6 +280,12 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 .region-content { /* Wrapper for the actual page content */
 }
 
+.node ul,
+.panel-hpszen-primary-box ul,
+.region-footer ul {
+  @include adjust-leading-to(1);
+}
+
 ul.inline { /* List of links generated by theme_links() */
   display: inline;
   padding: 0;
@@ -228,11 +307,74 @@ span.field-label { /* The inline field label used by the Fences module */
     padding: 0 0.5em;
   }
 }
-
+a.lexicon-term {
+  text-decoration: none;
+  border-bottom: 1px dotted black;
+}
 .feed-icon { /* The link to the RSS or Atom feed for the current list of content */
 }
 
 .more-link { /* Aggregator, blog, and forum more link */
+}
+.print_html,
+.print_mail,
+.print_pdf {
+  display: block;
+  float: left;
+  padding-right: rhythm(1);
+  @include leader(2);
+  @include trailer(1);
+  @include adjust-font-size-to(0.9 * $base-font-size);
+  @include adjust-leading-to(2);
+  margin-left: 0;
+  a {
+    @include hpszen-letterpress();
+    color: black;
+    @include hpszen-button();
+  }
+}
+#block-sharethis-sharethis-block {
+  @include leading-border();
+  border-color: $grey;
+}
+
+// Search results. Browse by listings.
+.page-search,
+.pane-hps-browse-panel-pane-list {
+  .views-row {
+    h2 {
+      clear: both;
+      @include padding-leader(2);
+      border-bottom: 1px solid $grey;
+      @include trailer(0.5);
+    }
+    &.views-row-first {
+      h2 {
+        @include padding-leader(0.5);
+      }
+    }
+  }
+}
+
+.pane-hps-browse-panel-pane-index {
+  td {
+    &:nth-child(2),
+    &:nth-child(4) {
+      width: 12%;
+    }
+    &:nth-child(5) {
+      width: 15%
+    }
+  }
+}
+.pane-hps-browse-panel-pane-gallery {
+  h2 {
+    @include adjust-font-size-to(1.2 * $base-font-size);
+    @include adjust-leading-to(1);
+  }
+  .field-dspace-bitstream-url {
+    width: 100%;
+  }
 }
 
 /*
@@ -260,7 +402,7 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 #footer {
-  background-color: $teal;
+  background-color: $base-color-accent;
   margin-top: rhythm(2);
   @include box-shadow();
   color: white;
@@ -276,6 +418,11 @@ span.field-label { /* The inline field label used by the Fences module */
         img {
           max-height: 100%;
         }
+        .hpszen-responsive {
+          &.hps-minor {
+            height: 100%;
+          }
+        }
       }
     }
   }
@@ -287,3 +434,126 @@ span.field-label { /* The inline field label used by the Fences module */
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 }
+
+// Override grid layout on front page because we need double padding to get boxes
+.front {
+  &.hpszen-primary-downsides-boxes {
+    #content {
+      padding-bottom: 0;
+      .panel-hpszen-primary-box,
+      .panel-hpszen-aside-box,
+      .panel-hpszen-downside-box {
+        // Reset padding to smaller size
+        .panel-pane {
+          @include zen-grid-item-base($zen-gutter-width);
+        }
+      }
+      .panel-hpszen-aside-box {
+        padding-left: $zen-gutter-width / 2;
+        padding-right: $zen-gutter-width / 2;
+        .panel-pane {
+          @include background-image(linear-gradient($grey, $grey - #111111));
+          border: 1px solid $grey;
+          @include border-radius(3px, 3px);
+          @include leader(1);
+          @include adjust-leading-to(1);
+          h2 {
+            @include hpszen-adjust-font-size-and-rhythm(1.7);
+            @include leader(0.25);
+            @include trailer(0.25);
+          }
+          ul {
+            margin: 0;
+          }
+          a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .more-link {
+            @include adjust-leading-to(2);
+            a {
+              color: $base-color-link;
+            }
+          }
+          &.pane-hps-news-panel-pane-front-page-news {
+            ul {
+              list-style-type: none;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Content: two columns underneath content, override front because we need double padding to get boxes
+// @see layouts/responsive.scss
+@media all and (min-width: 1em / 16 * 600) and (max-width: 1em / 16 * 767) {
+  .front {
+    &.hpszen-primary-downsides-boxes {
+      #main {
+        #content {
+          .panel-hpszen-aside-box {
+            .panel-pane {
+              &:nth-of-type(1) {
+                width: 48%;
+              }
+              &:nth-of-type(2) {
+                clear: none;
+                width: 48%;
+                margin-left: 52%;
+              }
+              &:nth-of-type(3) {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Content: asides adjacent to content
+@media all and (min-width: 1em / 16 * 768) {
+  .pane-hps-browse-panel-pane-list {
+    .views-row {
+      span.hpszen-responsive {
+        clear: both;
+        float: left;
+        padding-right: rhythm(1);
+        width: 50%;
+      }
+    }
+  }
+
+  .front {
+    &.hpszen-primary-downsides-boxes {
+      #main {
+        #content {
+          .panel-hpszen-primary-box {
+            width: 58.66667%;
+            margin-right: -58.66667%;
+          }
+          .panel-hpszen-aside-box {
+            padding-left: 0;
+            padding-right: 0;
+            width: 39.33333%;
+            margin-left: 58.66667%;
+            .panel-pane {
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
