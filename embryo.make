@@ -10,11 +10,11 @@ defaults[projects][subdir] = "custom"
 ; Theme
 projects[embryo][type] = theme
 projects[embryo][download][type] = get
-projects[embryo][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
-projects[embryo][download][subtree] = hps-drupal-<replaceme:tagname>/sites/embryo/themes/custom/embryo
+projects[embryo][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2012.12.20.01.zip
+projects[embryo][download][subtree] = hps-drupal-2012.12.20.01/sites/embryo/themes/custom/embryo
 
 ; Modules
 projects[embryo_dspaced][type] = module
 projects[embryo_dspaced][download][type] = get
-projects[embryo_dspaced][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
-projects[embryo_dspaced][download][subtree] = hps-drupal-<replaceme:tagname>/sites/embryo/modules/custom/embryo_dspaced
+projects[embryo_dspaced][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2012.12.20.01.zip
+projects[embryo_dspaced][download][subtree] = hps-drupal-2012.12.20.01/sites/embryo/modules/custom/embryo_dspaced
