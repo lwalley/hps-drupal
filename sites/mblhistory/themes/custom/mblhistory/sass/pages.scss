@@ -218,7 +218,7 @@ h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
 }
 tr.even { /* Some tables have rows marked even or odd. */
-  background-color: lighten($base-color-accent, 40); /* Drupal core uses a #eee background */
+  background-color: lighten($base-color-accent, 75); /* Drupal core uses a #eee background */
 }
 
 tr.odd {
