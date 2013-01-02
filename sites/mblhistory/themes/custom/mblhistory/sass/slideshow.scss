@@ -15,7 +15,7 @@
 
 // @todo Investigate auto zoom and pan for larger slides
 
-@mixin slide-vertical-rhythm($slide-lines: 32, $image-lines: 13, $pager-lines: 0, $clear: false) {
+@mixin slide-vertical-rhythm($slide-lines: 36, $image-lines: 10, $pager-lines: 0, $clear: false) {
   .cycling {
     ul.slides {
       > li {
@@ -180,18 +180,47 @@
     max-width: 1em / 14 * 525;
   }
 }
-
-// Establish default vertical rhythm for slides in mobile first single layout.
+// Adjust image and slide heights for different screen widths, to avoid gaps between image and text
 @include slide-vertical-rhythm();
-
-@media screen and (min-width: 1em / 16 * 400) and (max-width: 1em / 16 * 449) {
-  @include slide-vertical-rhythm(31, 17);
+@media screen and (min-width: 1em / 16 * 315) and (max-width: 1em / 16 * 349) {
+  @include slide-vertical-rhythm(27, 11);
 }
-
-@media screen and (min-width: 1em / 16 * 450) and (max-width: 1em / 16 * 1023) {
-  @include slide-vertical-rhythm(32, 19);
+@media screen and (min-width: 1em / 16 * 345) and (max-width: 1em / 16 * 369) {
+  @include slide-vertical-rhythm(27, 12);
 }
-// Content: adjacent column
-@media screen and (min-width: 1em / 16 * 1024) {
+@media screen and (min-width: 1em / 16 * 370) and (max-width: 1em / 16 * 394) {
+  @include slide-vertical-rhythm(27, 13);
+}
+@media screen and (min-width: 1em / 16 * 395) and (max-width: 1em / 16 * 419) {
+  @include slide-vertical-rhythm(28, 14);
+}
+@media screen and (min-width: 1em / 16 * 420) and (max-width: 1em / 16 * 449) {
+  @include slide-vertical-rhythm(28, 15);
+}
+@media screen and (min-width: 1em / 16 * 450) and (max-width: 1em / 16 * 499) {
+  @include slide-vertical-rhythm(28, 16);
+}
+@media screen and (min-width: 1em / 16 * 500) and (max-width: 1em / 16 * 554) {
+  @include slide-vertical-rhythm(29, 17);
+}
+@media screen and (min-width: 1em / 16 * 555) and (max-width: 1em / 16 * 767) {
   @include slide-vertical-rhythm(31, 19);
+}
+@media screen and (min-width: 1em / 16 * 768) and (max-width: 1em / 16 * 794) {
+  @include slide-vertical-rhythm(28, 15);
+}
+@media screen and (min-width: 1em / 16 * 795) and (max-width: 1em / 16 * 839) {
+  @include slide-vertical-rhythm(28, 16);
+}
+@media screen and (min-width: 1em / 16 * 840) and (max-width: 1em / 16 * 884) {
+  @include slide-vertical-rhythm(29, 17);
+}
+@media screen and (min-width: 1em / 16 * 885) and (max-width: 1em / 16 * 929) {
+  @include slide-vertical-rhythm(30, 18);
+}
+@media screen and (min-width: 1em / 16 * 930) and (max-width: 1em / 16 * 1023) {
+  @include slide-vertical-rhythm(31, 19);
+}
+@media screen and (min-width: 1em / 16 * 1024) {
+  @include slide-vertical-rhythm(30, 18);
 }
