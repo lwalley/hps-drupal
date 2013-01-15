@@ -93,7 +93,7 @@
 }
 @mixin hpszen-input($width: rhythm(10), $from: #ddd, $to: #fff) {
   width: $width;
-  @include rhythm-borders(1px, 0.5);
+  @include rhythm-borders(1px, 0.4);
   border-color: $from - #111111;
   @include background-image(linear-gradient($from, $to));
 }

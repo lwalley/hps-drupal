@@ -90,17 +90,18 @@ a {
 
 // Header: positioning child elements
 #logo {
-  width: auto;
+  width: rhythm(9);
   display: block;
   z-index: -1;
   position: absolute;
   top: 0;
-  left: -1 * rhythm(8);
+  left: -1 * rhythm(4);
 }
 #name-and-slogan {
+  padding-left: rhythm(1.5);
   h1#site-name {
     display: inline;
-    @include single-text-shadow();
+    @include single-text-shadow(1px, 1px, 2px, false, rgba(black, 0.8));
     a:link,
     a:visited {
       text-decoration: none;
@@ -110,6 +111,19 @@ a {
     a:focus {
       text-decoration: underline;
       color: #fff;
+    }
+    font-weight: normal;
+    font-family: $times;
+    span {
+      > span {
+        &:first-of-type {
+          font-size: 0.7em;
+          font-style: italic;
+        }
+        &:last-of-type {
+          display: block;
+        }
+      }
     }
   }
   h2#site-slogan {
@@ -125,9 +139,15 @@ a {
 }
 @media all and (min-width: 1em / 16 * 481) {
   #name-and-slogan {
-    h2#site-slogan {
-      margin-left: rhythm(2);
-    }
+    padding-left: rhythm(2);
+  }
+}
+@media all and (min-width: 1em / 16 * 620) and (max-width: 1em / 16 * 767) {
+  #logo {
+    width: rhythm(11);
+  }
+  #name-and-slogan {
+    padding-left: rhythm(7);
   }
 }
 @media all and (min-width: 1em / 16 * 768) {
@@ -137,14 +157,31 @@ a {
       margin-top: rhythm(2);
     }
   }
+  #logo {
+    width: rhythm(13);
+    left: -1 * rhythm(6.5);
+  }
   #name-and-slogan {
+    padding-left: rhythm(7);
     h1#site-name {
-      @include adjust-font-size-to(3 * $base-font-size);
       @include adjust-leading-to(0.8);
     }
     h2#site-slogan {
       @include trailer(1);
       margin-right: -30%;
+    }
+  }
+}
+@media all and (min-width: 1em / 16 * 1024) {
+  #logo {
+    width: auto;
+    left: -1 * rhythm(10);
+  }
+  #name-and-slogan {
+    padding-left: rhythm(6.5);
+    @include padding-leader(2);
+    h1 {
+      @include adjust-leading-to(0.8);
     }
   }
 }
@@ -167,13 +204,6 @@ a {
     a {
       padding: rhythm(1);
       color: $base-color-link - #111111;
-    }
-  }
-}
-@media all and (min-width: 1em / 16 * 1024) {
-  #name-and-slogan {
-    h1 {
-      @include adjust-leading-to(0.8);
     }
   }
 }

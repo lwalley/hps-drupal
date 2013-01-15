@@ -147,6 +147,8 @@ function mblhistory_preprocess_html(&$variables, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 function mblhistory_preprocess_page(&$variables, $hook) {
+  $variables['site_name'] = str_replace('of the', '<span>of the</span>', $variables['site_name']);
+  $variables['site_name'] = str_replace('Marine Biological Laboratory', '<span>Marine Biological Laboratory</span>', $variables['site_name']);
   $variables['logo'] = base_path() . path_to_theme() . '/logo.gif';
 }
 
