@@ -8,3 +8,6 @@ sites/*/private
 
 # Ignore sass-cache files from custom themes.
 .sass-cache/
+
+# Ignore modules managed by other repositories
+sites/all/modules
