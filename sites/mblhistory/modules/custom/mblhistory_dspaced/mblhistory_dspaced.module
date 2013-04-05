@@ -19,6 +19,13 @@ function mblhistory_dspaced_dspaced_entities_default() {
           "of the MBL History community."),
         'machine_name' => 'dc_subject_mblhistory',
       ),
+      'dc_type_mblhistory' => array(
+        'name' => t("DC Type MBL History"),
+        'description' => t("MBL History qualifier of the Dublin Core type property " .
+          "Contains keywords that describe the type of a resource in the context " .
+          "of the MBL History community."),
+        'machine_name' => 'dc_type_mblhistory',
+      ),
     ),
   );
 
@@ -59,6 +66,22 @@ function _mblhistory_dspaced_fields() {
       ),
       'xpath' => "metadata/metadataentity[schema = 'dc' and " .
                  "element = 'subject' and qualifier = 'mblhistory']/value",
+    ),
+    'dc_type_mblhistory' => array(
+      'field_name' => 'dc_type_mblhistory',
+      'label' => t('DC Type MBL History'),
+      'cardinality' => 1,
+      'type' => 'taxonomy_term_reference',
+      'settings' => array(
+        'allowed_values' => array(
+          array(
+            'vocabulary' => 'dc_type_mblhistory',
+            'parent' => 0,
+          ),
+        ),
+      ),
+      'xpath' => "metadata/metadataentity[schema = 'dc' and " .
+                 "element = 'type' and qualifier = 'mblhistory']/value",
     ),
   );
 }

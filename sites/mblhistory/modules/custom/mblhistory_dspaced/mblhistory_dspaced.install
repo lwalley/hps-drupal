@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Install file for MBL History DSpaced module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function mblhistory_dspaced_install() {
+  // We leave the creation of fields up to dspaced_entities module, so nothing
+  // to do here
+  // @see hook_dspaced_entities_default().
+  // @see dspaced_entities_modules_installed().
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function mblhistory_dspaced_uninstall() {
+  // We leave the removal of fields up to dspaced_entities module, so nothing
+  // to do here
+  // @see hook_dspaced_entities_default().
+  // @see dspaced_entities_modules_uninstalled().
+}
+
+/**
+ * Implements hook_update_N().
+ * Creates the DSpace DC Type MBL History vocabulary, field and DSpace Item instance.
+ */
+function mblhistory_dspaced_update_7001() {
+  // Load module and includes to get access to helper functions and hooks.
+  drupal_load('module', 'mblhistory_dspaced');
+  drupal_load('module', 'dspaced_entities');
+  try {
+    $entities = module_invoke('mblhistory_dspaced', 'dspaced_entities_default');
+    $to_add['bundles']['taxonomy_term']['dc_type_mblhistory'] = $entities['bundles']['taxonomy_term']['dc_type_mblhistory'];
+    $to_add['fields']['dc_type_mblhistory'] = $entities['fields']['dc_type_mblhistory'];
+    $to_add['instances']['node']['dspaced_entities_item'] = $to_add['fields'];
+    _dspaced_entities_install_bundles($to_add['bundles']);
+    _dspaced_entities_install_fields($to_add['fields']);
+    _dspaced_entities_install_instances($to_add['instances']);
+  }
+  catch (Exception $e) {
+    throw new DrupalUpdateException($e->getMessage());
+  }
+}
