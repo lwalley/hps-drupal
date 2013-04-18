@@ -1,1 +1,836 @@
-span.hpszen-responsive.hps-original,span.hpszen-responsive.hps-principal,span.hpszen-responsive.hps-supplemental,span.hpszen-responsive.hps-minor,span.hpszen-responsive.hps-uniform{display:inline-block}span.hpszen-responsive.hps-original img,span.hpszen-responsive.hps-principal img,span.hpszen-responsive.hps-supplemental img,span.hpszen-responsive.hps-minor img,span.hpszen-responsive.hps-uniform img{max-width:100%}span.hpszen-responsive.hps-original{width:29.16667em}span.hpszen-responsive.hps-principal{width:29.16667em}span.hpszen-responsive.hps-supplemental{width:16.66667em}span.hpszen-responsive.hps-minor{width:8.33333em}span.hpszen-responsive.hps-uniform{width:16.66667em}#page:before,#page:after,.region-bottom:before,.region-bottom:after{content:"";display:table}#page:after,.region-bottom:after{clear:both}#page{padding-bottom:4.5em}#header,#main,#footer{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%;padding-left:0;padding-right:0}#header{position:relative;padding-top:3em}#name-and-slogan,#secondary-menu,.region-header{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word}#name-and-slogan,.region-header{float:left;width:100%;margin-left:0%;margin-right:-100%}#secondary-menu{float:left;width:66.66667%;margin-left:33.33333%;margin-right:-100%}.region-header{clear:left}#logo{width:33.33333%;padding-left:0;padding-right:20px;margin-right:10px}#navigation{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}#content,.sidebars{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}.hpszen-primary-box #content,.hpszen-primary-aside-boxes #content,.hpszen-primary-upside-boxes #content,.hpszen-primary-downsides-boxes #content{padding-left:0;padding-right:0;padding-bottom:3em}.hpszen-primary-box #content .region-highlighted,.hpszen-primary-box #content>h1#page-title,.hpszen-primary-box #content .breadcrumb,.hpszen-primary-box #content .messages,.hpszen-primary-box #content>ul.tabs,.hpszen-primary-box #content .region-help,.hpszen-primary-box #content>ul.action-links,.hpszen-primary-box #content>.block,.hpszen-primary-box #content .panel-hpszen-primary-box,.hpszen-primary-box #content .panel-hpszen-aside-box,.hpszen-primary-box #content .panel-hpszen-upside-box,.hpszen-primary-box #content .panel-hpszen-downside-box,.hpszen-primary-aside-boxes #content .region-highlighted,.hpszen-primary-aside-boxes #content>h1#page-title,.hpszen-primary-aside-boxes #content .breadcrumb,.hpszen-primary-aside-boxes #content .messages,.hpszen-primary-aside-boxes #content>ul.tabs,.hpszen-primary-aside-boxes #content .region-help,.hpszen-primary-aside-boxes #content>ul.action-links,.hpszen-primary-aside-boxes #content>.block,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-upside-boxes #content .region-highlighted,.hpszen-primary-upside-boxes #content>h1#page-title,.hpszen-primary-upside-boxes #content .breadcrumb,.hpszen-primary-upside-boxes #content .messages,.hpszen-primary-upside-boxes #content>ul.tabs,.hpszen-primary-upside-boxes #content .region-help,.hpszen-primary-upside-boxes #content>ul.action-links,.hpszen-primary-upside-boxes #content>.block,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-downsides-boxes #content .region-highlighted,.hpszen-primary-downsides-boxes #content>h1#page-title,.hpszen-primary-downsides-boxes #content .breadcrumb,.hpszen-primary-downsides-boxes #content .messages,.hpszen-primary-downsides-boxes #content>ul.tabs,.hpszen-primary-downsides-boxes #content .region-help,.hpszen-primary-downsides-boxes #content>ul.action-links,.hpszen-primary-downsides-boxes #content>.block,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}.hpszen-primary-box #content .panel-hpszen-primary-box,.hpszen-primary-box #content .panel-hpszen-aside-box,.hpszen-primary-box #content .panel-hpszen-upside-box,.hpszen-primary-box #content .panel-hpszen-downside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box{padding-left:0;padding-right:0}.hpszen-primary-box #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box .panel-pane{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}#content{padding-top:1.5em;padding-bottom:1.5em}.toolbar #page{position:relative;padding-top:1.2em}#footer{padding-left:0;padding-right:0;margin-top:0em;padding-top:1.5em;padding-bottom:1.5em;margin-bottom:0em}#footer .block{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}@media all and (min-width: 30.0625em) and (max-width: 63.9375em){#content,.sidebars{padding-left:30px;padding-right:30px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}.hpszen-primary-box #content,.hpszen-primary-aside-boxes #content,.hpszen-primary-upside-boxes #content,.hpszen-primary-downsides-boxes #content{padding-left:0;padding-right:0;padding-bottom:3em}.hpszen-primary-box #content .region-highlighted,.hpszen-primary-box #content>h1#page-title,.hpszen-primary-box #content .breadcrumb,.hpszen-primary-box #content .messages,.hpszen-primary-box #content>ul.tabs,.hpszen-primary-box #content .region-help,.hpszen-primary-box #content>ul.action-links,.hpszen-primary-box #content>.block,.hpszen-primary-box #content .panel-hpszen-primary-box,.hpszen-primary-box #content .panel-hpszen-aside-box,.hpszen-primary-box #content .panel-hpszen-upside-box,.hpszen-primary-box #content .panel-hpszen-downside-box,.hpszen-primary-aside-boxes #content .region-highlighted,.hpszen-primary-aside-boxes #content>h1#page-title,.hpszen-primary-aside-boxes #content .breadcrumb,.hpszen-primary-aside-boxes #content .messages,.hpszen-primary-aside-boxes #content>ul.tabs,.hpszen-primary-aside-boxes #content .region-help,.hpszen-primary-aside-boxes #content>ul.action-links,.hpszen-primary-aside-boxes #content>.block,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-upside-boxes #content .region-highlighted,.hpszen-primary-upside-boxes #content>h1#page-title,.hpszen-primary-upside-boxes #content .breadcrumb,.hpszen-primary-upside-boxes #content .messages,.hpszen-primary-upside-boxes #content>ul.tabs,.hpszen-primary-upside-boxes #content .region-help,.hpszen-primary-upside-boxes #content>ul.action-links,.hpszen-primary-upside-boxes #content>.block,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-downsides-boxes #content .region-highlighted,.hpszen-primary-downsides-boxes #content>h1#page-title,.hpszen-primary-downsides-boxes #content .breadcrumb,.hpszen-primary-downsides-boxes #content .messages,.hpszen-primary-downsides-boxes #content>ul.tabs,.hpszen-primary-downsides-boxes #content .region-help,.hpszen-primary-downsides-boxes #content>ul.action-links,.hpszen-primary-downsides-boxes #content>.block,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box{padding-left:30px;padding-right:30px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}.hpszen-primary-box #content .panel-hpszen-primary-box,.hpszen-primary-box #content .panel-hpszen-aside-box,.hpszen-primary-box #content .panel-hpszen-upside-box,.hpszen-primary-box #content .panel-hpszen-downside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box{padding-left:0;padding-right:0}.hpszen-primary-box #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box .panel-pane{padding-left:30px;padding-right:30px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}html{font-size:81.25%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;line-height:1.95em}h1{font-size:2.6em;line-height:1.15385em;margin-top:0.57692em;margin-bottom:0.57692em}h2{font-size:1.95em;line-height:1.53846em;margin-top:0.76923em;margin-bottom:0.76923em}h3{font-size:1.521em;line-height:1.97239em;margin-top:0.98619em;margin-bottom:0.98619em}h4,h5,h6{font-size:1.3em;line-height:2.30769em;margin-top:1.15385em;margin-bottom:1.15385em}pre,code,kbd,samp,tt,var{font-size:1.3em;line-height:2.30769em}span.hpszen-responsive.hps-original{width:40.38462em}span.hpszen-responsive.hps-principal{width:40.38462em}span.hpszen-responsive.hps-supplemental{width:23.07692em}span.hpszen-responsive.hps-minor{width:11.53846em}span.hpszen-responsive.hps-uniform{width:23.07692em}}@media all and (min-width: 64em){#content,.sidebars{padding-left:45px;padding-right:45px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}.hpszen-primary-box #content,.hpszen-primary-aside-boxes #content,.hpszen-primary-upside-boxes #content,.hpszen-primary-downsides-boxes #content{padding-left:0;padding-right:0;padding-bottom:3em}.hpszen-primary-box #content .region-highlighted,.hpszen-primary-box #content>h1#page-title,.hpszen-primary-box #content .breadcrumb,.hpszen-primary-box #content .messages,.hpszen-primary-box #content>ul.tabs,.hpszen-primary-box #content .region-help,.hpszen-primary-box #content>ul.action-links,.hpszen-primary-box #content>.block,.hpszen-primary-box #content .panel-hpszen-primary-box,.hpszen-primary-box #content .panel-hpszen-aside-box,.hpszen-primary-box #content .panel-hpszen-upside-box,.hpszen-primary-box #content .panel-hpszen-downside-box,.hpszen-primary-aside-boxes #content .region-highlighted,.hpszen-primary-aside-boxes #content>h1#page-title,.hpszen-primary-aside-boxes #content .breadcrumb,.hpszen-primary-aside-boxes #content .messages,.hpszen-primary-aside-boxes #content>ul.tabs,.hpszen-primary-aside-boxes #content .region-help,.hpszen-primary-aside-boxes #content>ul.action-links,.hpszen-primary-aside-boxes #content>.block,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-upside-boxes #content .region-highlighted,.hpszen-primary-upside-boxes #content>h1#page-title,.hpszen-primary-upside-boxes #content .breadcrumb,.hpszen-primary-upside-boxes #content .messages,.hpszen-primary-upside-boxes #content>ul.tabs,.hpszen-primary-upside-boxes #content .region-help,.hpszen-primary-upside-boxes #content>ul.action-links,.hpszen-primary-upside-boxes #content>.block,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-downsides-boxes #content .region-highlighted,.hpszen-primary-downsides-boxes #content>h1#page-title,.hpszen-primary-downsides-boxes #content .breadcrumb,.hpszen-primary-downsides-boxes #content .messages,.hpszen-primary-downsides-boxes #content>ul.tabs,.hpszen-primary-downsides-boxes #content .region-help,.hpszen-primary-downsides-boxes #content>ul.action-links,.hpszen-primary-downsides-boxes #content>.block,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box{padding-left:45px;padding-right:45px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}.hpszen-primary-box #content .panel-hpszen-primary-box,.hpszen-primary-box #content .panel-hpszen-aside-box,.hpszen-primary-box #content .panel-hpszen-upside-box,.hpszen-primary-box #content .panel-hpszen-downside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box{padding-left:0;padding-right:0}.hpszen-primary-box #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-box #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-upside-boxes #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-upside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box .panel-pane{padding-left:45px;padding-right:45px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;clear:left;float:left;width:100%;margin-left:0%;margin-right:-100%}html{font-size:87.5%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;line-height:2.1em}h1{font-size:2.8em;line-height:1.60714em;margin-top:0.53571em;margin-bottom:0.53571em}h2{font-size:2.1em;line-height:1.42857em;margin-top:0.71429em;margin-bottom:0.71429em}h3{font-size:1.638em;line-height:1.8315em;margin-top:0.91575em;margin-bottom:0.91575em}h4,h5,h6{font-size:1.4em;line-height:2.14286em;margin-top:1.07143em;margin-bottom:1.07143em}pre,code,kbd,samp,tt,var{font-size:1.4em;line-height:2.14286em}span.hpszen-responsive.hps-original{width:53.84615em}span.hpszen-responsive.hps-principal{width:53.84615em}span.hpszen-responsive.hps-supplemental{width:30.76923em}span.hpszen-responsive.hps-minor{width:15.38462em}span.hpszen-responsive.hps-uniform{width:30.76923em}}@media all and (min-width: 48em){#header #name-and-slogan{float:left;width:66.66667%;margin-left:0%;margin-right:-66.66667%}#header .region-header,#header #secondary-menu{float:left;width:33.33333%;margin-left:66.66667%;margin-right:-100%}#header .region-header{clear:none}}@media all and (min-width: 43.6875em){#navigation{margin-bottom:1.5em}#navigation .block-menu .block-title,#navigation .block-menu-block .block-title{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px, 1px, 1px, 1px)}#navigation .block-menu>ul{float:left}#navigation .block-menu>ul>li{float:left;list-style-position:inside}}@media all and (min-width: 37.5em) and (max-width: 47.9375em){#content .panel-hpszen-downside-box,#content .panel-hpszen-aside-box{padding-left:0;padding-right:0}#content .panel-hpszen-downside-box .panel-pane,#content .panel-hpszen-aside-box .panel-pane{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word}#content .panel-hpszen-downside-box .panel-pane:nth-child(2n+1),#content .panel-hpszen-aside-box .panel-pane:nth-child(2n+1){float:left;width:50%;margin-left:0%;margin-right:-50%;clear:left}#content .panel-hpszen-downside-box .panel-pane:nth-child(2n),#content .panel-hpszen-aside-box .panel-pane:nth-child(2n){float:left;width:50%;margin-left:50%;margin-right:-100%;clear:none}}@media all and (min-width: 48em){.hpszen-primary-aside-boxes #content .panel-hpszen-primary-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-primary-box{float:left;width:66.66667%;margin-left:0%;margin-right:-66.66667%}.hpszen-primary-aside-boxes #content .panel-hpszen-aside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-aside-box{float:left;width:33.33333%;margin-left:66.66667%;margin-right:-100%;clear:none}.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box{padding-left:0;padding-right:0}.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box .panel-pane,.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box .panel-pane{padding-left:15px;padding-right:15px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word}.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box .panel-pane:nth-child(3n+1),.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box .panel-pane:nth-child(3n+1){float:left;width:33.33333%;margin-left:0%;margin-right:-33.33333%;clear:left}.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box .panel-pane:nth-child(2n),.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box .panel-pane:nth-child(2n){float:left;width:33.33333%;margin-left:33.33333%;margin-right:-66.66667%;clear:none}.hpszen-primary-aside-boxes #content .panel-hpszen-downside-box .panel-pane:nth-child(3n),.hpszen-primary-downsides-boxes #content .panel-hpszen-downside-box .panel-pane:nth-child(3n){float:left;width:33.33333%;margin-left:66.66667%;margin-right:-100%;clear:none}.hpszen-primary-upside-boxes #content .panel-hpszen-primary-box{float:left;width:66.66667%;margin-left:0%;margin-right:-66.66667%;clear:none}.hpszen-primary-upside-boxes #content .panel-hpszen-upside-box{float:left;width:33.33333%;margin-left:66.66667%;margin-right:-100%}}@media all and (min-width: 31.25em) and (max-width: 43.6875em){#footer .block{clear:none}#footer .block:nth-child(2n+1){float:left;width:50%;margin-left:0%;margin-right:-50%;clear:left}#footer .block:nth-child(2n){float:left;width:50%;margin-left:50%;margin-right:-100%}}@media all and (min-width: 43.75em){#footer .block{clear:none}#footer .block:nth-child(3n+1){float:left;width:33.33333%;margin-left:0%;margin-right:-33.33333%;clear:left}#footer .block:nth-child(3n){float:left;width:33.33333%;margin-left:33.33333%;margin-right:-66.66667%}#footer .block:nth-child(2n){float:left;width:33.33333%;margin-left:66.66667%;margin-right:-100%}}Messages icons need some room .messages,so we override grid padding #content .messages{padding-left:50px !important}
+/**
+ * @file
+ * Positioning for responsive layout.
+ *
+ * Uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/* line 82, ../images/icons-small/*.png */
+.icons-small-sprite {
+  background: url('../../images/../images/icons-small-se6519942e6.png') no-repeat;
+}
+
+/* line 25, ../../sass/layouts/responsive.scss */
+span.hpszen-responsive.hps-original, span.hpszen-responsive.hps-principal, span.hpszen-responsive.hps-supplemental, span.hpszen-responsive.hps-minor, span.hpszen-responsive.hps-uniform {
+  display: inline-block;
+}
+/* line 27, ../../sass/layouts/responsive.scss */
+span.hpszen-responsive.hps-original img, span.hpszen-responsive.hps-principal img, span.hpszen-responsive.hps-supplemental img, span.hpszen-responsive.hps-minor img, span.hpszen-responsive.hps-uniform img {
+  max-width: 100%;
+}
+
+/* line 34, ../../sass/layouts/responsive.scss */
+span.hpszen-responsive.hps-original {
+  width: 29.16667em;
+}
+/* line 37, ../../sass/layouts/responsive.scss */
+span.hpszen-responsive.hps-principal {
+  width: 29.16667em;
+}
+/* line 40, ../../sass/layouts/responsive.scss */
+span.hpszen-responsive.hps-supplemental {
+  width: 16.66667em;
+}
+/* line 43, ../../sass/layouts/responsive.scss */
+span.hpszen-responsive.hps-minor {
+  width: 8.33333em;
+}
+/* line 46, ../../sass/layouts/responsive.scss */
+span.hpszen-responsive.hps-uniform {
+  width: 16.66667em;
+}
+
+/* line 120, ../../sass/_custom.scss */
+html {
+  font-size: 75%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+.section:before, .section:after,
+#content > .block:before,
+#content > .block:after,
+#content > .node-page:before,
+#content > .node-page:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+.section:after,
+#content > .block:after,
+#content > .node-page:after {
+  clear: both;
+}
+
+/* line 63, ../../sass/layouts/responsive.scss */
+#header .section {
+  position: relative;
+  padding-top: 4.5em;
+}
+/* line 69, ../../sass/layouts/responsive.scss */
+#header #brand,
+#header #secondary-menu,
+#header .region-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+}
+/* line 73, ../../sass/layouts/responsive.scss */
+#header .region-header {
+  clear: left;
+}
+
+/* line 83, ../../sass/layouts/responsive.scss */
+.toolbar #header
+.section {
+  padding-top: 5.7em;
+}
+
+/* line 88, ../../sass/layouts/responsive.scss */
+#navigation {
+  z-index: 98;
+}
+/* line 90, ../../sass/layouts/responsive.scss */
+#navigation .region-navigation {
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  clear: left;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 96, ../../sass/layouts/responsive.scss */
+#navigation a {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: block;
+}
+/* line 101, ../../sass/layouts/responsive.scss */
+#navigation h2 {
+  margin: 0.75em 0;
+  overflow: hidden;
+}
+/* line 104, ../../sass/layouts/responsive.scss */
+#navigation h2 a {
+  float: right;
+  padding: 0;
+  margin: 0 0.75em;
+}
+/* line 110, ../../sass/layouts/responsive.scss */
+#navigation ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 115, ../../sass/layouts/responsive.scss */
+#navigation li.expanded {
+  position: relative;
+}
+/* line 117, ../../sass/layouts/responsive.scss */
+#navigation li.expanded > a {
+  margin-right: 3em;
+}
+/* line 119, ../../sass/layouts/responsive.scss */
+#navigation li.expanded > a.submenu-toggle {
+  margin-right: 0;
+  text-align: center;
+  width: 1.5em;
+  position: absolute;
+  right: 0;
+}
+
+/* line 133, ../../sass/layouts/responsive.scss */
+#main .section-inner {
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+  clear: left;
+}
+/* line 139, ../../sass/layouts/responsive.scss */
+#main .breadcrumb,
+#main #block-sharethis-sharethis-block {
+  padding-top: 6em;
+  padding-bottom: 1.5em;
+}
+
+/* line 146, ../../sass/layouts/responsive.scss */
+#bottom,
+#footer {
+  clear: both;
+}
+/* line 148, ../../sass/layouts/responsive.scss */
+#bottom .block,
+#footer .block {
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  clear: left;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+}
+
+/* line 154, ../../sass/layouts/responsive.scss */
+#bottom {
+  margin-top: 1.5em;
+}
+/* line 156, ../../sass/layouts/responsive.scss */
+#bottom li {
+  display: inline;
+}
+
+/* line 161, ../../sass/layouts/responsive.scss */
+#footer ul.menu {
+  list-style-type: none;
+  line-height: 4.5em;
+}
+/* line 5, ../../../../../../../../../../.rvm/gems/ruby-1.9.3-p194@hps/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
+#footer ul.menu, #footer ul.menu li {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
+/* line 29, ../../../../../../../../../../.rvm/gems/ruby-1.9.3-p194@hps/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
+#footer ul.menu li:after {
+  content: "|";
+}
+/* line 31, ../../../../../../../../../../.rvm/gems/ruby-1.9.3-p194@hps/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
+#footer ul.menu li:last-child:after {
+  content: "";
+}
+/* line 34, ../../../../../../../../../../.rvm/gems/ruby-1.9.3-p194@hps/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
+#footer ul.menu li.last:after {
+  content: "";
+}
+/* line 164, ../../sass/layouts/responsive.scss */
+#footer ul.menu a {
+  padding: 1.5em;
+}
+/* line 169, ../../sass/layouts/responsive.scss */
+#footer ul.menu li:first-child a {
+  padding-left: 0;
+}
+/* line 176, ../../sass/layouts/responsive.scss */
+#footer .block:last-child {
+  text-transform: uppercase;
+  /* Sets the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 0.9em;
+  line-height: 1.66667em;
+  /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 1.66667em;
+  margin-bottom: 1.66667em;
+}
+/* line 179, ../../sass/layouts/responsive.scss */
+#footer .block:last-child p {
+  margin: 0;
+}
+/* line 181, ../../sass/layouts/responsive.scss */
+#footer .block:last-child p + ul {
+  list-style-type: none;
+}
+/* line 5, ../../../../../../../../../../.rvm/gems/ruby-1.9.3-p194@hps/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
+#footer .block:last-child p + ul, #footer .block:last-child p + ul li {
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+}
+/* line 29, ../../../../../../../../../../.rvm/gems/ruby-1.9.3-p194@hps/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
+#footer .block:last-child p + ul li:after {
+  content: "|";
+}
+/* line 31, ../../../../../../../../../../.rvm/gems/ruby-1.9.3-p194@hps/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
+#footer .block:last-child p + ul li:last-child:after {
+  content: "";
+}
+/* line 34, ../../../../../../../../../../.rvm/gems/ruby-1.9.3-p194@hps/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
+#footer .block:last-child p + ul li.last:after {
+  content: "";
+}
+/* line 185, ../../sass/layouts/responsive.scss */
+#footer .block:last-child address {
+  display: inline;
+  padding-right: 1.5em;
+}
+/* line 190, ../../sass/layouts/responsive.scss */
+#footer .block:last-child li:last-child {
+  padding-left: 1.5em;
+  letter-spacing: 0.1em;
+}
+
+/* line 203, ../../sass/layouts/responsive.scss */
+.panel-hpszen-introduction .panel-pane,
+.panel-hpszen-featured .panel-pane,
+.panel-hpszen-content .panel-pane,
+.panel-hpszen-aside .panel-pane {
+  clear: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+}
+
+/* line 209, ../../sass/layouts/responsive.scss */
+.panel-hpszen-introduction {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+/* line 213, ../../sass/layouts/responsive.scss */
+.panel-hpszen-featured {
+  padding-bottom: 2.25em;
+}
+
+/* line 216, ../../sass/layouts/responsive.scss */
+.panel-hpszen-content {
+  padding-top: 1.5em;
+}
+
+/* line 221, ../../sass/layouts/responsive.scss */
+.page-participate #page-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* line 225, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-introduction blockquote {
+  position: relative;
+  margin-left: 3em;
+  margin-top: 3em;
+}
+/* line 230, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-introduction blockquote p:first-child {
+  /* Sets the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 1.3em;
+  line-height: 2.30769em;
+  /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 1.15385em;
+  margin-bottom: 1.15385em;
+  line-height: 1.8em;
+}
+/* line 233, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-introduction blockquote p:first-child:before {
+  content: '\201C';
+  font-size: 4em;
+  line-height: 1.125em;
+  position: absolute;
+  left: -0.45em;
+  top: -0.225em;
+}
+/* line 241, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-introduction blockquote p:last-child {
+  padding-right: 3em;
+  text-align: right;
+}
+/* line 248, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-featured {
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+}
+/* line 251, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-featured .view-content > div {
+  float: left;
+  padding-top: 1.5em;
+  padding-right: 1.5em;
+}
+/* line 256, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-featured h3 {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* line 259, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-featured .hpszen-responsive.hps-uniform {
+  width: 11.5em;
+}
+/* line 264, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-content .panel-pane {
+  clear: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: left;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: -100%;
+}
+/* line 270, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-content .pane-hps-participate-panel-pane-participate-stories .views-row {
+  overflow: hidden;
+  padding-bottom: 1.5em;
+}
+/* line 273, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-content .pane-hps-participate-panel-pane-participate-stories .views-row .hpszen-responsive {
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: left;
+  width: 33.33333%;
+  margin-left: 0%;
+  margin-right: -33.33333%;
+  clear: left;
+}
+/* line 278, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-content .pane-hps-participate-panel-pane-participate-stories .views-row > div {
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  float: left;
+  width: 66.66667%;
+  margin-left: 33.33333%;
+  margin-right: -100%;
+}
+/* line 281, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-content .pane-hps-participate-panel-pane-participate-stories .views-row > div h3 {
+  margin: 0;
+}
+/* line 283, ../../sass/layouts/responsive.scss */
+.page-participate .panel-hpszen-content .pane-hps-participate-panel-pane-participate-stories .views-row > div h3 + p {
+  margin-top: 0.3em;
+}
+
+/* line 294, ../../sass/layouts/responsive.scss */
+.page-explore .panel-hpszen-featured h2 {
+  /* Sets the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 1.1em;
+  line-height: 1.36364em;
+  /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 1.36364em;
+  margin-bottom: 1.36364em;
+}
+/* line 297, ../../sass/layouts/responsive.scss */
+.page-explore .panel-hpszen-featured ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.5em;
+}
+
+/* line 304, ../../sass/layouts/responsive.scss */
+.node-type-hps-course .pane-hps-courses-panel-pane-course-participants {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 306, ../../sass/layouts/responsive.scss */
+.node-type-hps-course .pane-hps-courses-panel-pane-course-participants .group {
+  padding-left: 15px;
+  padding-right: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+/* line 308, ../../sass/layouts/responsive.scss */
+.node-type-hps-course .pane-hps-courses-panel-pane-course-participants .group:nth-child(2n+1) {
+  float: left;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: -50%;
+  clear: left;
+}
+/* line 312, ../../sass/layouts/responsive.scss */
+.node-type-hps-course .pane-hps-courses-panel-pane-course-participants .group:nth-child(2n) {
+  float: left;
+  width: 50%;
+  margin-left: 50%;
+  margin-right: -100%;
+}
+/* line 316, ../../sass/layouts/responsive.scss */
+.node-type-hps-course .pane-hps-courses-panel-pane-course-participants ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@media all and (min-width: 30.0625em) and (max-width: 63.9375em) {
+  /* line 120, ../../sass/_custom.scss */
+  html {
+    font-size: 81.25%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  /* line 34, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-original {
+    width: 40.38462em;
+  }
+  /* line 37, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-principal {
+    width: 40.38462em;
+  }
+  /* line 40, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-supplemental {
+    width: 23.07692em;
+  }
+  /* line 43, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-minor {
+    width: 11.53846em;
+  }
+  /* line 46, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-uniform {
+    width: 23.07692em;
+  }
+}
+@media all and (min-width: 60.0625em) {
+  /* line 332, ../../sass/layouts/responsive.scss */
+  .section {
+    margin: 0 auto;
+    max-width: 73.84615em;
+  }
+
+  /* line 338, ../../sass/layouts/responsive.scss */
+  #content > .block,
+  #content > .node {
+    margin: 0 auto;
+    max-width: 72em;
+  }
+
+  /* line 345, ../../sass/layouts/responsive.scss */
+  #header .section {
+    max-width: 75.38462em;
+  }
+}
+@media all and (min-width: 64em) {
+  /* line 120, ../../sass/_custom.scss */
+  html {
+    font-size: 87.5%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  /* line 34, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-original {
+    width: 53.84615em;
+  }
+  /* line 37, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-principal {
+    width: 53.84615em;
+  }
+  /* line 40, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-supplemental {
+    width: 30.76923em;
+  }
+  /* line 43, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-minor {
+    width: 15.38462em;
+  }
+  /* line 46, ../../sass/layouts/responsive.scss */
+  span.hpszen-responsive.hps-uniform {
+    width: 30.76923em;
+  }
+
+  /* line 354, ../../sass/layouts/responsive.scss */
+  .section {
+    max-width: 68.57143em;
+  }
+
+  /* line 359, ../../sass/layouts/responsive.scss */
+  #content > .node,
+  #content > .block {
+    max-width: 66.85714em;
+  }
+
+  /* line 365, ../../sass/layouts/responsive.scss */
+  #header .section {
+    max-width: 71.42857em;
+  }
+  /* line 368, ../../sass/layouts/responsive.scss */
+  #header .section #logo,
+  #header .section #name-and-slogan {
+    margin-left: 1.78571em;
+  }
+  /* line 371, ../../sass/layouts/responsive.scss */
+  #header .section #logo {
+    margin-top: 1.5em;
+  }
+}
+@media all and (min-width: 48em) {
+  /* line 381, ../../sass/layouts/responsive.scss */
+  #header #brand {
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: -66.66667%;
+  }
+  /* line 385, ../../sass/layouts/responsive.scss */
+  #header .region-header,
+  #header #secondary-menu {
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+  /* line 388, ../../sass/layouts/responsive.scss */
+  #header .region-header {
+    clear: none;
+  }
+  /* line 391, ../../sass/layouts/responsive.scss */
+  #header .section {
+    padding-bottom: 1.5em;
+  }
+
+  /* line 396, ../../sass/layouts/responsive.scss */
+  #bottom p {
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+  /* line 399, ../../sass/layouts/responsive.scss */
+  #bottom ul {
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+
+  /* line 406, ../../sass/layouts/responsive.scss */
+  #footer .block:last-child p {
+    float: left;
+  }
+  /* line 408, ../../sass/layouts/responsive.scss */
+  #footer .block:last-child p + ul {
+    float: right;
+  }
+
+  /* line 417, ../../sass/layouts/responsive.scss */
+  .page-participate .panel-hpszen-introduction .panel-pane {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 422, ../../sass/layouts/responsive.scss */
+  .page-participate .panel-hpszen-introduction .view-content > div > p:first-child {
+    padding-left: 15px;
+    padding-right: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    float: left;
+    width: 58.33333%;
+    margin-left: 0%;
+    margin-right: -58.33333%;
+  }
+  /* line 428, ../../sass/layouts/responsive.scss */
+  .page-participate .panel-hpszen-introduction blockquote {
+    padding-left: 15px;
+    padding-right: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+    margin-top: 0;
+  }
+  /* line 434, ../../sass/layouts/responsive.scss */
+  .page-participate .panel-hpszen-introduction blockquote p:first-child:before {
+    left: -0.3em;
+    top: 0.075em;
+  }
+  /* line 443, ../../sass/layouts/responsive.scss */
+  .page-participate .panel-hpszen-content .pane-hps-participate-panel-pane-participate-stories {
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 447, ../../sass/layouts/responsive.scss */
+  .page-participate .panel-hpszen-content .pane-hps-participate-panel-pane-participate-contribute {
+    clear: none;
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 458, ../../sass/layouts/responsive.scss */
+  .page-explore .panel-hpszen-featured .section .panel-pane:nth-of-type(2) {
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+  /* line 461, ../../sass/layouts/responsive.scss */
+  .page-explore .panel-hpszen-featured .section .panel-pane:last-child {
+    clear: none;
+    float: left;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
+  }
+}
+@media all and (min-width: 43.6875em) {
+  /* line 478, ../../sass/layouts/responsive.scss */
+  #navigation .block-menu .block-title,
+  #navigation .block-menu-block .block-title {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  /* line 482, ../../sass/layouts/responsive.scss */
+  #navigation .block-menu > ul {
+    float: left;
+  }
+  /* line 484, ../../sass/layouts/responsive.scss */
+  #navigation .block-menu > ul > li {
+    float: left;
+    list-style-position: inside;
+    margin-right: 1.5em;
+  }
+  /* line 488, ../../sass/layouts/responsive.scss */
+  #navigation .block-menu > ul > li:last-child {
+    margin-right: 0;
+  }
+  /* line 491, ../../sass/layouts/responsive.scss */
+  #navigation .block-menu > ul > li > a {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+  }
+}
+@media all and (min-width: 37.5em) and (max-width: 47.9375em) {
+  /* line 506, ../../sass/layouts/responsive.scss */
+  .page-home .panel-hpszen-content,
+  .page-home .panel-hpszen-aside {
+    padding-left: 15px;
+    padding-right: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 512, ../../sass/layouts/responsive.scss */
+  .page-home .panel-hpszen-aside .panel-pane {
+    padding-left: 15px;
+    padding-right: 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 514, ../../sass/layouts/responsive.scss */
+  .page-home .panel-hpszen-aside .panel-pane:nth-child(2n+1) {
+    float: left;
+    width: 50%;
+    margin-left: 0%;
+    margin-right: -50%;
+    clear: left;
+  }
+  /* line 518, ../../sass/layouts/responsive.scss */
+  .page-home .panel-hpszen-aside .panel-pane:nth-child(2n) {
+    float: left;
+    width: 50%;
+    margin-left: 50%;
+    margin-right: -100%;
+    clear: none;
+  }
+}
+@media all and (min-width: 48em) {
+  /* line 530, ../../sass/layouts/responsive.scss */
+  .pane-hps-browse-panel-pane-list .views-row span.hpszen-responsive {
+    clear: both;
+    float: left;
+    padding-right: 1.5em;
+    width: 50%;
+  }
+
+  /* line 539, ../../sass/layouts/responsive.scss */
+  .page-home .panel-hpszen-content {
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: -66.66667%;
+  }
+  /* line 541, ../../sass/layouts/responsive.scss */
+  .page-home .panel-hpszen-content .panel-pane {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+  /* line 545, ../../sass/layouts/responsive.scss */
+  .page-home .panel-hpszen-aside {
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+  /* line 547, ../../sass/layouts/responsive.scss */
+  .page-home .panel-hpszen-aside .panel-pane {
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+  }
+}
+/* line 559, ../../sass/layouts/responsive.scss */
+#main .messages {
+  padding-left: 50px !important;
+}

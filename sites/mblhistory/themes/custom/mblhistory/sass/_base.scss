@@ -43,18 +43,16 @@ $legacy-support-for-ie8: true;
 // @see hpszen-increase-base-font-sizes()
 $base-font-size:   10px;
 $base-line-height: 1.5 * $base-font-size;
+$h1-font-size: 15px;
+$h2-font-size: 13px;
+$h3-font-size: 11px;
+$h4-font-size: 10px;
+$h5-font-size: 10px;
+$h6-font-size: 10px;
 
 
-// @note DejaVu and Nimbus Sans fonts are commonly available on Linux systems
-//$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
-//$georgia:         Georgia, Times, "Times New Roman", "DejaVu Serif", serif;
-//$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
-//$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
-//$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
-//$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
-$neue:            "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-$garamond:        Garamond, Perpetua, "Times New Roman", serif;
+$neue:            "Helvetica Neue", Arial, Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+$lucida-grande:   "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
@@ -62,18 +60,43 @@ $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
 $base-font-family: $neue;
-$font-headings:    $garamond;
+$font-headings:    $lucida-grande;
+$font-menus:       $lucida-grande;
+$font-buttons:     $lucida-grande;
 $font-monospace:   $courier;
+$font-fancy:       $lucida-grande;
 
 // Variables for default colors, shadows etc.
-$teal:                               #006D71;
-$grey:                               #ebeae6;
+$dark-teal:  #1d6d72;
+$teal:       #4d9ca2;
+$light-teal: #bbd3d4;
 
-$base-color-background:              white;
-$base-color-accent:                  $teal;
-$base-color-text:                    black;
-$base-color-link:                    $teal;
-$base-color-heading:                $teal;
+$dark-grey:  #333333;
+$grey:       #666666;
+$off-white:  #efefef;
+
+$base-color-neutral1: white;
+$base-color-neutral2: $off-white;
+$base-color-neutral3: $grey;
+$base-color-neutral4: $teal;
+$base-color-accent1:  $dark-teal;
+$base-color-accent2:  $dark-grey;
+$base-color-accent3:  $light-teal;
+$base-color-text:     black;
+$base-color-text2:    $grey;
+$base-color-heading:  black;
+$base-color-link:     $teal;
+$base-color-button:   $dark-teal;
+
+$background-color-body:         $base-color-neutral1;
+$background-color-content:      $base-color-neutral1;
+$background-color-tr-alternate: rgba($base-color-neutral2, 0.2);
+$background-color-header:       $base-color-neutral4;
+$background-color-footer:       $base-color-neutral3;
+$background-color-navigation:   $base-color-accent1;
+
+$link-color-visited1: #887f7a;
+$link-color-visited2: $off-white;
 
 $default-text-shadow-color:          rgba(black, 0.5);
 $default-text-shadow-h-offset:       1px;

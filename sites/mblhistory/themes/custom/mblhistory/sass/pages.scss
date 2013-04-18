@@ -9,44 +9,15 @@
 
 @import "base";
 
-/*
- * Body
- */
-
 body {
-  margin: rhythm(1);
+  margin: 0;
   padding: 0;
   // Use .html class to avoid conflict with CK Editor body
   &.html {
     margin: 0;
     padding: 0;
-    background: url('../images/background.jpg') no-repeat left top fixed;
-    @include background-size(cover);
   }
-}
-
-#page {
-}
-
-@media all and (min-width: 1em / 16 * 961) and (max-width: 1em / 16 * 1023) {
-  #page,
-  .region-bottom {
-    // Applying a max width, 13px is base font size in base theme at this screen width, we're overriding responsive layout
-    // @see responsive.scss
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1em / 13 * 960;
-  }
-}
-@media all and (min-width: 1em / 16 * 1024) {
-  #page,
-  .region-bottom {
-    // Applying a max width, 14px is base font size in base theme at this screen width, we're overriding responsive layout
-    // @see responsive.scss
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1em / 14 * 960;
-  }
+  background-color: $background-color-body;
 }
 
 // Defaults
@@ -55,7 +26,6 @@ h2,
 h3,
 h4 {
   font-family: $font-headings;
-  color: $base-color-heading;
 }
 a {
   &:link,
@@ -88,140 +58,8 @@ a {
   }
 }
 
-// Header: positioning child elements
-#logo {
-  width: rhythm(9);
-  display: block;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: -1 * rhythm(4);
-}
-#name-and-slogan {
-  padding-left: rhythm(1.5);
-  h1#site-name {
-    display: inline;
-    @include single-text-shadow(1px, 1px, 2px, false, rgba(black, 0.8));
-    a:link,
-    a:visited {
-      text-decoration: none;
-      color: #fff;
-    }
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-      color: #fff;
-    }
-    font-weight: normal;
-    font-family: $times;
-    span {
-      > span {
-        &:first-of-type {
-          font-size: 0.7em;
-          font-style: italic;
-        }
-        &:last-of-type {
-          display: block;
-        }
-      }
-    }
-  }
-  h2#site-slogan {
-    display: block;
-    margin-left: rhythm(3);
-    @include adjust-font-size-to(1.5 * $base-font-size);
-    @include adjust-leading-to(1);
-    color: $base-color-heading - #111111;
-    font-style: italic;
-    font-weight: normal;
-    @include hpszen-letterpress(1);
-  }
-}
-@media all and (min-width: 1em / 16 * 481) {
-  #name-and-slogan {
-    padding-left: rhythm(2);
-  }
-}
-@media all and (min-width: 1em / 16 * 620) and (max-width: 1em / 16 * 767) {
-  #logo {
-    width: rhythm(11);
-  }
-  #name-and-slogan {
-    padding-left: rhythm(7);
-  }
-}
-@media all and (min-width: 1em / 16 * 768) {
-  #header {
-    padding-top: rhythm(1);
-    .region-header {
-      margin-top: rhythm(2);
-    }
-  }
-  #logo {
-    width: rhythm(13);
-    left: -1 * rhythm(6.5);
-  }
-  #name-and-slogan {
-    padding-left: rhythm(7);
-    h1#site-name {
-      @include adjust-leading-to(0.8);
-    }
-    h2#site-slogan {
-      @include trailer(1);
-      margin-right: -30%;
-    }
-  }
-}
-@media all and (min-width: 1em / 16 * 1024) {
-  #logo {
-    width: auto;
-    left: -1 * rhythm(10);
-  }
-  #name-and-slogan {
-    padding-left: rhythm(6.5);
-    @include padding-leader(2);
-    h1 {
-      @include adjust-leading-to(0.8);
-    }
-  }
-}
-
-.region-header { /* Wrapper for any blocks placed in the header region */
-}
-
-#secondary-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: right;
-  .block-menu .block-title,
-  .block-menu-block .block-title {
-    @include element-invisible;
-  }
-  ul {
-    @include delimited-list('|');
-    @include adjust-leading-to(3);
-    a {
-      padding: rhythm(1);
-      color: $base-color-link - #111111;
-    }
-  }
-}
-
-/*
- * Main (container for everything else)
- */
-
-#main {
-}
-
-/*
- * Content
- */
 #content {
-  background-color: white;
-  @include border-radius(8px, 8px);
-  @include box-shadow();
+  background-color: $background-color-content;
 }
 
 .region-highlighted {
@@ -248,7 +86,7 @@ h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
 }
 tr.even { /* Some tables have rows marked even or odd. */
-  background-color: lighten($base-color-accent, 75); /* Drupal core uses a #eee background */
+  background-color: $background-color-tr-alternate; /* Drupal core uses a #eee background */
 }
 
 tr.odd {
@@ -311,8 +149,7 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 }
 
 .node ul,
-.panel-hpszen-primary-box ul,
-.region-footer ul {
+.panel-hpszen-primary-box ul {
   @include adjust-leading-to(1);
 }
 
@@ -363,10 +200,6 @@ a.lexicon-term {
     @include hpszen-button();
   }
 }
-#block-sharethis-sharethis-block {
-  @include leading-border();
-  border-color: $grey;
-}
 
 // Search results. Browse by listings.
 .page-search,
@@ -407,94 +240,127 @@ a.lexicon-term {
   }
 }
 
-/*
- * First sidebar (on left in LTR languages, on right in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-first
- * (see the layout.css file.)
- */
-
-.region-sidebar-first {
+#content-header,
+.panel-hpszen-introduction {
+  background-color: $base-color-neutral2;
 }
 
-/*
- * Second sidebar (on right in LTR languages, on left in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-second
- * (see the layout.css file.)
- */
-
-.region-sidebar-second {
+.panel-hpszen-featured {
+  background-color: $base-color-accent3;
 }
 
-/*
- * Footer
- */
+#header {
+  background: $background-color-header;
+  color: white;
+  .section {
+    background: transparent url('../images/seal.png') no-repeat 0 40%;
+  }
+}
+
+#logo {
+  display: block;
+  max-width: rhythm(17);
+  img {
+     max-width: 100%;
+  }
+}
+.with-logo {
+  #site-name {
+    @include element-invisible;
+  }
+}
+// Header: positioning child elements
+#name-and-slogan {
+  h1#site-name {
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: #fff;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      color: #fff;
+    }
+    font-weight: normal;
+    span {
+      > span {
+        &:first-of-type {
+          font-size: 0.7em;
+          font-style: italic;
+        }
+        &:last-of-type {
+          display: block;
+        }
+      }
+    }
+  }
+  h2#site-slogan {
+    font-style: $base-font-family;
+    @include adjust-font-size-to(1 * $base-font-size);
+    @include adjust-leading-to(1);
+    font-weight: normal;
+  }
+}
+
+#secondary-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: right;
+  .block-menu .block-title,
+  .block-menu-block .block-title {
+    @include element-invisible;
+  }
+  ul {
+    @include delimited-list('|');
+    @include adjust-leading-to(3);
+    a {
+      padding: rhythm(1);
+    }
+  }
+}
+
+
+#bottom {
+  background-color: $base-color-neutral2;
+  color: $base-color-text2;
+  li {
+    list-style-type: none;
+  }
+}
 
 #footer {
-  background-color: $base-color-accent;
-  margin-top: rhythm(2);
-  @include box-shadow();
+  background-color: $background-color-footer;
   color: white;
   a {
     color: white;
   }
-  .view-display-id-block_supporting_organisations_logos {
-    ul {
-      list-style-type: none;
-      li {
-        height: rhythm(3);
-        margin-bottom: rhythm(1);
-        img {
-          max-height: 100%;
-        }
-        .hpszen-responsive {
-          &.hps-minor {
-            height: 100%;
-          }
-        }
+  li {
+    list-style-type: none;
+  }
+  #block-menu-menu-hps-tertiary {
+    font-family: $font-menus;
+    border-bottom: 1px dotted $off-white;
+  }
+  .block {
+    &:last-child {
+      address {
+        font-style: normal;
       }
     }
   }
 }
 
-/*
- * Page bottom
- */
-
-.region-bottom { /* Wrapper for any blocks placed in the page bottom region */
-}
-
-// Override grid layout on front page because we need double padding to get boxes
+// Override default styles for different sections
 .front {
-  &.hpszen-primary-downsides-boxes {
+  &.hpszen-primary-downsides-boxes,
+  &.hpszen-home {
     #content {
-      padding-bottom: 0;
-      .panel-hpszen-primary-box,
-      .panel-hpszen-aside-box,
-      .panel-hpszen-downside-box {
-        // Reset padding to smaller size
-        .panel-pane {
-          @include zen-grid-item-base($zen-gutter-width);
-        }
-      }
       .panel-hpszen-aside-box {
-        padding-left: $zen-gutter-width / 2;
-        padding-right: $zen-gutter-width / 2;
         .panel-pane {
-          @include background-image(linear-gradient($grey, $grey - #111111));
-          border: 1px solid $grey;
-          @include border-radius(3px, 3px);
-          @include leader(1);
-          @include adjust-leading-to(1);
-          h2 {
-            @include hpszen-adjust-font-size-and-rhythm(1.7);
-            @include leader(0.25);
-            @include trailer(0.25);
-          }
-          ul {
-            margin: 0;
-          }
+          @include background-image(linear-gradient($base-color-accent3, $base-color-accent3 - #111111));
+          border: 1px solid $base-color-accent3;
           a {
             text-decoration: none;
             color: black;
@@ -503,7 +369,6 @@ a.lexicon-term {
             }
           }
           .more-link {
-            @include adjust-leading-to(2);
             a {
               color: $base-color-link;
             }
@@ -511,7 +376,6 @@ a.lexicon-term {
           &.pane-hps-news-panel-pane-front-page-news {
             ul {
               list-style-type: none;
-              padding: 0;
             }
           }
         }
@@ -519,71 +383,51 @@ a.lexicon-term {
     }
   }
 }
-// Content: two columns underneath content, override front because we need double padding to get boxes
-// @see layouts/responsive.scss
-@media all and (min-width: 1em / 16 * 600) and (max-width: 1em / 16 * 767) {
-  .front {
-    &.hpszen-primary-downsides-boxes {
-      #main {
-        #content {
-          .panel-hpszen-aside-box {
-            .panel-pane {
-              &:nth-of-type(1) {
-                width: 48%;
-              }
-              &:nth-of-type(2) {
-                clear: none;
-                width: 48%;
-                margin-left: 52%;
-              }
-              &:nth-of-type(3) {
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-              }
-            }
+
+.page-participate {
+  .panel-hpszen-introduction {
+    blockquote {
+      p {
+        &:first-child {
+          font-family: $font-fancy;
+          font-style: italic;
+          &:before {
+            font-style: normal;
           }
         }
       }
     }
   }
+  .panel-hpszen-featured {
+    background-color: $base-color-accent2;
+  }
 }
-// Content: asides adjacent to content
+
+
+
+// Override default styles for wider screens.
+
 @media all and (min-width: 1em / 16 * 768) {
-  .pane-hps-browse-panel-pane-list {
-    .views-row {
-      span.hpszen-responsive {
-        clear: both;
-        float: left;
-        padding-right: rhythm(1);
-        width: 50%;
-      }
+  #header .section {
+    padding-top: rhythm(1);
+    .region-header {
+      margin-top: rhythm(2);
     }
   }
-
-  .front {
-    &.hpszen-primary-downsides-boxes {
-      #main {
-        #content {
-          .panel-hpszen-primary-box {
-            width: 58.66667%;
-            margin-right: -58.66667%;
-          }
-          .panel-hpszen-aside-box {
-            padding-left: 0;
-            padding-right: 0;
-            width: 39.33333%;
-            margin-left: 58.66667%;
-            .panel-pane {
-              &:first-child {
-                margin-top: 0;
-              }
-            }
-          }
-        }
-      }
+  #name-and-slogan {
+    h1#site-name {
+      @include adjust-leading-to(0.8);
+    }
+    h2#site-slogan {
+      @include trailer(1);
     }
   }
 }
-
+@media all and (min-width: 1em / 16 * 1024) {
+  #name-and-slogan {
+    h1 {
+      @include adjust-leading-to(0.8);
+    }
+  }
+}
 

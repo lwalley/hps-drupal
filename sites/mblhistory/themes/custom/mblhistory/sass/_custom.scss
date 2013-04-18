@@ -1,4 +1,8 @@
-//
+// Custom sass functions
+@function hpszen-px-to-em($pixels-to-convert, $base-font-size-unitless) {
+  @return ($pixels-to-convert / $base-font-size-unitless) + 0em;
+}
+
 // Custom sass mixins
 //
 // To use a mixin in this file, add this line to the top of your .scss file:
@@ -75,12 +79,14 @@
   }
 }
 
-@mixin hpszen-button($from: #fff, $to: #ddd) {
+@mixin hpszen-button($from: #f2f2f2, $to: #dddddd) {
   overflow: visible;
-  color: #394651;
+  color: $base-color-button;
+  font-family: $font-buttons;
   text-decoration: none;
-  @include rhythm-borders(1px, 0.3);
-  @include border-radius(3px);
+  @include rhythm-borders(1px, 0.4);
+  padding-left: rhythm(0.6);
+  padding-right: rhythm(0.6);
   border-color: $to - #111111;
   @include background-image(linear-gradient(left top, $from, $to));
   cursor: pointer;
@@ -108,47 +114,13 @@
   @include leader(1, $adjustment * $base-font-size);
   @include trailer(1, $adjustment * $base-font-size);
 }
-/*
- * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
- *    http://clagnut.com/blog/348/#c790
- * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
- *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
- */
 // @see normalize.scss
 // @see responsive.scss
 @mixin hpszen-increase-base-font-sizes($increase) {
   html {
-    font-size: 100% * ($base-font-size * $increase / 16px); /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
-    /* Establishes a vertical rhythm unit using $base-line-height. */
-    @include adjust-leading-to($increase);
-  }
-  /*
-   * Addresses font sizes and margins set differently in IE6/7
-   * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
-   */
-
-  h1 {
-    @include hpszen-adjust-font-size-and-rhythm($increase * 2);
-  }
-  h2 {
-    @include hpszen-adjust-font-size-and-rhythm($increase * 1.5);
-  }
-
-  h3 {
-    @include hpszen-adjust-font-size-and-rhythm($increase * 1.17);
-  }
-  h4, h5, h6 {
-    @include hpszen-adjust-font-size-and-rhythm($increase * 1);
-  }
-  pre,
-  code,
-  kbd,
-  samp,
-  tt,
-  var {
-    @include adjust-font-size-to( 1 * $increase * $base-font-size );
+    font-size: 100% * ($base-font-size * $increase / 16px);
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
 }
 // Content: Set/reset base grid with adjusted gutter
@@ -202,3 +174,11 @@
     }
   }
 }
+@mixin hpszen-bulletless-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+// Import sprites.
+$icons-small-layout: smart;
+@import "../images/icons-small/*.png";

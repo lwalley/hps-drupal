@@ -46,14 +46,12 @@
 .cycling { /* jQuery cycle is enabled. */
   position: relative;
   ul.slides {
-    border: 1px solid $grey;
-    @include border-radius(3px, 3px);
     list-style: none;
     padding: 0;
     margin: 0;
     > li {
       text-align: center;
-      background: $base-color-accent;
+      background: $base-color-accent1;
       color: white;
       width: 100% !important;
       a,
@@ -81,10 +79,10 @@
         @include adjust-font-size-to(1.7 * $base-font-size);
         font-weight: normal;
         @include trailing-border(1px, 0);
-        border-color: $grey;
+        border-color: white;
       }
       > p {
-        @include adjust-leading-to(1);
+        @include adjust-leading-to(1.2);
       }
       > a {
         position: absolute;
