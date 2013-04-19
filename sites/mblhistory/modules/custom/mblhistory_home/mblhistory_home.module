@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MBL History Home feature.
+ */
+
+include_once 'mblhistory_home.features.inc';
