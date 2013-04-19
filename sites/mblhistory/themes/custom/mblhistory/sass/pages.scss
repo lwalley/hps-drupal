@@ -28,10 +28,13 @@ h4 {
   font-family: $font-headings;
 }
 a {
-  &:link,
-  &:visited {
+  &:link {
     text-decoration: none;
     color: $base-color-link;
+  }
+  &:visited {
+    text-decoration: none;
+    color: $link-color-visited1;
   }
   &:hover,
   &:focus {
@@ -247,6 +250,18 @@ a.lexicon-term {
 
 .panel-hpszen-featured {
   background-color: $base-color-accent3;
+  a {
+    &:link {
+      color: $base-color-accent1;
+    }
+    &:visited {
+      color: $base-color-accent1 + #222222;
+    }
+    &:hover,
+    &:focus {
+      color: $base-color-accent1 - #222222;
+    }
+  }
 }
 
 #header {

@@ -266,7 +266,7 @@ span.hpszen-responsive {
       @include zen-grid-item-base();
       @include zen-grid-item(12, 1);
     }
-    .pane-hps-participate-panel-pane-participate-stories {
+    .pane-mblhistory-participate-panel-pane-participate-stories {
       .views-row {
         overflow: hidden;
         @include padding-trailer;
@@ -440,11 +440,11 @@ span.hpszen-responsive {
       }
     }
     .panel-hpszen-content {
-      .pane-hps-participate-panel-pane-participate-stories {
+      .pane-mblhistory-participate-panel-pane-participate-stories {
         @include zen-grid-item(6, 1);
         @include zen-nested-container();
       }
-      .pane-hps-participate-panel-pane-participate-contribute {
+      .pane-mblhistory-participate-panel-pane-participate-contribute {
         clear: none;
         @include zen-grid-item(4, 9);
         @include zen-nested-container();
