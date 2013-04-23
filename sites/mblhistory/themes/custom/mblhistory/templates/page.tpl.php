@@ -144,26 +144,33 @@
 </div>
 
 <div id="main" role="main">
-  <div id="content-header">
-    <div class="section">
-      <div class="section-inner">
-        <?php print render($page['highlighted']); ?>
-        <?php print $breadcrumb; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1 class="title" id="page-title"><?php print $title; ?></h1>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-        <?php print render($tabs); ?>
+  <a id="main-content"></a>
+  <?php
+    $highlighted = render($page['highlighted']);
+    $actions = render($action_links);
+    $tabs_menu = render($tabs);
+    if ($highlighted || $breadcrumb || $title || $messages || $actions || $tabs_menu):
+  ?>
+    <div id="content-header">
+      <div class="section">
+        <div class="section-inner">
+          <?php print $highlighted; ?>
+          <?php print $breadcrumb; ?>
+          <?php print render($title_prefix); ?>
+          <?php if ($title): ?>
+            <h1 class="title" id="page-title"><?php print $title; ?></h1>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php print $messages; ?>
+          <?php print render($page['help']); ?>
+          <?php if ($actions): ?>
+            <ul class="action-links"><?php print $actions; ?></ul>
+          <?php endif; ?>
+          <?php print $tabs_menu; ?>
+        </div>
       </div>
     </div>
-  </div>
+  <?php endif; ?>
 
   <div id="content">
     <?php print render($page['content']); ?>
