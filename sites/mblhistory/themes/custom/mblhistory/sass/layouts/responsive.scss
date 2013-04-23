@@ -216,7 +216,23 @@ span.hpszen-responsive {
 .panel-hpszen-content {
   @include padding-leader;
 }
+
 // Override default layout for different site sections
+.page-taxonomy-term {
+  .panel-hpszen-introduction {
+    padding-top: 0;
+    .pane-term-description {
+      .pane-content {
+        p {
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 .page-participate {
   #page-title {
     @include element-invisible();
