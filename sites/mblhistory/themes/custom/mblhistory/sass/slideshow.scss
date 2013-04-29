@@ -90,12 +90,11 @@
         bottom: $zen-gutter-width / 2;
         float: right;
         @include hpszen-button();
-        @include hpszen-letterpress();
         &:link,
         &:visited,
         &:hover,
         &:focus, {
-          color: black;
+          color: white;
         }
       }
     }

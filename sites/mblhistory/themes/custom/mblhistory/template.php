@@ -225,3 +225,40 @@ function mblhistory_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Implements preprocess_panels_pane().
+ */
+function mblhistory_preprocess_panels_pane(&$variables) {
+  if ($variables['pane']->subtype == 'hps_courses_search') {
+    // @note Browsing by facets using Views Facets Blocks and Panels is made possible with patch
+    //       @see http://drupal.org/node/1925114#comment-7107040
+    //       However its missing a more link, and doesn't use views styles, sorts or paging.
+    //       So we override e.g. more link, sort as needed here, as quick and dirty fix.
+    // @todo Make Facets Blocks in Panels adhere to views or panel settings or find better
+    //       plane for overriding Views render.
+    //$variables['more'] = l(t('more'), 'courses');
+    $data = array();
+    foreach ($variables['content']['facets']['#items'] as $key => &$item) {
+      $data[$key] = $item['data'];
+      unset($item['class']);
+      $item['data'] .= ', ';
+    }
+    $sort_direction = SORT_ASC;
+    $limit = 10;
+    if ($variables['pane']->configuration['display'] == 'search_api_views_facets_block_course_year') {
+      $sort_direction = SORT_DESC;
+      $limit = 30;
+    }
+    array_multisort($data, $sort_direction, $variables['content']['facets']['#items']);
+    // Truncate number of items displayed... alternative would be to show all and hide with client-side behaviour.
+    $variables['content']['facets']['#items'] = array_splice($variables['content']['facets']['#items'], 0, $limit);
+    // Remove comma from last item.
+    $last = array_pop($variables['content']['facets']['#items']);
+    $last['data'] = rtrim($last['data'], ", ");
+    $variables['content']['facets']['#items'][] = $last;
+    $variables['content']['facets']['#items'][] = array(
+      'data' => t('... <a href="!url">all courses</a>', array('!url' => '/courses'))
+    );
+  }
+}

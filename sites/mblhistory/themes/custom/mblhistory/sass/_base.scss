@@ -75,6 +75,8 @@ $dark-grey:  #333333;
 $grey:       #666666;
 $off-white:  #efefef;
 
+$maroon:     #991d39;
+
 $base-color-neutral1: white;
 $base-color-neutral2: $off-white;
 $base-color-neutral3: $grey;
@@ -82,13 +84,15 @@ $base-color-neutral4: $teal;
 $base-color-accent1:  $dark-teal;
 $base-color-accent2:  $dark-grey;
 $base-color-accent3:  $light-teal;
+$base-color-accent4:  $maroon;
 $base-color-text:     black;
 $base-color-text2:    $grey;
 $base-color-heading:  black;
 $base-color-link:     $teal;
-$base-color-button:   $dark-teal;
+$base-color-button:   white;
+$base-color-header:   white;
 
-$background-color-body:         $base-color-neutral1;
+$background-color-body:         $base-color-neutral3;
 $background-color-content:      $base-color-neutral1;
 $background-color-tr-alternate: rgba($base-color-neutral2, 0.2);
 $background-color-header:       $base-color-neutral4;

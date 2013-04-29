@@ -60,7 +60,9 @@ a {
     color: #fff;
   }
 }
-
+#main {
+  background-color: $base-color-neutral2;
+}
 #content {
   background-color: $background-color-content;
 }
@@ -198,9 +200,6 @@ a.lexicon-term {
   @include adjust-leading-to(2);
   margin-left: 0;
   a {
-    @include hpszen-letterpress();
-    color: black;
-    @include hpszen-button();
   }
 }
 
@@ -337,6 +336,12 @@ a.lexicon-term {
 }
 
 
+.panel-hpszen-operations {
+  .pane-views-exposed {
+    background-color: $base-color-accent3;
+  }
+}
+
 #bottom {
   background-color: $base-color-neutral2;
   color: $base-color-text2;
@@ -372,10 +377,9 @@ a.lexicon-term {
   &.hpszen-primary-downsides-boxes,
   &.hpszen-home {
     #content {
-      .panel-hpszen-aside-box {
+      .panel-hpszen-aside {
         .panel-pane {
-          @include background-image(linear-gradient($base-color-accent3, $base-color-accent3 - #111111));
-          border: 1px solid $base-color-accent3;
+          background-color: $base-color-neutral2;
           a {
             text-decoration: none;
             color: black;
@@ -418,6 +422,11 @@ a.lexicon-term {
   }
 }
 
+.page-learn {
+  .panel-hpszen-featured {
+    background-color: $base-color-accent2;
+  }
+}
 
 
 // Override default styles for wider screens.
