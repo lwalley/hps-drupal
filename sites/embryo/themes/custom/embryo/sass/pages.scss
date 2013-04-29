@@ -402,26 +402,30 @@ a.lexicon-term {
  */
 
 #footer {
+  @include margin-leader();
+  padding-top: 0;
   background-color: $base-color-accent;
-  margin-top: rhythm(2);
   @include box-shadow();
   color: white;
   a {
     color: white;
   }
-  .view-display-id-block_supporting_organisations_logos {
-    ul {
-      list-style-type: none;
-      li {
-        height: rhythm(3);
-        margin-bottom: rhythm(1);
-        img {
-          max-height: 100%;
-        }
-        .hpszen-responsive {
-          &.hps-minor {
-            height: 100%;
-          }
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    &.menu {
+      border-bottom: 1px dotted #efefef;
+    }
+  }
+}
+.front {
+  #footer {
+    .block {
+      &:first-child {
+        background-color: #ebeae6;
+        color: #666;
+        a {
+          color: #666;
         }
       }
     }
