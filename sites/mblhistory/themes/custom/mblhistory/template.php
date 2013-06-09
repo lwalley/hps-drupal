@@ -176,7 +176,7 @@ function mblhistory_preprocess_page(&$variables, $hook) {
  */
 function mblhistory_preprocess_node(&$variables, $hook) {
   $variables['submitted'] = t('By !username &mdash; <time datetime="!datetime">!shortdate</time>',
-    array('!username' => $variables['name'], '!datetime' => format_date($variables['node']->created, 'iso'),
+    array('!username' => $variables['name'], '!datetime' => format_date($variables['node']->created, 'custom', 'c'),
     '!shortdate' => format_date($variables['node']->created, 'short')));
 
   // Optionally, run node-type-specific preprocess functions, like
