@@ -184,7 +184,7 @@
 }
 @mixin mblhistory-blockquote {
   position: relative;
-  margin-left: rhythm(2);
+  margin-left: rhythm(1.5);
   @include leader(2);
   p {
     &:first-child {

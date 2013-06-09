@@ -691,6 +691,17 @@ iframe {
       }
     }
   }
+  .page-mblhistory-build-the-archives {
+    &.hpszen-i1-f2-b2,
+    &.hpszen-i1-f2-b3 {
+      #panel-hpszen-f1 {
+        @include zen-grid-item(7, 1);
+      }
+      #panel-hpszen-f2 {
+        @include zen-grid-item(5, 8);
+      }
+    }
+  }
   .node-type-hps-news {
     .node-hps-news {
       overflow: hidden;
