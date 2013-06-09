@@ -15,7 +15,7 @@
 
 // @todo Investigate auto zoom and pan for larger slides
 
-@mixin slide-vertical-rhythm($slide-lines: 36, $image-lines: 10, $pager-lines: 0, $clear: false) {
+@mixin slide-vertical-rhythm($slide-lines: 36, $image-lines: 9, $pager-lines: 2, $clear: true) {
   .cycling {
     ul.slides {
       > li {
@@ -30,28 +30,33 @@
       }
     }
     .pager {
-      top: rhythm($image-lines);
+      top: rhythm($slide-lines);
     }
     .nav {
-      top: rhythm($image-lines - 2);
+      top: rhythm($slide-lines);
     }
     @if $clear {
       &:after {
-        height: rhythm($slide-lines);
+        height: rhythm($pager-lines);
       }
     }
   }
 }
 
+$featured-base-color: $grey-dark;
+$slide-base-color: darken($featured-base-color, 5%);
+
 .cycling { /* jQuery cycle is enabled. */
+  @include margin-leader();
   position: relative;
   ul.slides {
+    @include hpszen-box-emboss();
     list-style: none;
     padding: 0;
     margin: 0;
     > li {
-      text-align: center;
-      background: $base-color-accent1;
+      background-color: $slide-base-color;
+      overflow-y: auto;
       color: white;
       width: 100% !important;
       a,
@@ -69,37 +74,23 @@
         }
       }
       // For single column add gutter to slide contents (since we are forcing slide image to stretch across gutter
-      > h2, p {
-        color: white;
-        text-align: left;
-        margin-left: $zen-gutter-width / 2;
-        margin-right: $zen-gutter-width / 2;
+      > h2, > p, > a {
+        display: block;
+        margin-left: rhythm(1);
+        margin-right: rhythm(1);
       }
       > h2 {
-        @include adjust-font-size-to(1.7 * $base-font-size);
+        @include adjust-font-size-to(1.2 * $base-font-size);
         font-weight: normal;
-        @include trailing-border(1px, 0);
-        border-color: white;
+        margin-top: 0;
+        margin-bottom: 0;
       }
       > p {
         @include adjust-leading-to(1.2);
       }
-      > a {
-        position: absolute;
-        right: $zen-gutter-width / 2;
-        bottom: $zen-gutter-width / 2;
-        float: right;
-        @include hpszen-button();
-        &:link,
-        &:visited,
-        &:hover,
-        &:focus, {
-          color: white;
-        }
-      }
     }
   }
-  .pager {
+  .pager-thumbnails {
     position: absolute;
     width: 100%;
     background: rgba(black, 0.5);
@@ -118,40 +109,45 @@
       }
     }
   }
-  .nav {
-    position: absolute;
-    z-index: 10;
-    right: 15px;
+  .pager-markers {
+    padding-top: rhythm(0.5);
+    float: left;
+    overflow: hidden;
     a {
       text-indent: 100%;
       white-space: nowrap;
       overflow: hidden;
       display: block;
       float: left;
-      width: 30px;
-      height: 30px;
-      &#hpszen-slide-previous {
-        background: transparent url('../images/previous.png') no-repeat top left;
-      }
-      &#hpszen-slides-pause {
-        background: transparent url('../images/pause.png') no-repeat top left;
-      }
-      &#hpszen-slides-resume {
-        display: none;
-        background: transparent url('../images/resume.png') no-repeat top left;
-      }
-      &#hpszen-slide-next {
-        background: transparent url('../images/next.png') no-repeat top left;
+      border: rhythm(0.4) solid $featured-base-color;
+      width: rhythm(0.5);
+      height: rhythm(0.5);
+      background-color: $teal-bright;
+      &.activeSlide {
+        background-color: white;
       }
     }
-    &.paused {
-      a {
-        &#hpszen-slides-resume {
-          display: block;
-        }
-        &#hpszen-slides-pause {
-          display: none;
-        }
+  }
+  .nav {
+    padding-top: rhythm(0.3);
+    float: right;
+    overflow: hidden;
+    a {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      float: left;
+      border: rhythm(0.5) solid $featured-base-color;
+      width: round(icons-small-sprite-width(slide-previous) / 2);
+      height: round(icons-small-sprite-height(slide-previous) / 2);
+      background: transparent $icons-small no-repeat;
+      background-size: round(icons-small-sprite-width(slide-previous) / 2) auto;
+      &#hpszen-slide-previous {
+        background-position: 0 round(nth(sprite-position($icons-small, slide-previous), 2) / 2);
+      }
+      &#hpszen-slide-next {
+        background-position: 0 round(nth(sprite-position($icons-small, slide-next), 2) / 2);
       }
     }
   }
@@ -161,63 +157,62 @@
     visibility: hidden;
   }
 }
-
-// Prevent slides from growing too big
+// Prevent slides from growing wider than image width (700px)
 @media all and (min-width: 1em / 16 * 481) and (max-width: 1em / 16 * 1023) {
   .cycling,
   .slides,
   .pager {
-    max-width: 1em / 13 * 525;
+    max-width: hpszen-px-to-em(700, 13);
   }
 }
-@media all and (min-width: 1em / 16 * 1024) {
+@media all and (min-width: 1em / 16 * 481) and (max-width: 1em / 16 * 1023) {
   .cycling,
   .slides,
   .pager {
-    max-width: 1em / 14 * 525;
+    max-width: hpszen-px-to-em(700, 14);
   }
 }
 // Adjust image and slide heights for different screen widths, to avoid gaps between image and text
 @include slide-vertical-rhythm();
 @media screen and (min-width: 1em / 16 * 315) and (max-width: 1em / 16 * 349) {
-  @include slide-vertical-rhythm(27, 11);
+  @include slide-vertical-rhythm(24, 9);
 }
 @media screen and (min-width: 1em / 16 * 345) and (max-width: 1em / 16 * 369) {
-  @include slide-vertical-rhythm(27, 12);
+  @include slide-vertical-rhythm(24, 10);
 }
 @media screen and (min-width: 1em / 16 * 370) and (max-width: 1em / 16 * 394) {
-  @include slide-vertical-rhythm(27, 13);
+  @include slide-vertical-rhythm(24, 11);
 }
 @media screen and (min-width: 1em / 16 * 395) and (max-width: 1em / 16 * 419) {
-  @include slide-vertical-rhythm(28, 14);
+  @include slide-vertical-rhythm(26, 11);
 }
 @media screen and (min-width: 1em / 16 * 420) and (max-width: 1em / 16 * 449) {
-  @include slide-vertical-rhythm(28, 15);
+  @include slide-vertical-rhythm(26, 13);
 }
 @media screen and (min-width: 1em / 16 * 450) and (max-width: 1em / 16 * 499) {
-  @include slide-vertical-rhythm(28, 16);
+  @include slide-vertical-rhythm(26, 14);
 }
 @media screen and (min-width: 1em / 16 * 500) and (max-width: 1em / 16 * 554) {
-  @include slide-vertical-rhythm(29, 17);
+  @include slide-vertical-rhythm(24, 11);
 }
 @media screen and (min-width: 1em / 16 * 555) and (max-width: 1em / 16 * 767) {
-  @include slide-vertical-rhythm(31, 19);
+  @include slide-vertical-rhythm(29, 16);
 }
 @media screen and (min-width: 1em / 16 * 768) and (max-width: 1em / 16 * 794) {
-  @include slide-vertical-rhythm(28, 15);
+  @include slide-vertical-rhythm(25, 13);
 }
 @media screen and (min-width: 1em / 16 * 795) and (max-width: 1em / 16 * 839) {
-  @include slide-vertical-rhythm(28, 16);
+  @include slide-vertical-rhythm(26, 14);
 }
 @media screen and (min-width: 1em / 16 * 840) and (max-width: 1em / 16 * 884) {
-  @include slide-vertical-rhythm(29, 17);
+  @include slide-vertical-rhythm(26, 15);
 }
 @media screen and (min-width: 1em / 16 * 885) and (max-width: 1em / 16 * 929) {
-  @include slide-vertical-rhythm(30, 18);
+  @include slide-vertical-rhythm(27, 16);
 }
 @media screen and (min-width: 1em / 16 * 930) and (max-width: 1em / 16 * 1023) {
-  @include slide-vertical-rhythm(31, 19);
+  @include slide-vertical-rhythm(28, 17);
 }
 @media screen and (min-width: 1em / 16 * 1024) {
-  @include slide-vertical-rhythm(30, 18);
+  @include slide-vertical-rhythm(28, 17);
 }

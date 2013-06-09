@@ -101,7 +101,6 @@
  *   http://drupal.org/node/223440 and http://drupal.org/node/1089656
  */
 
-
 /**
  * Override or insert variables into the maintenance page template.
  *
@@ -152,6 +151,18 @@ function mblhistory_preprocess_page(&$variables, $hook) {
   }
   $variables['site_name'] = str_replace('of the', '<span>of the</span>', $variables['site_name']);
   $variables['site_name'] = str_replace('Marine Biological Laboratory', '<span>Marine Biological Laboratory</span>', $variables['site_name']);
+  // Add theme wrapper for HTTP error pages
+  $status = drupal_get_http_header('status');
+  switch ($status) {
+    case '404 Not Found':
+    case '403 Forbidden':
+      if (!preg_match('/^<div/', $variables['page']['content']['system_main']['main']['#markup'])) {
+        $variables['page']['content']['system_main']['main']['#prefix'] = '<div class="section"><div class="section-inner"><p>';
+        $variables['page']['content']['system_main']['main']['#suffix'] = '</p></div></div>';
+      }
+      break;
+  }
+
 }
 
 
@@ -163,16 +174,18 @@ function mblhistory_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/*
 function mblhistory_preprocess_node(&$variables, $hook) {
+  $variables['submitted'] = t('By !username &mdash; <time datetime="!datetime">!shortdate</time>',
+    array('!username' => $variables['name'], '!datetime' => format_date($variables['node']->created, 'iso'),
+    '!shortdate' => format_date($variables['node']->created, 'short')));
+
   // Optionally, run node-type-specific preprocess functions, like
-  // mblhistory_preprocess_node_page() or STARTERKIT_preprocess_node_story().
+  // mblhistory_preprocess_node_page() or mblhistory_preprocess_node_story().
   //$function = __FUNCTION__ . '_' . $variables['node']->type;
   //if (function_exists($function)) {
     //$function($variables, $hook);
   //}
 }
-//*/
 
 /**
  * Override or insert variables into the comment templates.

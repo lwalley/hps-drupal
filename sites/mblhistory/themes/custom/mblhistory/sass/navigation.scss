@@ -10,24 +10,18 @@
 
 #navigation {
   // @note #main-menu is turned off so we can have expanded menu items using #block-system-main-menu.
-  background-color: $background-color-navigation;
+  @include hpszen-color($color-accent2);
   font-family: $lucida-grande;
   color: white;
   a {
     text-decoration: none;
-    &:link {
-      color: white;
-    }
-    &:visited {
-      color: $link-color-visited2;
-    }
     &:hover,
     &:active {
       text-decoration: underline;
     }
     &.active-trail {
-      background-color: $base-color-neutral2;
-      color: $base-color-link;
+      background-color: $off-white;
+      color: $teal-dark;
     }
   }
   h2 {
@@ -44,9 +38,9 @@
 }
 #secondary-menu {
   a {
-    color: white;
+    //color: white;
     &:visited {
-      color: $link-color-visited2;
+      //color: $link-color-visited2;
     }
   }
 }

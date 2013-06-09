@@ -79,26 +79,28 @@
   }
 }
 
-@mixin hpszen-button($from: $dark-teal, $to: $dark-teal + #111111) {
+@mixin hpszen-button($color-button-background, $color-button-text) {
+  $from: $color-button-background;
+  $to: lighten($color-button-background, 5%);
+  $from-saturated: saturate($from, 50%);
+  $to-saturated: saturate($to, 50%);
+  color: $color-button-text;
   overflow: visible;
-  color: $base-color-button;
   font-family: $font-buttons;
   text-decoration: none;
   @include rhythm-borders(1px, 0.4);
   padding-left: rhythm(0.6);
   padding-right: rhythm(0.6);
-  border-color: $to - #010101;
   @include border-radius;
+  border-color: lighten($to, 2%) lighten($to, 5%) darken($from, 2%) darken($from, 5%);
   background-color: $from;
   @include background-image(linear-gradient(left top, $from, $to));
   cursor: pointer;
   &:hover {
-    @include background-image(linear-gradient(left top, saturate($from + #111111, 10%), saturate($to + #111111, 10%)));
-  }
-  &:active {
-    @include background-image(linear-gradient(left top, $from, $to));
+    @include background-image(linear-gradient(left top, $from-saturated, $to-saturated));
   }
 }
+
 @mixin hpszen-input($width: rhythm(10), $from: #ddd, $to: #fff) {
   width: $width;
   @include rhythm-borders(1px, 0.4);
@@ -200,11 +202,31 @@
       }
     }
     &:last-child {
-      padding-right: rhythm(2);
       text-align: right;
     }
   }
 }
+// Colors
+@mixin hpszen-color($color-list) {
+  background-color: nth($color-list, 1);
+  color: nth($color-list, 2);
+  a {
+    &:link {
+      color: nth($color-list, 3);
+    }
+    &:visited {
+      color: darken(nth($color-list, 3), 10%);
+    }
+    &:hover,
+    &:focus {
+      color: lighten(nth($color-list, 3), 10%);
+    }
+  }
+  input[type="submit"] {
+    @include hpszen-button(nth($color-list, 4), nth($color-list, 5));
+  }
+}
 // Import sprites.
 $icons-small-layout: smart;
+$icons-small: sprite-map("../images/icons-small/*.png");
 @import "../images/icons-small/*.png";

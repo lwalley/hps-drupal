@@ -11,7 +11,7 @@ input {
     @include hpszen-input();
   }
   &[type="submit"] {
-    @include hpszen-button();
+    //@include hpszen-button();
   }
 }
 
@@ -28,7 +28,7 @@ form {
   input.error,
   textarea.error,
   select.error { /* Highlight the form elements that caused a form submission error */
-    border: 1px solid $base-color-accent4;
+    //border: 1px solid $base-color-accent4;
   }
 
   label { /* The label for a form element */
@@ -42,7 +42,7 @@ form {
   }
 
   .form-required { /* The part of the label that indicates a required field */
-    color: $base-color-accent4;
+    //color: $base-color-accent4;
   }
 
   .form-checkboxes & ,
@@ -143,6 +143,6 @@ td.menu-disabled {
 // Override defaults
 #header {
   input[type="submit"] {
-    @include hpszen-button($dark-grey - #111111, $to: $dark-grey);
+    //@include hpszen-button($dark-grey - #111111, $to: $dark-grey);
   }
 }

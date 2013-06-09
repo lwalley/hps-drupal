@@ -67,40 +67,23 @@ $font-monospace:   $courier;
 $font-fancy:       $lucida-grande;
 
 // Variables for default colors, shadows etc.
-$dark-teal:  #1d6d72;
-$teal:       #4d9ca2;
-$light-teal: #bbd3d4;
+$teal-dark:   #1a6065; // hsla(184, 59%, 25%, 1) rgba(26, 96, 101, 1)
+$teal:        #4d9ca2; // hsla(184, 36%, 47%, 1) rgba(77, 157, 163, 1)
+$teal-light:  #bbd3d4; // hsla(184, 23%, 78%, 1) rgba(187, 211, 212, 1)
+$teal-bright: #63B0B6; //#31b5bf; // hsla(184, 59%, 47%, 1) rgba(49, 181, 191, 1)
+$grey-dark:   #1a1a1a; // hsla(0, 0%, 10%, 1) rgba(26, 26, 26, 1)
+$grey:        #666666; // hsla(0, 0%, 40%, 1) rgba(102, 102, 102, 1)
+$off-white:   #e6e6e6; // hsla(0, 0%, 90%, 1) rgba(230, 230, 230, 1)
 
-$dark-grey:  #333333;
-$grey:       #666666;
-$off-white:  #efefef;
-
-$maroon:     #991d39;
-
-$base-color-neutral1: white;
-$base-color-neutral2: $off-white;
-$base-color-neutral3: $grey;
-$base-color-neutral4: $teal;
-$base-color-accent1:  $dark-teal;
-$base-color-accent2:  $dark-grey;
-$base-color-accent3:  $light-teal;
-$base-color-accent4:  $maroon;
-$base-color-text:     black;
-$base-color-text2:    $grey;
-$base-color-heading:  black;
-$base-color-link:     $teal;
-$base-color-button:   white;
-$base-color-header:   white;
-
-$background-color-body:         $base-color-neutral3;
-$background-color-content:      $base-color-neutral1;
-$background-color-tr-alternate: rgba($base-color-neutral2, 0.2);
-$background-color-header:       $base-color-neutral4;
-$background-color-footer:       $base-color-neutral3;
-$background-color-navigation:   $base-color-accent1;
-
-$link-color-visited1: #887f7a;
-$link-color-visited2: $off-white;
+// Base color lists: background, text, link, button background, button text
+$color-neutral1: white black $teal-dark $teal-dark white;
+$color-neutral2: $off-white black $teal-dark $teal-dark white;
+$color-neutral3: $off-white $grey black $grey-dark white;
+$color-neutral4: $grey white white $grey-dark white;
+$color-accent1:  $teal white white $grey-dark white;
+$color-accent2:  $teal-dark white white white $teal-dark;
+$color-accent3:  $grey-dark white $teal-bright $teal-dark white;
+$color-accent4:  $teal-light black black $teal-dark white;
 
 $default-text-shadow-color:          rgba(black, 0.5);
 $default-text-shadow-h-offset:       1px;
@@ -122,7 +105,8 @@ $indent-amount: 1em;
 
 // Default Zen Grids settings, mobile first.
 $zen-column-count:  12;
-$zen-gutter-width:  $base-line-height * 2;
+$zen-gutter-width:  $base-line-height * 4;
+$hpszen-max-content-width:  1000; // 1000px
 // IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
 // - Drop support for IE 6/7. :-) In the _base.scss, set $legacy-support-for-ie6
 //   and $legacy-support-for-ie7 to false.
