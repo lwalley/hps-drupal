@@ -205,6 +205,10 @@ iframe {
 #content {
   @include padding-trailer(1);
 }
+.breadcrumb {
+  @include padding-leader(0.5);
+  @include padding-trailer(0.5);
+}
 #block-sharethis-sharethis-block {
   @include padding-leader(1);
   @include padding-trailer(1);
@@ -292,9 +296,23 @@ iframe {
     }
   }
 }
-
+#panel-hpszen-r2 {
+  .pane-views-row {
+    .pane-content {
+      > div {
+        @include padding-leader(0.5);
+        @include padding-trailer(0.5);
+        border-bottom: 1px dotted darken(white, 30%);
+        &:first-child {
+          border-top: 1px dotted darken(white, 30%);
+        }
+      }
+    }
+  }
+}
 #results {
   .pane-views-exposed {
+    padding: rhythm(1);
     .views-submit-button {
       clear: both;
       float: right;
@@ -454,7 +472,7 @@ iframe {
     }
   }
 }
-.page-mblhistory-access-the-archives {
+.page-hps-archives {
   #featured {
     h2 {
       @include hpszen-adjust-font-size-and-rhythm(1.1);
@@ -608,16 +626,19 @@ iframe {
   }
   .hpszen-i1-r2 {
     #panel-hpszen-r1 {
-      @include zen-grid-item(3, 1);
-      input[type="text"] {
-        width: 100%;
-      }
-      .views-submit-button {
-        clear: both;
+      @include zen-grid-item(4, 1);
+      .panel-pane {
+        input[type="text"] {
+          width: 100%;
+        }
+        .views-submit-button {
+          clear: both;
+        }
       }
     }
     #panel-hpszen-r2 {
-      @include zen-grid-item(9, 5);
+      @include zen-grid-item(8, 5);
+      clear: none;
     }
   }
   #footer {

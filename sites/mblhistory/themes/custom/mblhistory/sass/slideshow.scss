@@ -56,8 +56,8 @@ $slide-base-color: darken($featured-base-color, 5%);
     margin: 0;
     > li {
       background-color: $slide-base-color;
-      overflow-y: auto;
       color: white;
+      overflow-y: auto;
       width: 100% !important;
       a,
       a.lexicon-term {
@@ -65,7 +65,7 @@ $slide-base-color: darken($featured-base-color, 5%);
         border-color: white;
       }
       > span {
-        background-color: white;
+        background-color: lighten($slide-base-color, 10%);
         // Fake crop for responsive images.
         max-height: 1em / 12 * 400;
         overflow: hidden;
@@ -139,10 +139,10 @@ $slide-base-color: darken($featured-base-color, 5%);
       display: block;
       float: left;
       border: rhythm(0.5) solid $featured-base-color;
-      width: round(icons-small-sprite-width(slide-previous) / 2);
-      height: round(icons-small-sprite-height(slide-previous) / 2);
+      width: round(image-width(sprite-file($icons-small, slide-previous)) / 2);
+      height: round(image-height(sprite-file($icons-small, slide-previous)) / 2);
       background: transparent $icons-small no-repeat;
-      background-size: round(icons-small-sprite-width(slide-previous) / 2) auto;
+      background-size: round(image-width(sprite-file($icons-small, slide-previous)) / 2) auto;
       &#hpszen-slide-previous {
         background-position: 0 round(nth(sprite-position($icons-small, slide-previous), 2) / 2);
       }

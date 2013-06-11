@@ -27,9 +27,9 @@
   h2 {
     @include hide-text();
     a {
-      height: icons-small-sprite-height(hamburger);
-      width: icons-small-sprite-width(hamburger);
-      @include icons-small-sprite(hamburger);
+      height: image-height(sprite-file($icons-small, hamburger));
+      width: image-width(sprite-file($icons-small, hamburger));
+      background: sprite($icons-small, hamburger) no-repeat;
     }
   }
   li {
