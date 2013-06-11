@@ -273,7 +273,7 @@ a.lexicon-term {
 #results {
   #panel-hpszen-r1 {
     .pane-views-exposed {
-      @include hpszen-color($color-accent3);
+      @include hpszen-color($color-accent4);
     }
   }
 }
@@ -303,19 +303,19 @@ a.lexicon-term {
   }
 }
 // Search results. Browse by listings.
-.page-hps-search,
+// @todo move to browse listing layout styles to responsive.sass
+//       and make search and browse style consistent - may require markup changes.
 .pane-hps-browse-panel-pane-list {
   .views-row {
+    overflow: hidden;
+    @include padding-leader(0.5);
+    @include padding-trailer();
+    border-bottom: 1px dotted darken(white, 30%);
     h2 {
       clear: both;
-      @include padding-leader(2);
-      border-bottom: 1px solid $grey;
-      @include trailer(0.5);
     }
-    &.views-row-first {
-      h2 {
-        @include padding-leader(0.5);
-      }
+    &:first-child {
+      border-top: 1px dotted darken(white, 30%);
     }
   }
 }
