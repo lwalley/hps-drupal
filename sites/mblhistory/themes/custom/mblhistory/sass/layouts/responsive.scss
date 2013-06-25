@@ -624,6 +624,28 @@ iframe {
       clear: none;
     }
   }
+  .hpszen-i1-b2 {
+    #panel-hpszen-b1 {
+      @include zen-grid-item(3, 1);
+    }
+    #panel-hpszen-b2 {
+      @include zen-grid-item(9, 4);
+      clear: none;
+    }
+  }
+  .hpszen-i1-b3 {
+    #panel-hpszen-b1 {
+      @include zen-grid-item(3, 1);
+    }
+    #panel-hpszen-b2 {
+      @include zen-grid-item(6, 4);
+      clear: none;
+    }
+    #panel-hpszen-b3 {
+      @include zen-grid-item(3, 10);
+      clear: none;
+    }
+  }
   .hpszen-i1-r2 {
     #panel-hpszen-r1 {
       @include zen-grid-item(4, 1);
