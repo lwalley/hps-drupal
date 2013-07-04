@@ -272,6 +272,7 @@ iframe {
 #introduction,
 #featured,
 #basic,
+#after,
 #results {
   @include padding-leader();
   @include padding-trailer();
@@ -337,6 +338,9 @@ iframe {
   .pane-title {
     margin-bottom: 0;
   }
+}
+#after {
+  margin-bottom: -1 * rhythm(1);
 }
 .page-mblhistory-home {
   #panel-hpszen-b1,
@@ -601,7 +605,8 @@ iframe {
     }
   }
   .hpszen-i1-f1-b3,
-  .hpszen-i1-f2-b3 {
+  .hpszen-i1-f2-b3,
+  .hpszen-i1-f3-b3-a1 {
     #panel-hpszen-b1 {
       @include zen-grid-item(4, 1);
     }
@@ -620,6 +625,19 @@ iframe {
       @include zen-grid-item(8, 1);
     }
     #panel-hpszen-f2 {
+      @include zen-grid-item(4, 9);
+      clear: none;
+    }
+  }
+  .hpszen-i1-f3-b3-a1 {
+    #panel-hpszen-f1 {
+      @include zen-grid-item(4, 1);
+    }
+    #panel-hpszen-f2 {
+      @include zen-grid-item(4, 5);
+      clear: none;
+    }
+    #panel-hpszen-f3 {
       @include zen-grid-item(4, 9);
       clear: none;
     }
@@ -661,18 +679,6 @@ iframe {
     #panel-hpszen-r2 {
       @include zen-grid-item(8, 5);
       clear: none;
-    }
-  }
-  #footer {
-    .block {
-      &:last-child {
-        p {
-          float: left;
-          + ul {
-            float: right;
-          }
-        }
-      }
     }
   }
   .page-hps-archives {

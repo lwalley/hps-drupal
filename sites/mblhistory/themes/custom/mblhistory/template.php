@@ -162,7 +162,10 @@ function mblhistory_preprocess_page(&$variables, $hook) {
       }
       break;
   }
-
+  // Instead of programmatically adding login link to secondary menu add login
+  // and logout links to menus through GUI and use user/login? as path to avoid
+  // access issues when creating the menu item
+  unset($variables['secondary_menu']['menu-login']);
 }
 
 
