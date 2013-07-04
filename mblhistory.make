@@ -6,11 +6,16 @@ core = 7.x
 ; Set projects defaults for modules and themes
 defaults[projects][subdir] = "custom"
 
-; Theme
+; Themes
 projects[mblhistory][type] = theme
 projects[mblhistory][download][type] = get
 projects[mblhistory][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
 projects[mblhistory][download][subtree] = hps-drupal-<replaceme:tagname>/sites/mblhistory/themes/custom/mblhistory
+
+projects[mblmini][type] = theme
+projects[mblmini][download][type] = get
+projects[mblmini][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
+projects[mblmini][download][subtree] = hps-drupal-<replaceme:tagname>/sites/mblhistory/themes/custom/mblmini
 
 ; Modules
 projects[mblhistory_dspaced][type] = module
