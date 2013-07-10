@@ -156,7 +156,8 @@ function mblhistory_preprocess_page(&$variables, $hook) {
   switch ($status) {
     case '404 Not Found':
     case '403 Forbidden':
-      if (!preg_match('/^<div/', $variables['page']['content']['system_main']['main']['#markup'])) {
+      if (isset($variables['page']['content']['system_main']['main']['#markup'])
+        && !preg_match('/^<div/', $variables['page']['content']['system_main']['main']['#markup'])) {
         $variables['page']['content']['system_main']['main']['#prefix'] = '<div class="section"><div class="section-inner"><p>';
         $variables['page']['content']['system_main']['main']['#suffix'] = '</p></div></div>';
       }
