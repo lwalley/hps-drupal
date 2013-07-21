@@ -314,6 +314,16 @@ iframe {
     }
   }
 }
+#panel-hpszen-b3 {
+  .pane-hps-exhibits-panel-pane-exhibits-related-items {
+    ul {
+      @include hpszen-bulletless-list();
+      li {
+        @include padding-trailer();
+      }
+    }
+  }
+}
 #results {
   .pane-views-exposed {
     padding: rhythm(1);
@@ -711,6 +721,27 @@ iframe {
     #panel-hpszen-r2 {
       @include zen-grid-item(8, 5);
       clear: none;
+    }
+  }
+  #panel-hpszen-b3 {
+    .pane-hps-exhibits-panel-pane-exhibits-related-items {
+      ul {
+        li {
+          clear: both;
+          overflow: hidden;
+          div {
+            width: 50%;
+            float: left;
+            .hpszen-responsive {
+              max-width: 90%;
+            }
+            + a {
+              display: block;
+              overflow: hidden;
+            }
+          }
+        }
+      }
     }
   }
   .page-hps-archives {
