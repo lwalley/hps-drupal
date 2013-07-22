@@ -744,6 +744,28 @@ iframe {
       }
     }
   }
+  .page-hps-exhibits {
+    #panel-hpszen-b1 {
+      .pane-content {
+        div {
+          clear: both;
+          @include margin-trailer(2);
+          > h3, > div {
+            width: 70%;
+            float: right;
+          }
+          > a {
+            display: block;
+            width: 30%;
+            .hps-responsive {
+              max-width: 90%;
+            }
+          }
+        }
+
+      }
+    }
+  }
   .page-hps-archives {
     #featured {
       .panel {
