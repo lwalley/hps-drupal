@@ -1,0 +1,65 @@
+<?php
+/**
+ * @file
+ * embryo_redirect.module
+ */
+
+/**
+ * Implements hook_boot().
+ */
+function embryo_redirect_boot() {
+  // @note implementing hook_boot to ensure this module is loaded
+  //       when hook_url_inbound_alter is called.
+  // @see https://api.drupal.org/comment/48898#comment-48898
+}
+/**
+ * Implements hook_url_inbound_alter().
+ */
+function embryo_redirect_url_inbound_alter(&$path, $original_path, $path_language) {
+  // Redirect from legacy URL to dpsaced_entities_item node
+  if (preg_match('/^view\/(?<id>embryo:\d*?)\/?$/', $path, $matches)) {
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'dspaced_entities_item')
+      ->fieldCondition('dc_identifier_other', 'value', $matches['id'], '=');
+    $result = $query->execute();
+    if (isset($result['node'])) {
+      $nids = array_keys($result['node']);
+      // Alias first node found.
+      $path = "node/{$nids[0]}";
+      // Flag as redirect
+      _embryo_redirect_is_redirect(TRUE);
+      // Do some housekeeping checks.
+      if (count($nids) > 1) {
+        $items = array();
+        foreach($nids as $nid) {
+          $items[] = l("node/{$nid}", "node/{$nid}");
+        }
+        watchdog('embryo_redirect',
+          'Legacy ID @id found in multiple dspaced_entities_item nodes: !links.',
+          array('@id' => $matches['id'], '!links' => implode(', ', $items)),
+          WATCHDOG_ERROR);
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_init().
+ */
+function embryo_redirect_init() {
+  if (drupal_static('_embryo_redirect_is_redirect')) {
+    drupal_static_reset('_embryo_redirect_is_redirect');
+    $request_uri = $original_uri = ltrim(request_uri(), '/');
+    $redirect_path = current_path();
+    drupal_goto($redirect_path, array(), '301');
+  }
+}
+
+/**
+ * Helper function to flag when redirect needed.
+ */
+function _embryo_redirect_is_redirect($is_redirect = FALSE) {
+  $static = &drupal_static(__FUNCTION__);
+  $static = $is_redirect;
+}

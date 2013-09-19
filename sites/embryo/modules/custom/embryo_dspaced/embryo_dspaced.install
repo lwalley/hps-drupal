@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file embryo_dspaced.install
+ */
+
+/**
+ * Implements hook_install().
+ */
+function embryo_dspaced_install() {
+  // Nothing to do here. Fields installed by dspaced_entities module.
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function embryo_dspaced_uninstall() {
+ // Nothing to do here. Fields uninstalled by dspaced_entities module.
+}
+
+/**
+ * Implements hook_update_N().
+ * Adds dc.identifier.other field to dspaced_entities_item node type.
+ */
+function embryo_dspaced_update_7100() {
+  // Check field does not already exist.
+  if (!field_info_field('dc_identifier_other')) {
+    // Load module and includes to get access to helper functions and hooks.
+    drupal_load('module', 'embryo_dspaced');
+    try {
+      $entities = module_invoke('embryo_dspaced', 'dspaced_entities_default');
+      $field_dc_identifier_other = $entities['fields']['dc_identifier_other'];
+      field_create_field($field_dc_identifier_other);
+      $field_dc_identifier_other['entity_type'] = 'node';
+      $field_dc_identifier_other['bundle'] = 'dspaced_entities_item';
+      field_create_instance($field_dc_identifier_other);
+    }
+    catch (Exception $e) {
+      throw new DrupalUpdateException($e->getMessage());
+    }
+  }
+}

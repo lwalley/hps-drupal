@@ -60,5 +60,14 @@ function _embryo_dspaced_fields() {
       'xpath' => "metadata/metadataentity[schema = 'dc' and " .
                  "element = 'subject' and qualifier = 'embryo']/value",
     ),
+    'dc_identifier_other' => array(
+      'field_name' => 'dc_identifier_other',
+      'label' => t('DC Identifier Other'),
+      'cardinality' => FIELD_CARDINALITY_UNLIMITED,
+      'type' => 'text',
+      'settings' => array('max_length' => 255),
+      'xpath' => "metadata/metadataentity[schema = 'dc' and " .
+                 "element = 'identifier' and qualifier = 'other']/value"
+    ),
   );
 }

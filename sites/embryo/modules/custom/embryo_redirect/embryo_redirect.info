@@ -1,0 +1,4 @@
+name = Embryo Redirect
+description = Adds permanent redirects for legacy URLs.
+core = 7.x
+package = HPS
