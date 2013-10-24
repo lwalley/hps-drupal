@@ -12,10 +12,10 @@ projects[mblhistory][download][type] = get
 projects[mblhistory][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
 projects[mblhistory][download][subtree] = hps-drupal-<replaceme:tagname>/sites/mblhistory/themes/custom/mblhistory
 
-projects[mblmini][type] = theme
-projects[mblmini][download][type] = get
-projects[mblmini][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
-projects[mblmini][download][subtree] = hps-drupal-<replaceme:tagname>/sites/mblhistory/themes/custom/mblmini
+projects[mblexhibitlinear][type] = theme
+projects[mblexhibitlinear][download][type] = get
+projects[mblexhibitlinear][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
+projects[mblexhibitlinear][download][subtree] = hps-drupal-<replaceme:tagname>/sites/mblhistory/themes/custom/mblexhibitlinear
 
 ; Modules
 projects[mblhistory_dspaced][type] = module
