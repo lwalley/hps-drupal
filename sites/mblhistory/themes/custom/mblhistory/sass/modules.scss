@@ -1,0 +1,508 @@
+@import "init";
+@import "hipos/macro/modules";
+
+#header {
+  .section {
+    background: transparent url('../images/seal.png') no-repeat 0 40%;
+  }
+}
+
+.header__logo {
+  display: block;
+  max-width: rhythm(17);
+}
+
+.header__logo-image {
+  max-width: 100%;
+}
+
+.header__site-name {
+  font-weight: normal;
+  span {
+    > span {
+      &:first-of-type {
+        font-size: 0.7em;
+        font-style: italic;
+      }
+      &:last-of-type {
+        display: block;
+      }
+    }
+  }
+}
+
+.with-logo {
+  .header__site-name {
+    color: red;
+    @include element-invisible;
+  }
+}
+#footer {
+  #block-menu-menu-hps-tertiary {
+    font-family: $hipos-font-menus;
+    border-bottom: 1px dotted $off-white;
+  }
+  .block {
+    &:last-child {
+      address {
+        font-style: normal;
+      }
+    }
+  }
+}
+.view-display-id-panel_pane_gallery {
+  .view-content {
+    > div {
+      border-top: 1px dotted darken(white, 30%);
+    }
+  }
+}
+// Search results. Browse by listings.
+// @todo move to browse listing layout styles to responsive.sass
+//       and make search and browse style consistent - may require markup changes.
+.pane-hps-browse-panel-pane-list {
+  .views-row {
+    overflow: hidden;
+    @include padding-leader(0.5);
+    @include padding-trailer();
+    border-bottom: 1px dotted darken(white, 30%);
+    h2 {
+      clear: both;
+    }
+    &:first-child {
+      border-top: 1px dotted darken(white, 30%);
+    }
+  }
+}
+
+.pane-hps-browse-panel-pane-index {
+  td {
+    &:nth-child(2),
+    &:nth-child(4) {
+      width: 12%;
+    }
+    &:nth-child(5) {
+      width: 15%
+    }
+  }
+}
+.pane-hps-browse-panel-pane-gallery {
+  h2 {
+    @include adjust-font-size-to(1.2 * $base-font-size);
+    @include adjust-leading-to(1);
+  }
+  .field-dspace-bitstream-url {
+    width: 100%;
+  }
+}
+
+
+// Override default styles for different sections
+.page-mblhistory-home {
+  #basic_two {
+    li {
+      > span {
+        color: darken(white, 20%);
+      }
+    }
+  }
+}
+
+.page-hps-archives {
+  #featured {
+    @include hipos-color(nth($hipos-colors, 8));
+  }
+}
+
+#introduction,
+#featured {
+  blockquote {
+    @include hipos-fancy-blockquote();
+    p {
+      &:first-child {
+        font-family: $hipos-font-fancy;
+        font-style: italic;
+        &:before {
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+
+#basic__three {
+  .pane-hps-exhibits-panel-pane-exhibits-related-items {
+    ul {
+      @include hipos-bulletless-list();
+      li {
+        @include padding-trailer();
+      }
+    }
+  }
+}
+
+// Override default layout for different site sections
+.page-mblhistory-home {
+  #basic__one,
+  #basic__two {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        @include padding-leader(0.5);
+        @include padding-trailer(0.5);
+        border-bottom: 1px dotted darken(white, 30%);
+        overflow: hidden;
+        &:first-child {
+          border-top: 1px dotted darken(white, 30%);
+        }
+        > h3 {
+          @include hipos-adjust-font-size-and-rhythm(1);
+          margin: 0;
+        }
+        > p {
+          @include hipos-adjust-font-size-and-rhythm(0.9);
+          @include margin-leader(0.5);
+          @include margin-trailer(0.5);
+          &:last-child {
+            @include hipos-adjust-font-size-and-rhythm(0.8);
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+        > a {
+          width: 30%;
+          margin-right: 2%;
+          display: block;
+          float: left;
+          .hpszen-responsive {
+            max-width: 100%;
+          }
+          + h3 {
+            margin-left: 32%;
+          }
+        }
+        > span {
+          display: block;
+          float: right;
+        }
+      }
+    }
+  }
+}
+.page-taxonomy-term {
+  #introduction {
+    padding-top: 0;
+    .pane-term-description {
+      .pane-content {
+        p {
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.page-mblhistory-build-the-archives {
+  #featured {
+    @include padding-leader;
+    @include padding-trailer(2);
+    .view-content > div {
+      float: left;
+      @include padding-leader(1);
+      padding-right: rhythm(1);
+    }
+    h3 {
+      @include element-invisible();
+    }
+    .hpszen-responsive.hps-uniform {
+      width: hipos-px-to-em(80, 12);
+    }
+  }
+  #basic__one {
+    .pane-hps-archives-panel-pane-hps-archives-featured-stories {
+      @include zen-clear();
+      @include zen-grid-item-base();
+      @include zen-grid-item(12, 1);
+      @include zen-nested-container();
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+          @include padding-leader();
+          @include padding-trailer();
+          border-bottom: 1px dotted darken(white, 30%);
+          overflow: hidden;
+          &:first-child {
+            border-top: 1px dotted darken(white, 30%);
+          }
+          .hpszen-responsive {
+            @include zen-grid-item-base();
+            @include zen-grid-item(4, 1);
+            @include zen-clear();
+          }
+          > div {
+            @include zen-grid-item-base();
+            @include zen-grid-item(8, 5);
+            h3 {
+              margin: 0;
+              + p {
+                margin-top: rhythm(0.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.page-mblhistory-explore {
+  #featured {
+    padding-bottom: 0;
+    ul {
+      @include hipos-bulletless-list();
+    }
+  }
+  #basic__two {
+    blockquote {
+      @include hipos-fancy-blockquote();
+    }
+  }
+  .pane-hps-courses-search {
+    ul {
+      @include hipos-bulletless-list;
+    }
+    li {
+      display: inline;
+    }
+  }
+}
+.page-hps-archives {
+  #featured {
+    h2 {
+      @include hipos-adjust-font-size-and-rhythm(1.1);
+    }
+    ul {
+      @include hipos-bulletless-list;
+      @include adjust-leading-to(1);
+    }
+  }
+}
+.node-type-hps-course {
+  .pane-hps-courses-panel-pane-course-participants {
+    @include zen-nested-container();
+    .view-empty {
+      @include zen-grid-item-base();
+      @include zen-grid-item(12, 1);
+    }
+    .group {
+      @include zen-grid-item-base();
+      &:nth-child(2n+1) {
+        @include zen-grid-item(6, 1);
+        @include zen-clear();
+      }
+      &:nth-child(2n) {
+        @include zen-grid-item(6, 7);
+      }
+    }
+    ul {
+      @include hipos-bulletless-list;
+    }
+  }
+}
+
+// Start of overrides for wider screens
+// Font: increase base font size as screens get wider
+// Content increase base grid and gutters
+@media all and (min-width: 1em / 16 * 481) and (max-width: 1em / 16 * 1023) {
+  .page-mblhistory-explore {
+    #featured {
+      .pane-hps-exhibits-panel-pane-featured-exhibits {
+        .view-content {
+          li {
+            // Match width of image .hps-minor
+            // @see hipos-adjust-responsive-images
+            width: (1em / 13) * 150 * 1.2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Multi-column layouts begin.
+@media all and (min-width: 1em / 16 * 768) {
+  #basic__three {
+    .pane-hps-exhibits-panel-pane-exhibits-related-items {
+      ul {
+        li {
+          clear: both;
+          overflow: hidden;
+          div {
+            width: 50%;
+            float: left;
+            .hpszen-responsive {
+              max-width: 90%;
+            }
+            + a {
+              display: block;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+  .page-hps-exhibits {
+    #basic__one {
+      .pane-content {
+        div {
+          clear: both;
+          @include margin-trailer(2);
+          > h3, > div {
+            width: 70%;
+            float: right;
+          }
+          > a {
+            display: block;
+            width: 30%;
+            .hps-responsive {
+              max-width: 90%;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  .page-hps-archives {
+    #featured {
+      .panel {
+        @include zen-nested-container();
+        .panel-pane {
+          @include zen-grid-item-base();
+          @include zen-grid-item(12, 1);
+          @include zen-clear();
+          &:nth-of-type(2) {
+            @include zen-grid-item(4, 1);
+          }
+          &:last-child {
+            @include zen-grid-item(4, 5);
+            clear: none;
+          }
+        }
+      }
+    }
+  }
+  .page-mblhistory-home {
+    #featured {
+      @include padding-leader();
+    }
+    &.hpszen-i1-f2-b3 {
+      #featured__one {
+        @include zen-grid-item(4, 9);
+        clear: none;
+      }
+      #featured__two {
+        @include zen-grid-item(8, 1);
+      }
+    }
+    #basic__one,
+    #basic__two {
+      ul {
+        li {
+          a {
+            width: 30%;
+            margin-right: 0;
+            + h3 {
+              margin-left: 30%;
+              padding-left: rhythm(0.5);
+              + p {
+                clear: both;
+              }
+            }
+          }
+        }
+      }
+    }
+    #bottom {
+      p {
+        @include zen-grid-item(4, 1);
+      }
+      ul {
+        @include zen-grid-item(8, 5);
+      }
+    }
+  }
+  .page-mblhistory-build-the-archives {
+    &.hpszen-i1-f2-b2,
+    &.hpszen-i1-f2-b3 {
+      #featured__one {
+        @include zen-grid-item(7, 1);
+      }
+      #featured__two {
+        @include zen-grid-item(5, 8);
+      }
+    }
+  }
+  .page-mblhistory-explore {
+    #featured {
+      .pane-hps-exhibits-panel-pane-featured-exhibits {
+        h2 {
+          @include element-invisible();
+        }
+        .view-content {
+          height: rhythm(28);
+          overflow-y: hidden;
+          overflow-x: scroll;
+          white-space: nowrap;
+          li {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: rhythm(5);
+            white-space: normal;
+            h3 {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .node-type-hps-news {
+    .node-hps-news {
+      overflow: hidden;
+      .group_hps_news_image {
+        @include hipos-adjust-font-size-and-rhythm(0.9);
+        width: 40%;
+        float: right;
+        .hpszen-responsive {
+          width: 100%;
+          @include padding-trailer(0.5);
+        }
+        + div {
+          margin-right: 40%;
+          padding-right: rhythm(2);
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: 1em / 16 * 1024) {
+  .page-mblhistory-explore {
+    #featured {
+      .pane-hps-exhibits-panel-pane-featured-exhibits {
+        .view-content {
+          li {
+            // Match width of image .hps-minor
+            // @see hipos-adjust-responsive-images
+            width: (1em / 14) * 150 * 1.4;
+          }
+        }
+      }
+    }
+  }
+}
+
+

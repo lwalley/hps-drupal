@@ -1,0 +1,38 @@
+@import "init";
+@import "hipos/micro/layout";
+
+// @todo also reflow content at smaller breakpoints to address long lines.
+
+@media all and (min-width: 1em / 16 * 768) {
+  .hpszen-b2 {
+    #basic__one {
+      @include zen-grid-item(8, 1, right);
+    }
+    #basic__two {
+      @include zen-grid-item(4, 9, right);
+    }
+  }
+  .hpszen-i1-b2 {
+    #basic__one {
+      @include zen-grid-item(4, 1);
+    }
+    #basic__two {
+      @include zen-grid-item(8, 5);
+      clear: none;
+    }
+  }
+  .hpszen-i1-b3 {
+    #basic__one {
+      @include zen-grid-item(3, 1);
+    }
+    #basic__two {
+      @include zen-grid-item(6, 4);
+      clear: none;
+    }
+    #basic__three {
+      @include zen-grid-item(3, 10);
+      clear: none;
+    }
+  }
+}
+

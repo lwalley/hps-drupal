@@ -1,0 +1,24 @@
+@import "init";
+
+@import "hipos/themes/swimlanes";
+
+.header-navigation {
+  @include hipos-color($header--colors);
+}
+.navigation {
+  background-color: transparent;
+}
+html.js .navigation {
+  // If Javascript is enabled then replace navigation header with hamburger icon
+  h2 {
+    a {
+      width: image-width(sprite-file($icons-small, hamburger));
+      background-position: 0 round(nth(sprite-position($icons-small, hamburger), 2) * 0.6);
+      @include background-size(60% auto);
+    }
+  }
+}
+
+.pane-node-book-menu li {
+  border-bottom: 1px dotted $grey;
+}

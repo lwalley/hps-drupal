@@ -1,0 +1,67 @@
+@import "init";
+@import "hipos/micro/modules";
+
+.header__site-name {
+  font-weight: normal;
+  span {
+    span:nth-of-type(1) {
+      font-style: italic;
+    }
+  }
+}
+
+.node-type-hps-exhibit .pane-node-title h1 {
+  @include hipos-adjust-font-size-and-rhythm(3);
+  font-weight: normal;
+}
+
+.pane-node-field-hps-exhibit-banner {
+  .hpszen-responsive {
+    &.hps-principal {
+      width: auto;
+    }
+  }
+}
+
+.pane-node-book-menu {
+  ul {
+    @include hipos-menu-list;
+  }
+}
+
+.pane-hps-exhibits-panel-pane-exhibit-information-menu {
+  @include margin-leader(3);
+  ul {
+    @include hipos-menu-list;
+  }
+}
+
+.pane-node-prepopulate {
+  ul {
+    @include hipos-bulletless-list;
+  }
+}
+
+.view-display-id-panel_pane_exhibits_related_items {
+  @include hipos-adjust-font-size-and-rhythm(0.8);
+  ul {
+    @include hipos-bulletless-list;
+  }
+  li {
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 1.5em;
+    div {
+      width: 40%;
+      float: left;
+      .hpszen-responsive {
+        max-width: 90%;
+      }
+      + a {
+        display: block;
+        overflow: hidden;
+      }
+    }
+  }
+}
+

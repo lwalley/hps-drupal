@@ -1,0 +1,79 @@
+screenshot  = screenshot.png
+name        = MBL Exhibit Linear
+description = Linear exhibit theme for MBL History.
+core        = 7.x
+base theme  = mblhistory
+
+; Don't override basic.css inherited from hpszen theme, because it contains
+; normalisation and a basic layout relevant to the HPS distribution. Instead,
+; to alter layout select different panels layouts in page manager, and to
+; customise components add new modular, theme and state stylesheets.
+; @see http://smacss.com/book/categorizing
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/modules.css
+stylesheets[all][] = css/theme.css
+stylesheets[all][] = css/slideshow.css
+
+; Don't override script.js inherited from hpszen theme because it contains
+; useful generic behaviour applicable to the HPS distribution. Instead, you
+; can alter hpszen behaviours, or add new behaviours by adding new js files.
+; If you really need to override the hpszen script.js file then uncomment the
+; js/scripts.js line (use and empty script.js file to 'disable' hpszen js).
+scripts[] = js/mblexhibitlinear.js
+
+; Sub-themes do not inherit regions so we define them here.
+; @see http://drupal.org/node/225125
+; This section lists the regions defined in HPS Zen's default page.tpl.php and
+; maintenance-page.tpl.php files.
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[bottom]         = Bottom
+regions[footer]         = Footer
+
+; The page_top and page_bottom regions are hidden, which means they will not
+; show up on the blocks administration page. But they are required in order for
+; the html.tpl.php to work properly, so do not delete them.
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+
+
+; Various page elements output by the theme can be toggled on and off. The
+; "features" control which of these check boxes display on the
+; admin/appearance config page. This is useful for suppressing check boxes
+; for elements not used by your sub-theme. To suppress a check box, omit the
+; entry for it below. See the Drupal 7 Theme Guide for more info:
+; http://drupal.org/node/171205#features
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; Set the default values of settings on the theme-settings.php form.
+;
+; In order to have expanded main menu items we turn off main menu and use
+; menu block instead as recommended by Zen creators @see zen/templates/page.tpl.php
+settings[toggle_main_menu]           = 0
+settings[zen_breadcrumb]             = no
+settings[zen_breadcrumb_separator]   = ' › '
+settings[zen_breadcrumb_home]        = 1
+settings[zen_breadcrumb_trailing]    = 1
+settings[zen_breadcrumb_title]       = 0
+settings[zen_skip_link_anchor]       = content
+settings[zen_skip_link_text]         = Skip navigation
+settings[zen_html5_respond_meta][]   = respond
+settings[zen_html5_respond_meta][]   = html5
+settings[zen_html5_respond_meta][]   = meta
+settings[zen_rebuild_registry]       = 1
+settings[zen_wireframes]             = 0
+settings[hpszen_navigation_dropdown] = 0
+

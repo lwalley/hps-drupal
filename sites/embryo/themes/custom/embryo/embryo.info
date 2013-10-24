@@ -1,72 +1,38 @@
+; Documentation for this file is available in Zen STARTERKIT
+; @see zen/STARTERKIT/STARTERKIT.info.txt
+
 screenshot  = screenshot.png
 name        = Embryo
 description = HPS Zen sub theme.
 core        = 7.x
 base theme  = hpszen
 
-
-; This section controls the CSS files for your theme. There are 3 different
-; things you can do with a "stylesheets" line:
-; - Add a new stylesheet for your theme.
-; - Override a module's stylesheet. If the stylesheet you are adding uses the
-;   same filename as a stylesheet from a Drupal core or contrib module, your CSS
-;   file will be used instead of the module's file.
-; - Remove a module's stylesheet. If you specify the name of a Drupal core or
-;   contrib module's stylesheets, Drupal will remove that stylesheet if you do
-;   NOT include a file with that name with your theme.
-;
-; stylesheets[MEDIA][] = FILE
-;
-; The "FILE" is the name of the stylesheet to add/override/remove.
-; The "MEDIA" in the first set of brackets is a media type or a media query.
-; Typical CSS media types include "all", "screen", "print", and "handheld". A
-; typical media query is "screen and (max-width: 320px)".
-;
-; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
-; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
-
-
-; Stylehseets are inherited from base theme.
-; Override or add new stylesheets.
-stylesheets[all][] = css/normalize.css
+; Don't override styles.css inherited from hpszen theme, because it contains
+; normalisation and a basic layout relevant to the HPS distribution. Instead,
+; to alter layout select different panels layouts in page manager, and to
+; customise components add new modular, theme and state stylesheets.
+; @see http://smacss.com/book/categorizing
+stylesheets[all][] = css/skin.css
 stylesheets[all][] = css/pages.css
-stylesheets[all][] = css/navigation.css
-stylesheets[all][] = css/slideshow.css
-stylesheets[all][] = css/views-styles.css
 
-; Javascript files are inherited from base theme.
-; Override or add new Javascript files.
-; Add empty file to override and 'disable' base theme Javascript files.
+; Don't override script.js inherited from hpszen theme because it contains
+; useful generic behaviour applicable to the HPS distribution. Instead, you
+; can alter hpszen behaviours, or add new behaviours by adding new js files.
+; If you really need to override the hpszen script.js file then uncomment the
+; js/scripts.js line (use and empty script.js file to 'disable' hpszen js).
 ; scripts[] = js/script.js
-
-
 
 ; Sub-themes do not inherit regions so we define them here.
 ; @see http://drupal.org/node/225125
-; This section lists the regions defined in Zen's default page.tpl.php and
-; maintenance-page.tpl.php files. The name in brackets is the machine name of
-; the region. The text after the equals sign is a descriptive text used on the
-; admin/structure/blocks page.
-;
-; In the page.tpl, the contents of the region are output with a
-; $page['MACHINE-NAME'] variable and, in the maintenance-page.tpl, the region is
-; output with a $MACHINE-NAME variable. For example, with this line in the .info
-; file:
-;   regions[header_top] = Header top
-; You'll use this variable in page.tpl.php:
-;   <?php print render($page['header_top']); ?>
-; And you'll use this variable in maintenance-page.tpl.php:
-;   <?php print $header_top; ?>
-
+; This section lists the regions defined in HPS Zen's default page.tpl.php and
+; maintenance-page.tpl.php files.
 regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
-regions[sidebar_first]  = First sidebar
-regions[sidebar_second] = Second sidebar
+regions[bottom]         = Bottom
 regions[footer]         = Footer
-regions[bottom]         = Page bottom
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
@@ -93,9 +59,10 @@ features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
 
-
-
 ; Set the default values of settings on the theme-settings.php form.
+;
+; In order to have expanded main menu items we turn off main menu and use
+; menu block instead as recommended by Zen creators @see zen/templates/page.tpl.php
 settings[toggle_main_menu]         = 0
 settings[zen_breadcrumb]           = no
 settings[zen_breadcrumb_separator] = ' › '
@@ -109,3 +76,4 @@ settings[zen_html5_respond_meta][] = html5
 settings[zen_html5_respond_meta][] = meta
 settings[zen_rebuild_registry]     = 1
 settings[zen_wireframes]           = 0
+

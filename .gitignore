@@ -11,3 +11,6 @@ sites/*/private
 
 # Ignore modules managed by other repositories
 sites/all/modules
+
+# Ignore local copy of hipos compass plugin
+sites/*/themes/custom/*/sass-extensions/hipos

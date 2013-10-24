@@ -18,3 +18,8 @@ projects[embryo_dspaced][type] = module
 projects[embryo_dspaced][download][type] = get
 projects[embryo_dspaced][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
 projects[embryo_dspaced][download][subtree] = hps-drupal-<replaceme:tagname>/sites/embryo/modules/custom/embryo_dspaced
+
+projects[embryo_redirect][type] = module
+projects[embryo_redirect][download][type] = get
+projects[embryo_redirect][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
+projects[embryo_redirect][download][subtree] = hps-drupal-<replaceme:tagname>/sites/embryo/modules/custom/embryo_redirect

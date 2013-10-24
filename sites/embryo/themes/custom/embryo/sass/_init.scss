@@ -1,0 +1,49 @@
+//
+// Initialization partial
+//
+// To make it easier for sub themes to override init settings we separate
+// generic variables into init-hipos file and then sub themes can customise this
+// init partial.
+
+// Import generic variables
+@import "init-hipos";
+
+// Variables for the font stacks.
+$hipos-font-base:        $neue;          // The font family set on the html element.
+$hipos-font-headings:    $garamond; // The font family set on h elements
+$hipos-font-menus:       $garamond;
+$hipos-font-buttons:     $garamond;
+$hipos-font-fancy:       $garamond;
+$hipos-font-monospace:   $courier;       // The font family set on pre, code etc
+
+
+// Custom colors
+$blue:   #557ebd; // hsla(216, 44%, 54%, 1) rgba(85, 126, 189, 1)
+$grey:   #ebeae6; // hsla(48, 11%, 91%, 1) rgba(235, 234, 230, 1)
+
+// Base color lists: background, text, link, button background, button text
+$hipos-colors-neutral1: white black $teal-dark $teal-dark white;
+$hipos-colors-neutral2: $off-white black $teal-dark $teal-dark white;
+$hipos-colors-neutral3: $off-white $grey black $grey-dark white;
+$hipos-colors-neutral4: $grey white white $grey-dark white;
+$hipos-colors-accent1:  $teal white white $grey-dark white;
+$hipos-colors-accent2:  $teal-dark white white white $teal-dark;
+$hipos-colors-accent3:  $grey-dark white $teal-bright $teal-dark white;
+$hipos-colors-accent4:  $teal-light black black $teal-dark white;
+$hipos-colors-accent5:  darken($grey-dark, 5%) white $teal-bright $teal-dark white;
+
+$body--colors: $hipos-color-neutral1;
+$header--colors: $hipos-colors-accent1;
+$navigation--colors: $hipos-colors-accent2;
+$navigation--active--colors: $hipos-colors-neutral2;
+$main__header--colors: $hipos-colors-neutral2;
+$slideshow--colors: $hipos-colors-accent5;
+
+// Tab styling.
+$tabs-container-bg: white;
+$tabs-border: $grey-light;
+
+// Import sprites.
+$icons-small-layout: smart;
+$icons-small: sprite-map("../images/icons-small/*.png");
+

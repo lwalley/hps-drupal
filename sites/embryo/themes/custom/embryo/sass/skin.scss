@@ -1,0 +1,7 @@
+// Import initialization partial.
+@import "init";
+
+// Import hipos swimlanes as default skin.
+// Override this file in sub themes to use a different skin.
+@import "hipos/nought";
+

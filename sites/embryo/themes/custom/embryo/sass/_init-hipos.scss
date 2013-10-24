@@ -1,0 +1,180 @@
+//
+// Initialization partial
+//
+// To make it easier to use all variables and mixins in any Sass file in this
+// theme, each .scss file has a @import "init" declaration. And this _init.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared Sass variables.
+// - Next we import Compass plug-ins (Sass mixin libraries).
+// - Last we define our custom mixins for this theme.
+//
+
+
+// =============================================================================
+// Variables
+// =============================================================================
+
+//
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// - Drop support for IE 6/7. :-) Set $legacy-support-for-ie6
+//   and $legacy-support-for-ie7 to false.
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid and gutter width in resonsive-sidebars.scss
+//   (use px for both or use % for both) and set the box-sizing variable to content-box.
+//
+// Zen does not require special handling for IE8 or later. But Compass uses that
+// variable for a couple edge cases. We include it for completeness sake. See
+// the documentation at http://compass-style.org/reference/compass/support/
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+$legacy-support-for-ie8: true;
+
+
+//
+// Font faces, stacks and sizes.
+//
+
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size:   10px; // The font size set on the root html element.
+$base-line-height: 1.5 * $base-font-size; // This line-height determines the basic unit of vertical rhythm.
+
+$h1-font-size: 1.5 * $base-font-size;
+$h2-font-size: 1.3 * $base-font-size;
+$h3-font-size: 1.1 * $base-font-size;
+$h4-font-size: 1   * $base-font-size;
+$h5-font-size: 1   * $base-font-size;
+$h6-font-size: 1   * $base-font-size;
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's create some font stacks.
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+$lucida-grande:   "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+$garamond:        Garamond, Perpetua, "Times New Roman", serif;
+
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$neue:            "Helvetica Neue", Arial, Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+//
+// Colors, etc.
+//
+// Variables for default colors, shadows etc.
+$teal-dark:   #1a6065; // hsla(184, 59%, 25%, 1) rgba(26, 96, 101, 1)
+$teal:        #4d9ca2; // hsla(184, 36%, 47%, 1) rgba(77, 157, 163, 1)
+$teal-light:  #bbd3d4; // hsla(184, 23%, 78%, 1) rgba(187, 211, 212, 1)
+$teal-bright: #63B0B6; //#31b5bf; // hsla(184, 59%, 47%, 1) rgba(49, 181, 191, 1)
+$grey-light:  #bbbbbb; // hsla(0, 0%, 73%, 1) rgba(187, 187, 187, 1)
+$grey-dark:   #1a1a1a; // hsla(0, 0%, 10%, 1) rgba(26, 26, 26, 1)
+$grey:        #666666; // hsla(0, 0%, 40%, 1) rgba(102, 102, 102, 1)
+$off-white:   #e6e6e6; // hsla(0, 0%, 90%, 1) rgba(230, 230, 230, 1)
+
+$default-text-shadow-color:          rgba(black, 0.5);
+$default-text-shadow-h-offset:       1px;
+$default-text-shadow-v-offset:       1px;
+$default-text-shadow-blur:           1px;
+$default-text-shadow-spread:         false;
+
+$default-border-radius:              2px;
+
+$default-box-shadow-color:           rgba(black, 0.5);
+$default-box-shadow-h-offset:        2px; // Positive is to the right.
+$default-box-shadow-v-offset:        2px; // Positive is down.
+$default-box-shadow-blur:            5px;
+$default-box-shadow-spread:          false;
+$default-box-shadow-inset:           false;
+
+// Tab styling.
+$tabs-container-bg: white;
+$tabs-border: $grey-light;
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 30px;
+
+// Default Zen Grids settings, mobile first.
+$zen-column-count:  12;
+$zen-gutter-width:  $base-line-height * 4;
+$hipos-max-content-width:  1000 !default; // 1000px
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// - Drop support for IE 6/7. :-) In the _base.scss, set $legacy-support-for-ie6
+//   and $legacy-support-for-ie7 to false.
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid width and gutter width (use px for both or
+//   use % for both, etc.) and set the box-sizing variable to content-box.
+//   $zen-box-sizing: content-box;
+// More efficient if we set item-base manually.
+$zen-auto-include-item-base: false;
+$zen-auto-include-flow-item-base: false;
+
+
+// Default hipos specific settings intended to be overridden.
+// Variables for the font stacks.
+$hipos-font-base:        $neue !default;          // The font family set on the html element.
+$hipos-font-headings:    $lucida-grande !default; // The font family set on h elements
+$hipos-font-menus:       $lucida-grande !default;
+$hipos-font-buttons:     $lucida-grande !default;
+$hipos-font-fancy:       $lucida-grande !default;
+$hipos-font-monospace:   $courier !default;       // The font family set on pre, code etc
+
+// Base color lists: background, text, link, button background, button text
+$hipos-color-neutral1: white black $teal-dark $teal-dark white !default;
+$hipos-color-neutral2: $off-white black $teal-dark $teal-dark white !default;
+$hipos-color-neutral3: $off-white $grey black $grey-dark white !default;
+$hipos-color-neutral4: $grey white white $grey-dark white !default;
+$hipos-color-accent1:  $teal white white $grey-dark white !default;
+$hipos-color-accent2:  $teal-dark white white white $teal-dark !default;
+$hipos-color-accent3:  $grey-dark white $teal-bright $teal-dark white !default;
+$hipos-color-accent4:  $teal-light black black $teal-dark white !default;
+
+
+// =============================================================================
+// Partials to be shared with all .scss files.
+// =============================================================================
+
+// Add Compass' IE and vendor prefix support variables.
+@import "compass/support";
+// Better than Drupal's clearfix.
+@import "compass/utilities/general/clearfix";
+// See http://compass-style.org/help/tutorials/spriting/
+@import "compass/utilities/sprites";
+// Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/css3";
+// Helps set up a vertical rhythm, and includes common text styles.
+@import "compass/typography";
+// Add the Zen Grids responsive layout mixins.
+@import "zen";
+
