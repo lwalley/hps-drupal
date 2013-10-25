@@ -1,10 +1,8 @@
 @import "init";
 @import "hipos/macro/modules";
 
-#header {
-  .section {
-    background: transparent url('../images/seal.png') no-repeat 0 40%;
-  }
+.header__bucket {
+  background: transparent url('../images/seal.png') no-repeat 0 40%;
 }
 
 .header__logo {
