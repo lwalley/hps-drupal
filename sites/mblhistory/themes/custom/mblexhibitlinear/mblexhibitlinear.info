@@ -59,15 +59,18 @@ features[] = main_menu
 features[] = secondary_menu
 
 ; Set the default values of settings on the theme-settings.php form.
-;
+; Turn off most of header elements - we just want minimal title
+settings[toggle_logo]                = 0
+settings[toggle_slogan]              = 0
+settings[toggle_secondary_menu]      = 0
 ; In order to have expanded main menu items we turn off main menu and use
 ; menu block instead as recommended by Zen creators @see zen/templates/page.tpl.php
 settings[toggle_main_menu]           = 0
-settings[zen_breadcrumb]             = no
+settings[zen_breadcrumb]             = yes
 settings[zen_breadcrumb_separator]   = ' › '
-settings[zen_breadcrumb_home]        = 1
+settings[zen_breadcrumb_home]        = 0
 settings[zen_breadcrumb_trailing]    = 1
-settings[zen_breadcrumb_title]       = 0
+settings[zen_breadcrumb_title]       = 1
 settings[zen_skip_link_anchor]       = content
 settings[zen_skip_link_text]         = Skip navigation
 settings[zen_html5_respond_meta][]   = respond
