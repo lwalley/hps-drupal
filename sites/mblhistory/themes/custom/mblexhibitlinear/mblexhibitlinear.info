@@ -9,6 +9,7 @@ base theme  = mblhistory
 ; to alter layout select different panels layouts in page manager, and to
 ; customise components add new modular, theme and state stylesheets.
 ; @see http://smacss.com/book/categorizing
+stylesheets[all][] = css/basic.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/modules.css
 stylesheets[all][] = css/theme.css

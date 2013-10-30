@@ -36,3 +36,12 @@
   }
 }
 
+@media all and (min-width: 1em / 16 * 1500) {
+  // @todo could do something like this in shared layout using if max width > 1500
+  .no-panels .main__content__panel--ish,
+  .panel {
+    padding-left: $zen-gutter-width * 1.5;
+    padding-right: $zen-gutter-width * 1.5;
+  }
+}
+

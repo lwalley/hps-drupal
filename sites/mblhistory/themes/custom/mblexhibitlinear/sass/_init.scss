@@ -4,6 +4,9 @@
 // Initialize hipos plugin
 @import "hipos";
 
+// Override hipos settings
+$hipos-max-content-width:  3000; // px
+
 // Variables for the font stacks.
 $hipos-font-base:        $neue;          // The font family set on the html element.
 $hipos-font-headings:    $lucida-grande; // The font family set on h elements
