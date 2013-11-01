@@ -5,16 +5,17 @@
 .header-navigation {
   @include hipos-color($header--colors);
 }
-.navigation {
+.navigation,
+.header {
   background-color: transparent;
 }
-html.js .navigation {
+.js .navigation {
   // If Javascript is enabled then replace navigation header with hamburger icon
   h2 {
     a {
       width: image-width(sprite-file($icons-small, hamburger));
-      background-position: 0 round(nth(sprite-position($icons-small, hamburger), 2) * 0.6);
-      @include background-size(60% auto);
+      background-position: 0 round(nth(sprite-position($icons-small, hamburger), 2) * 0.8);
+      @include background-size(80% auto);
     }
   }
 }

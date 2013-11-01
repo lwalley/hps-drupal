@@ -15,10 +15,12 @@
   font-weight: normal;
 }
 
-.pane-node-field-hps-exhibit-banner {
-  .hpszen-responsive {
-    &.hps-principal {
-      width: auto;
+@media all and (min-width: 1em / 16 * 768) {
+  .pane-node-field-hps-exhibit-banner {
+    .hpszen-responsive {
+      &.hps-principal {
+        width: auto;
+      }
     }
   }
 }
