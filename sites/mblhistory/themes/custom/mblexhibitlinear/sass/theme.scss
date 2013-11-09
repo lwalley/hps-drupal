@@ -23,3 +23,33 @@
 .pane-node-book-menu li {
   border-bottom: 1px dotted $grey;
 }
+
+.pane-hps-exhibits-panel-pane-exhibits-related-items {
+  @include hipos-color($aside--colors);
+  .pane-title {
+    background-color: lighten(nth($aside--colors, 1), 4%);
+  }
+  .view-content {
+    > ul {
+      overflow: hidden;
+      > li {
+        @include apply-side-rhythm-border(bottom, 1px, 0);
+        border-bottom-color: lighten(nth($aside--colors, 1), 4%);
+        &.item--expanded {
+          border-bottom-color: shade(nth($aside--expanded--colors, 1), 4%);
+        }
+      }
+    }
+  }
+  .item__summary {
+    &:hover {
+      background-color: rgba(black, 0.1);
+    }
+  }
+  .item--expanded {
+    @include hipos-color($aside--expanded--colors);
+    .item__detail {
+      background-color: tint(nth($aside--expanded--colors, 1), 60%);
+    }
+  }
+}

@@ -27,7 +27,9 @@ $hipos-colors: (
   $grey-dark white $teal-bright $teal-dark white, //7
   $teal-light black black $teal-dark white, //8
   darken($grey-dark, 5%) white $teal-bright $teal-dark white, //9
-  black white white $off-white black //10
+  black white white $off-white black, //10
+  lighten($grey-dark, 4%) white $teal-bright $teal-dark white, //11
+  shade($off-white, 10%) black $teal-dark $teal-dark white  //2
 );
 
 $body--colors:                  nth($hipos-colors, 7);
@@ -42,6 +44,8 @@ $after--colors:                 nth($hipos-colors, 2);
 $bottom--colors:                nth($hipos-colors, 2);
 $footer--colors:                nth($hipos-colors, 10);
 $slideshow--colors:             nth($hipos-colors, 9);
+$aside--colors:                 nth($hipos-colors, 11);
+$aside--expanded--colors:       nth($hipos-colors, 12);
 
 // Tab styling.
 $tabs-container-bg: white;
