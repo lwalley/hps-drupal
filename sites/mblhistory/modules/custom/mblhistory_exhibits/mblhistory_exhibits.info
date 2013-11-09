@@ -1,0 +1,6 @@
+name = MBL History Exhibits
+description = Overrides default exhibits configuration set by HPS distribution.
+package = MBL History
+core = 7.x
+
+dependencies[] = hps_exhibits

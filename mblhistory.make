@@ -33,3 +33,8 @@ projects[mblhistory_participate][download][type] = get
 projects[mblhistory_participate][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
 projects[mblhistory_participate][download][subtree] = hps-drupal-<replaceme:tagname>/sites/mblhistory/modules/custom/mblhistory_participate
 
+projects[mblhistory_exhibits][type] = module
+projects[mblhistory_exhibits][download][type] = get
+projects[mblhistory_exhibits][download][url] = https://github.com/mbl-cli/hps-drupal/archive/<replaceme:tagname>.zip
+projects[mblhistory_exhibits][download][subtree] = hps-drupal-<replaceme:tagname>/sites/mblhistory/modules/custom/mblhistory_exhibits
+
