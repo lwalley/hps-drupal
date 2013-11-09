@@ -6,6 +6,13 @@
  */
 
 /**
+ * Implements hook_views_api().
+ */
+function mblhistory_dspaced_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_dspaced_entities_default().
  */
 function mblhistory_dspaced_dspaced_entities_default() {
