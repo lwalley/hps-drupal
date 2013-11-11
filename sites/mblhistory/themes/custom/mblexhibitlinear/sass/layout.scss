@@ -1,32 +1,56 @@
 @import "init";
 @import "hipos/micro/layout";
 
-// @todo also reflow content at smaller breakpoints to address long lines.
+// Exhibit home page
+@media all and (min-width: 1em / 16 * 768) {
+  .node-type-hps-exhibit {
+    #basic__one {
+      @include zen-grid-item(7, 1, right);
+    }
+    #basic__two {
+      @include zen-grid-item(5, 8, right);
+    }
+  }
+}
+@media all and (min-width: 1em / 16 * 1500) {
+  .node-type-hps-exhibit {
+    #basic__two {
+      @include zen-grid-item(4, 8, right);
+      padding-right: $zen-gutter-width;
+    }
+  }
+}
+@media all and (min-width: 1em / 16 * 1900) {
+  .node-type-hps-exhibit {
+    #basic__two {
+      padding-right: $zen-gutter-width * 2;
+    }
+  }
+}
+// Information pages
+// ????
+
+// Narrative pages
 .node-type-hps-exhibit-narrative {
   #basic__three {
+    @include margin-leader(4);
     @include zen-nested-container;
   }
 }
-@media all and (min-width: 1em / 16 * 768) {
-  .hpszen-b2 {
-    #basic__one {
-      @include zen-grid-item(8, 1, right);
-    }
+@media all and (min-width: 1em / 16 * 768) and (max-width: 1em / 16 * 849) {
+  .node-type-hps-exhibit-narrative {
     #basic__two {
-      @include zen-grid-item(4, 9, right);
+      @include zen-grid-item(7, 1);
+      padding-right: $zen-gutter-width;
     }
-  }
-  .hpszen-i1-b2 {
-    #basic__one {
-      @include zen-grid-item(4, 1);
-    }
-    #basic__two {
-      @include zen-grid-item(8, 5);
+    #basic__three {
+      @include zen-grid-item(5, 8);
       clear: none;
     }
   }
-  .hpszen-b3,
-  .hpszen-i1-b3 {
+}
+@media all and (min-width: 1em / 16 * 850) and (max-width: 1em / 16 * 1279) {
+  .node-type-hps-exhibit-narrative {
     #basic__one {
       @include zen-grid-item(3, 1);
     }
@@ -39,49 +63,43 @@
       clear: none;
     }
   }
-  .node-type-hps-exhibit-narrative {
-    #basic__two {
-      padding-right: $zen-gutter-width;
-    }
-  }
 }
-@media all and (min-width: 1em / 16 * 1280) {
-  .hpszen-b3,
-  .hpszen-i1-b3 {
+@media all and (min-width: 1em / 16 * 1280) and (max-width: 1em / 16 * 1499) {
+  .node-type-hps-exhibit-narrative {
     #basic__one {
       @include zen-grid-item(3, 1);
     }
     #basic__two {
       @include zen-grid-item(5, 4);
+      clear: none;
     }
     #basic__three {
       @include zen-grid-item(4, 9);
+      clear: none;
     }
   }
 }
 @media all and (min-width: 1em / 16 * 1500) {
-  .hpszen-b3,
-  .hpszen-i1-b3 {
+  .node-type-hps-exhibit-narrative {
     #basic__one {
       @include zen-grid-item(2, 1);
     }
     #basic__two {
       @include zen-grid-item(4, 3);
+      clear: none;
     }
     #basic__three {
       @include zen-grid-item(2, 11);
+      clear: none;
     }
   }
 
 }
-
 @media all and (min-width: 1em / 16 * 2200) {
-  .hpszen-b3,
-  .hpszen-i1-b3 {
+  .node-type-hps-exhibit-narrative {
     #basic__two {
       padding-right: $zen-gutter-width * 2;
     }
   }
-
 }
 

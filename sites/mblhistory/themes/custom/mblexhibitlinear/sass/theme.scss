@@ -10,12 +10,11 @@
   background-color: transparent;
 }
 .js .navigation {
-  // If Javascript is enabled then replace navigation header with hamburger icon
   h2 {
     a {
-      width: image-width(sprite-file($icons-small, hamburger));
-      background-position: 0 round(nth(sprite-position($icons-small, hamburger), 2) * 0.8);
-      @include background-size(80% auto);
+      &:before {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -37,6 +36,9 @@
         border-bottom-color: lighten(nth($aside--colors, 1), 4%);
         &.item--expanded {
           border-bottom-color: shade(nth($aside--expanded--colors, 1), 4%);
+        }
+        &:last-child {
+          border-bottom: none;
         }
       }
     }

@@ -44,6 +44,7 @@
   }
 }
 .pane-hps-exhibits-panel-pane-exhibits-related-items {
+  position: relative;
   .pane-title {
     font-weight: normal;
     @include hipos-adjust-font-size-and-rhythm(1);
@@ -74,12 +75,12 @@
       @include zen-grid-item-base;
       padding: 0;
       @include zen-grid-item(2, 1);
-      padding: $zen-gutter-width * 0.25;
+      padding: round($zen-gutter-width * 0.3);
       padding-right: 0;
       + h3 {
         @include zen-grid-item-base;
         @include zen-grid-item(10, 3);
-        padding: $zen-gutter-width * 0.25;
+        padding: round($zen-gutter-width * 0.3);
       }
     }
     img {
@@ -125,8 +126,9 @@
         padding: rhythm(1);
         position: absolute;
         top: 0;
-        left: -190%;
+        right: 0;
         margin-right: 100%;
+        width: 160%;
       }
     }
   }
