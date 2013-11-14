@@ -5,4 +5,10 @@
  * mblhistory_exhibits.module
  */
 
-// Nothing to see here
+/**
+ * Implements hook_views_api().
+ */
+function mblhistory_exhibits_views_api() {
+  return array("version" => "3.0");
+}
+
