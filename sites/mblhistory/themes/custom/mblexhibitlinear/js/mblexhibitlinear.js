@@ -11,7 +11,8 @@
       if (Drupal.settings.hpszen === undefined) {
         Drupal.settings.hpszen = {};
       }
-      Drupal.settings.hpszen.navigationBreakpoint = 841;
+      Drupal.settings.hpszen.navigationBreakpoint    = 841;
+      Drupal.settings.hpszen.narrativeMenuBreakpoint = 850;
     }
   };
 

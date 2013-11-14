@@ -32,8 +32,10 @@
 
 // Narrative pages
 .node-type-hps-exhibit-narrative {
+  #basic__one {
+    @include zen-nested-container;
+  }
   #basic__three {
-    @include margin-leader(4);
     @include zen-nested-container;
   }
 }
@@ -53,6 +55,9 @@
   .node-type-hps-exhibit-narrative {
     #basic__one {
       @include zen-grid-item(3, 1);
+      .fixedsticky-on {
+        width: zen-grid-item-width(3);
+      }
     }
     #basic__two {
       @include zen-grid-item(6, 4);
@@ -68,6 +73,9 @@
   .node-type-hps-exhibit-narrative {
     #basic__one {
       @include zen-grid-item(3, 1);
+      .fixedsticky-on {
+        width: zen-grid-item-width(3);
+      }
     }
     #basic__two {
       @include zen-grid-item(5, 4);
@@ -83,6 +91,9 @@
   .node-type-hps-exhibit-narrative {
     #basic__one {
       @include zen-grid-item(2, 1);
+      .fixedsticky-on {
+        width: zen-grid-item-width(2);
+      }
     }
     #basic__two {
       @include zen-grid-item(4, 3);

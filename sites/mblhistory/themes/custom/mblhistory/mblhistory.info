@@ -79,4 +79,5 @@ settings[zen_wireframes]             = 0
 settings[hpszen_navigation_dropdown] = 0
 settings[hpszen_navigation_dropdown] = 0
 settings[hpszen_exhibits_js]         = 0
+settings[hpszen_position_sticky]     = 0
 

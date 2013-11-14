@@ -14,15 +14,16 @@
       <header class="header<?php if ($logo) print " with-logo"; ?>" id="header" role="banner">
         <?php if ($logo || $site_name): ?>
           <div class="header__brand">
-          <?php if ($logo): ?>
-            <a href="<?php print $front_page; ?>" title="<?php print t('Go to home page.'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php $site_name ? print "{$site_name}" : print t('Home'); ?>" class="header__logo-image" /></a>
-          <?php endif; ?>
+            <?php if ($logo): ?>
+              <a href="<?php print $front_page; ?>" title="<?php print t('Go to home page.'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php $site_name ? print "{$site_name}" : print t('Home'); ?>" class="header__logo-image" /></a>
+            <?php endif; ?>
 
-          <?php if ($site_name): ?>
-            <h1 class="header__site-name" id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Go to home page.'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
+            <?php if ($site_name): ?>
+              <h1 class="header__site-name" id="site-name">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Go to home page.'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
+              </h1>
+            <?php endif; ?>
+          </div>
         <?php endif; ?>
       </header>
 

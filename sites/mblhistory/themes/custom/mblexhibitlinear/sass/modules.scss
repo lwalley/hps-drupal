@@ -25,9 +25,91 @@
   }
 }
 
+// Narrative navigation styles all pages
 .pane-node-book-menu {
+  h2 {
+    @include element-invisible;
+  }
   ul {
     @include hipos-menu-list;
+  }
+  li a {
+    display: block;
+  }
+}
+
+// Navigation on narrative pages
+.node-type-hps-exhibit-narrative {
+  .pane-node-book-nav {
+    padding-left: $zen-gutter-width * 0.5;
+    padding-right: $zen-gutter-width * 0.5;
+    .page-previous,
+    .page-next {
+      @include zen-grid-item-base;
+      text-decoration: none;
+    }
+    .page-previous {
+      @include zen-grid-item(2, 9);
+    }
+    .page-next {
+      @include zen-grid-item(2, 11);
+    }
+    .page-previous,
+    .page-next {
+    }
+    .text,
+    .text {
+      @include element-invisible;
+    }
+  }
+  .pane-node-book-menu {
+    margin: 0;
+    h2 a,
+    li a {
+      text-decoration: none;
+      padding-left: $zen-gutter-width * 0.5;
+      padding-right: $zen-gutter-width * 0.5;
+    }
+    li li {
+      border-bottom: none;
+      a {
+        padding-left: rhythm(2);
+      }
+    }
+  }
+}
+@media all and (max-width: 1em / 16 * 850) {
+  .js .node-type-hps-exhibit-narrative {
+    .pane-node-book-menu {
+      h2 {
+        @include element-invisible-off;
+        font-weight: normal;
+        @include hipos-adjust-font-size-and-rhythm(1, 0, 0);
+        width: zen-grid-item-width(5);
+      }
+      margin-top: -1 * rhythm(1.3);
+    }
+  }
+}
+@media all and (max-width: 1em / 16 * 320) {
+  .node-type-hps-exhibit-narrative {
+    .pane-node-book-nav .page-previous,
+    .pane-node-book-nav .page-next,
+    .pane-node-book-menu h2,
+    .pane-node-book-menu li a {
+      padding-left: round($zen-gutter-width * 0.3);
+      padding-right: round($zen-gutter-width * 0.3);
+    }
+  }
+}
+@media all and (min-width: 1em / 16 * 850) {
+  .node-type-hps-exhibit-narrative {
+    .pane-node-book-nav.fixedsticky {
+      top: hipos-px-to-em(100);
+    }
+    .pane-node-book-menu.fixedsticky {
+      top: hipos-px-to-em(100) + rhythm(1.8);
+    }
   }
 }
 
@@ -43,6 +125,8 @@
     @include hipos-bulletless-list;
   }
 }
+
+// Related items
 .pane-hps-exhibits-panel-pane-exhibits-related-items {
   position: relative;
   .pane-title {

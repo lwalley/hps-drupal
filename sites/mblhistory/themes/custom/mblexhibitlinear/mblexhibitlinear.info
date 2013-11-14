@@ -81,4 +81,5 @@ settings[zen_rebuild_registry]       = 1
 settings[zen_wireframes]             = 0
 settings[hpszen_navigation_dropdown] = 0
 settings[hpszen_exhibits_js]         = 1
+settings[hpszen_position_sticky]     = 1
 

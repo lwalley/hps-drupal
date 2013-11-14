@@ -12,6 +12,7 @@
 .js .navigation {
   h2 {
     a {
+      overflow: hidden; // Required by IE to prevent scrollbars
       &:before {
         font-size: 16px;
       }
@@ -21,6 +22,28 @@
 
 .pane-node-book-menu li {
   border-bottom: 1px dotted $grey;
+}
+.node-type-hps-exhibit-narrative {
+  .pane-node-book-nav {
+    @include hipos-color($aside--colors);
+    .page-links {
+      border: none;
+    }
+    .icon,
+    .icon {
+      @include icomoon-replace-text-with-glyph(false, 16px, inline-block);
+      &:before {
+        top: rhythm(0.1);
+      }
+    }
+    .page-previous .icon:before {
+      content: $icon-previous;
+    }
+    .page-next .icon:before {
+      content: $icon-next;
+      margin-left: -20px;
+    }
+  }
 }
 
 .pane-hps-exhibits-panel-pane-exhibits-related-items {
