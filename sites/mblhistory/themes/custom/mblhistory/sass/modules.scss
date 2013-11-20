@@ -239,10 +239,12 @@
             @include zen-grid-item-base();
             @include zen-grid-item(4, 1);
             @include zen-clear();
+            @include zen-nested-container();
           }
           > div {
             @include zen-grid-item-base();
             @include zen-grid-item(8, 5);
+            padding-right: 0;
             h3 {
               margin: 0;
               + p {

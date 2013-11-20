@@ -45,7 +45,21 @@
     }
   }
 }
-
+@media all and (min-width: 1em / 16 * 1920) {
+  .node-type-hps-exhibit-narrative {
+    .pane-node-book-nav {
+      .page-previous,
+      .page-next {
+        .icon:before {
+          font-size: 32px;
+        }
+      }
+      .page-next .icon:before {
+        margin-left: -32px;
+      }
+    }
+  }
+}
 .pane-hps-exhibits-panel-pane-exhibits-related-items {
   @include hipos-color($aside--colors);
   .pane-title {

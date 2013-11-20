@@ -97,6 +97,7 @@
     }
     #basic__two {
       @include zen-grid-item(4, 3);
+      padding-left: $zen-gutter-width;
       clear: none;
     }
     #basic__three {
@@ -110,6 +111,7 @@
   .node-type-hps-exhibit-narrative {
     #basic__two {
       padding-right: $zen-gutter-width * 2;
+      padding-left: $zen-gutter-width * 2;
     }
   }
 }
