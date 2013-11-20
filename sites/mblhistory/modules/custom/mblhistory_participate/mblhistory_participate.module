@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the MBL History Participate feature.
- */
-
-include_once 'mblhistory_participate.features.inc';
