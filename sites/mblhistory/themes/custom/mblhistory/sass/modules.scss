@@ -169,15 +169,12 @@
           }
         }
         > a {
-          width: 30%;
-          margin-right: 2%;
+          @include padding-leader(0.2);
+          width: 35%;
           display: block;
           float: left;
           .hpszen-responsive {
-            max-width: 100%;
-          }
-          + h3 {
-            margin-left: 32%;
+            max-width: 90%;
           }
         }
         > span {
@@ -406,24 +403,6 @@
       }
       #featured__two {
         @include zen-grid-item(8, 1);
-      }
-    }
-    #basic__one,
-    #basic__two {
-      ul {
-        li {
-          a {
-            width: 30%;
-            margin-right: 0;
-            + h3 {
-              margin-left: 30%;
-              padding-left: rhythm(0.5);
-              + p {
-                clear: both;
-              }
-            }
-          }
-        }
       }
     }
     #bottom {
