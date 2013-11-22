@@ -30,18 +30,11 @@
  * @ingroup themeable
  */
 ?>
-<?php if ($tree || $has_links): ?>
-  <div id="book-navigation-<?php print $book_id; ?>" class="book-navigation">
-    <?php if ($has_links): ?>
-    <div class="page-links clearfix">
-      <?php if ($prev_url): ?>
-        <a href="<?php print $prev_url; ?>" class="page-previous" title="<?php print t('Go to previous page'); ?>"><span class="icon">&lt;</span><span class="text"><?php print $prev_title; ?></span></a>
-      <?php endif; ?>
-      <?php if ($next_url): ?>
-        <a href="<?php print $next_url; ?>" class="page-next" title="<?php print t('Go to next page'); ?>"><span class="text"><?php print $next_title ?></span><span class="icon">&gt;</span></a>
-      <?php endif; ?>
-    </div>
-    <?php endif; ?>
-
-  </div>
+<?php if ($has_links): ?>
+  <?php if ($prev_url): ?>
+    <a href="<?php print $prev_url; ?>" class="page-previous" title="<?php print t('Go to previous page'); ?>"><span><?php print $prev_title; ?></span></a>
+  <?php endif; ?>
+  <?php if ($next_url): ?>
+    <a href="<?php print $next_url; ?>" class="page-next" title="<?php print t('Go to next page'); ?>"><span><?php print $next_title ?></span></a>
+  <?php endif; ?>
 <?php endif; ?>
