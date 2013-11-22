@@ -9,32 +9,32 @@ defaults[projects][subdir] = "custom"
 ; Themes
 projects[mblhistory][type] = theme
 projects[mblhistory][download][type] = get
-projects[mblhistory][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.01.zip
-projects[mblhistory][download][subtree] = hps-drupal-2013.11.20.01/sites/mblhistory/themes/custom/mblhistory
+projects[mblhistory][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.02.zip
+projects[mblhistory][download][subtree] = hps-drupal-2013.11.20.02/sites/mblhistory/themes/custom/mblhistory
 
 projects[mblexhibitlinear][type] = theme
 projects[mblexhibitlinear][download][type] = get
-projects[mblexhibitlinear][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.01.zip
-projects[mblexhibitlinear][download][subtree] = hps-drupal-2013.11.20.01/sites/mblhistory/themes/custom/mblexhibitlinear
+projects[mblexhibitlinear][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.02.zip
+projects[mblexhibitlinear][download][subtree] = hps-drupal-2013.11.20.02/sites/mblhistory/themes/custom/mblexhibitlinear
 
 ; Modules
 projects[mblhistory_dspaced][type] = module
 projects[mblhistory_dspaced][download][type] = get
-projects[mblhistory_dspaced][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.01.zip
-projects[mblhistory_dspaced][download][subtree] = hps-drupal-2013.11.20.01/sites/mblhistory/modules/custom/mblhistory_dspaced
+projects[mblhistory_dspaced][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.02.zip
+projects[mblhistory_dspaced][download][subtree] = hps-drupal-2013.11.20.02/sites/mblhistory/modules/custom/mblhistory_dspaced
 
 projects[mblhistory_home][type] = module
 projects[mblhistory_home][download][type] = get
-projects[mblhistory_home][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.01.zip
-projects[mblhistory_home][download][subtree] = hps-drupal-2013.11.20.01/sites/mblhistory/modules/custom/mblhistory_home
+projects[mblhistory_home][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.02.zip
+projects[mblhistory_home][download][subtree] = hps-drupal-2013.11.20.02/sites/mblhistory/modules/custom/mblhistory_home
 
 projects[mblhistory_exhibits][type] = module
 projects[mblhistory_exhibits][download][type] = get
-projects[mblhistory_exhibits][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.01.zip
-projects[mblhistory_exhibits][download][subtree] = hps-drupal-2013.11.20.01/sites/mblhistory/modules/custom/mblhistory_exhibits
+projects[mblhistory_exhibits][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.02.zip
+projects[mblhistory_exhibits][download][subtree] = hps-drupal-2013.11.20.02/sites/mblhistory/modules/custom/mblhistory_exhibits
 
 projects[mblhistory_browse][type] = module
 projects[mblhistory_browse][download][type] = get
-projects[mblhistory_browse][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.01.zip
-projects[mblhistory_browse][download][subtree] = hps-drupal-2013.11.20.01/sites/mblhistory/modules/custom/mblhistory_browse
+projects[mblhistory_browse][download][url] = https://github.com/mbl-cli/hps-drupal/archive/2013.11.20.02.zip
+projects[mblhistory_browse][download][subtree] = hps-drupal-2013.11.20.02/sites/mblhistory/modules/custom/mblhistory_browse
 
