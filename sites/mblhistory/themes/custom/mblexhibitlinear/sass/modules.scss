@@ -14,8 +14,7 @@
   @include hipos-adjust-font-size-and-rhythm(3);
   font-weight: normal;
 }
-
-@media all and (min-width: 1em / 16 * 768) {
+@media all and (min-width: 1em / 16 * 1681) {
   .pane-node-field-hps-exhibit-banner {
     .hpszen-responsive {
       &.hps-principal {
@@ -25,118 +24,125 @@
   }
 }
 
-// Narrative navigation styles all pages
+// Exhibit navigation
 .pane-node-book-menu {
   h2 {
     @include element-invisible;
-  }
-  ul {
-    @include hipos-menu-list;
+    @include hipos-adjust-font-size-and-rhythm(1, 0, 0);
+    line-height: normal;
   }
   li a {
+    @include padding-leader(0.7);
+    @include padding-trailer(0.7);
+  }
+}
+.pane-node-book-menu,
+.pane-node-book-nav,
+.pane-node-og-group-ref {
+  a {
     display: block;
+    text-decoration: none;
   }
 }
 
 // Navigation on narrative pages
 .node-type-hps-exhibit-narrative {
-  .pane-node-book-nav {
-    @include zen-grid-item-base;
-    @include zen-grid-item(12, 1);
-    @include zen-nested-container;
-    @include margin-trailer();
-    .page-previous,
-    .page-next {
-      @include zen-grid-item-base;
-      text-decoration: none;
-    }
-    .page-previous {
-      @include zen-grid-item(2, 9);
-    }
-    .page-next {
-      @include zen-grid-item(2, 11);
-    }
-    .page-previous,
-    .page-next {
-      padding-left: round($zen-gutter-width * 0.5);
-      padding-right: round($zen-gutter-width * 0.5);
-    }
-    .text,
-    .text {
-      @include element-invisible;
+  .basic__one {
+    .panel-pane {
+      @include zen-grid-item-base(0);
     }
   }
+  .pane-node-book-nav,
   .pane-node-book-menu {
-    margin: 0;
-    ul {
-      @include zen-clear;
+    @include zen-grid-item(12, 1);
+  }
+  .pane-node-og-group-ref {
+    @include zen-grid-item(3, 1);
+    a:before {
+      padding-left: round($zen-gutter-width * 0.3);
     }
-    h2 a,
-    li a {
-      text-decoration: none;
-      padding-left: round($zen-gutter-width * 0.5);
-      padding-right: round($zen-gutter-width * 0.5);
+  }
+  .page-previous {
+    @include zen-grid-item(3, 7);
+  }
+  .page-next {
+    @include zen-grid-item(3, 10);
+    padding-right: round($zen-gutter-width * 0.3);
+  }
+  .pane-node-book-menu {
+    h2 a:before {
+      padding-left: round($zen-gutter-width * 0.3);
+    }
+    .pane-content > ul > li > a {
+      padding-left: round($zen-gutter-width * 0.3);
+      padding-right: round($zen-gutter-width * 0.3);
+    }
+    ul {
+      margin: rhythm(3) 0 0 0;
     }
     li li {
-      border-bottom: none;
       a {
         padding-left: rhythm(2);
       }
     }
   }
 }
-@media all and (max-width: 1em / 16 * 320) {
+@media all and (min-width: 1em / 16 * 321) {
   .node-type-hps-exhibit-narrative {
-    .pane-node-book-nav .page-previous,
-    .pane-node-book-nav .page-next,
-    .pane-node-book-menu h2 a,
-    .pane-node-book-menu li a {
-      padding-left: round($zen-gutter-width * 0.3);
-      padding-right: round($zen-gutter-width * 0.3);
+    .page-next {
+      padding-right: round($zen-gutter-width * 0.5);
+    }
+    .pane-node-og-group-ref {
+      a:before {
+        padding-left: round($zen-gutter-width * 0.5);
+      }
+    }
+    .pane-node-book-menu {
+      h2 a:before {
+        padding-left: round($zen-gutter-width * 0.5);
+      }
+      .pane-content > ul > li > a {
+        padding-left: round($zen-gutter-width * 0.5);
+        padding-right: round($zen-gutter-width * 0.5);
+      }
     }
   }
 }
+
 @media all and (max-width: 1em / 16 * 849) {
   .js .node-type-hps-exhibit-narrative {
+    .pane-node-og-group-ref {
+      @include zen-grid-item(3, 4);
+    }
     .pane-node-book-menu {
       h2 {
         @include element-invisible-off;
         font-weight: normal;
-        @include hipos-adjust-font-size-and-rhythm(1, 0, 0);
-        width: zen-grid-item-width(7);
-        margin-top: rhythm(0.5);
+        width: zen-grid-item-width(3);
+      }
+      ul {
+        margin-top: 0;
       }
     }
   }
 }
 @media all and (min-width: 1em / 16 * 850) {
   .node-type-hps-exhibit-narrative {
-    .pane-node-book-nav.fixedsticky {
-      top: hipos-px-to-em(100);
-      .page-previous,
-      .page-next {
-        padding-left: 0;
-        padding-right: 0;
+    .pane-node-book-menu {
+      @include zen-clear();
+      ul {
+        margin-top: 0;
       }
     }
-    .pane-node-book-menu.fixedsticky {
-      top: hipos-px-to-em(100);
-      padding-top: rhythm(1.5);
+    .pane-node-og-group-ref {
+      @include zen-grid-item(3, 1);
     }
   }
 }
-@media all and (min-width: 1em / 16 * 1920) {
-  .node-type-hps-exhibit-narrative {
-    .pane-node-book-menu.fixedsticky {
-      padding-top: rhythm(2);
-    }
-  }
-}
-
 .pane-hps-exhibits-panel-pane-exhibit-information-menu {
   @include margin-leader(3);
   ul {
-    @include hipos-menu-list;
+    @include hipos-bulletless-list;
   }
 }
 
@@ -151,9 +157,9 @@
   position: relative;
   .pane-title {
     font-weight: normal;
-    @include hipos-adjust-font-size-and-rhythm(1);
-    padding: rhythm(1);
-    margin: 0;
+    @include hipos-adjust-font-size-and-rhythm(1, 0, 0);
+    @include adjust-leading-to(2.9);
+    padding: 0 rhythm(1);
   }
   .view-content {
     > ul {
@@ -218,13 +224,6 @@
     padding-left: rhythm(0.8);
     padding-right: rhythm(0.8);
   }
-
-  li:hover,
-  .item--expanded,
-  .item__detail {
-  }
-  .item--expanded {
-  }
   .item__detail--hidden {
     @include element-invisible;
   }
@@ -232,6 +231,7 @@
     position: relative;
     .item--expanded {
       .item__detail {
+        min-height: rhythm(10);
         padding: rhythm(1);
         position: absolute;
         top: 0;
